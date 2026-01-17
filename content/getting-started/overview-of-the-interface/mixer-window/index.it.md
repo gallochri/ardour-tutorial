@@ -1,6 +1,6 @@
 ---
-title: Mixer window
-description: Basics of Ardour's Mixer window
+title: Finestra del Mixer
+description: Nozioni di base sulla finestra Mixer di Ardour
 weight: 2
 cascade:
   type: docs

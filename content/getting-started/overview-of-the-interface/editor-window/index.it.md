@@ -90,79 +90,71 @@ del mouse, e così via.
 
 ## Timeline
 
-Right-click on the names of rulers and you will see a menu with all the possible
-rulers at your disposition. You may uncheck rulers that you don't need in order
-to save screen space. More information on these operations can be found in the
-[Setting up the Timeline](../../setting-up-the-timeline/) and [Setting Up Time Signature](../../../editing-sessions/setting-up-time-signature/) chapters.
+Cliccando con il tasto destro sui nomi dei righelli si aprirà un menu con tutti i righelli disponibili. Puoi 
+deselezionare i righelli che non ti servono per risparmiare spazio sullo schermo. Maggiori informazioni su queste 
+operazioni sono disponibili nei capitoli [Impostazione della timeline](../../setting-up-the-timeline/) e 
+[Impostazione del tempo musicale](../../../editing-sessions/setting-up-time-signature/).
 
-![Ardour Overview Rulers](en/ardour7-overview-rulers.png?width=40vw)
+{{< figure src="it/ardour8-overview-rulers.png" alt="Timeline Rulers" >}}
 
-## Tracks and Busses
+## Tracce e Bus
 
-Just below the rulers is where tracks and busses are displayed. In the example
-below, you can see one bus called _Master_ and one track called _Voiceover_.
-_Voiceover_ also contains one region which represents an audio file with a drawing
-of its waveform. You can find more information on tracks and busses in the
-[Creating a Track or Bus](../../creating-tracks-and-busses/) chapter.
+Appena sotto i righelli vengono visualizzate le tracce e i bus. Nell'esempio sottostante, è possibile vedere un bus 
+chiamato _Master_ e una traccia chiamata _Voiceover_. _Voiceover_ contiene anche una regione che rappresenta un file 
+audio con la sua forma d'onda. Maggiori informazioni sulle tracce e sui bus sono disponibili nel capitolo 
+[Creazione traccie o e bus](../../creating-tracks-and-busses/).
 
-![Ardour Track](en/Ardour6_Track.png?width=30vw)
+{{< figure src="it/ardour8-track.png" alt="Tracce e bus" >}}
 
-## Project Overview
+## Panoramica del progetto
 
-This is a bird's-eye view of the entire session.
+Questa è una panoramica dell'intera sessione.
 
-{{< figure src="en/ardour7-overview-panel.png" alt="Project overview" >}}
+{{< figure src="it/ardour8-overview-panel.png" alt="Panoramica del progetto" >}}
 
-There are two major use cases here:
+Ci sono due casi d'uso principali:
 
-1. Navigating around the project. Just grab the rectangle and drag it around to
-pan over the entire project.
+1. Navigazione all'interno del progetto. Basta selezionare il rettangolo e trascinarlo per eseguire una panoramica 
+dell'intero progetto.
 
-2. Tweaking zoom and position of the visible part of the project. Grab the left
-or the right side of the visible rectangle's border and drag it inwards or
-outwards to zoom in or out respectively.
+2. Modifica dello zoom e della posizione della parte visibile del progetto. Afferra il lato sinistro o destro del bordo 
+del rettangolo visibile e trascinalo verso l'interno o verso l'esterno per ingrandire o rimpicciolire rispettivamente.
 
-## Editor Mixer
+## Mixer dell'editor
 
-The Editor Mixer is located at the left of the _Editor_ window. It displays the
-mixer strip of the currently selected track or bus. It's mainly used to control
-the volume, plugins, and routing for the track or the bus to which it
-corresponds.
+L'Editor Mixer si trova nella parte sinistra della finestra _Editor_. Visualizza la striscia del mixer della traccia o 
+del bus attualmente selezionato. Viene utilizzato principalmente per controllare il volume, i plugin e il routing della 
+traccia o del bus a cui corrisponde.
 
-{{< figure src="en/Ardour6_Editor_Mixer.png" height="100px" >}}
+{{< figure src="it/ardour8-editor-mixer.png" height="100px" >}}
 
-You can toggle to view or hide the _Editor Mixer_ by clicking on the menu
-`View > Show Editor Mixer` (**Shift + E** shortcut). This Mixer is covered in
-the [Using the Mixer Strip](../mixing-sessions/the-mixer-strip/) chapter.
+È possibile attivare o nascondere l'Editor Mixer cliccando sul menu `Vista > Mostra il mixer dell'editor` 
+(scorciatoia **Shift + E**). Questo Mixer è descritto nel capitolo 
+[Utilizzo della barra del Mixer](../../../mixing-sessions/the-mixer-strip/).
 
-## Editor List
+## Elenco dell'editor
 
-The space on the right of Ardour's _Editor_ window can have 8 different
-functions, depending on which tab is currently selected: _Tracks & Busses_,
-_Sources_, _Regions_, _Clips_, _Arrangement_, _Snapshots_, _Track & Bus
-Groups_, and _Ranges & Marks_.
+Lo spazio sulla destra della finestra _Editor_ di Ardour può avere 8 diverse funzioni, a seconda della scheda 
+selezionata: _Tracce e bus_, _Sorgenti_, _Regioni_, _Clips_, _Arrangiamento_, _Istantanee_, _Tracce e gruppi_ e 
+_Intervalli e marcatori_.
 
-![Sources List](en/ardour7-sources-list.png?height=60vh)
+{{< figure src="it/ardour8-sources-list.png" alt="Elenco dell'editor" >}}
 
-- _Tracks & Busses_ provides an overview of all tracks and busses in the
-project, including the invisible ones. This tab is covered in the
-[Arranging Tracks](../../../editing-sessions/arranging-tracks/) chapter
-- _Sources_ lists all files on the disk imported to the session.
-- _Regions_ is a list of all takes in the session. You can reuse both sources
-and regions by dragging them onto the canvas. You'll find more information on
-regions in the [Working With
-Regions](../../../editing-sessions/working-with-regions/) chapter.
-- _Clips_ lists reusable audio and MIDI clips that can be drag-and-dropped
-either to the timeline or to the grid of clips on the _Cue_ page.
-- _Arrangement_ lists all available user-defined arrangement sections
-(like verse, chorus, bridge etc.) and allows quickly copy-pasting them.
-- _Snapshots_ are versions of the same session saved at particular moments in
-time, they are discussed in the [Saving a
-Snapshot](../../../saving-sessions/saving-a-snapshot/) chapter.
-- _Ranges and Marks_ is an overview of all markers in the project, with an easy
-user interface to edit them.
+- _Tracce e bus_ fornisce una panoramica di tutte le tracce e i bus presenti nel progetto, compresi quelli invisibili. 
+Questa scheda è trattata nel capitolo [Disposizione delle tracce](../../../editing-sessions/arranging-tracks/).
+- _Sorgenti_ elenca tutti i file presenti sul disco importati nella sessione.
+- _Regioni_ è un elenco di tutte le registrazioni della sessione. È possibile riutilizzare sia le sorgenti che le 
+regioni trascinandole sull'area di lavoro. Maggiori informazioni sulle regioni sono disponibili nel capitolo 
+[Lavorare con le regioni](../../../editing-sessions/working-with-regions/).
+- _Clips_ elenca le clip audio e MIDI riutilizzabili che possono essere trascinate nella timeline o nella griglia delle 
+clip nella pagina _Cue_.
+- _Arrangiamento_ elenca tutte le sezioni di arrangiamento disponibili definite dall'utente (come strofa, ritornello, 
+bridge ecc.) e consente di copiarle e incollarle rapidamente.
+- _Istantanee_ sono versioni della stessa sessione salvate in momenti particolari, vengono descritte nel capitolo 
+[Salvataggio di uno snapshot](../../../saving-sessions/saving-a-snapshot/).
+- _Intervalli e marcatori_ è una panoramica di tutti i marcatori presenti nel progetto, con un'interfaccia utente 
+intuitiva che consente di modificarli facilmente.
 
-**Continuing**
+**Continua**
 
-Next up is the _Mixer_ window where you focus on making instruments stand out in
-a song.
+L'argomento successivo è la finestra del _Mixer_, dove ci si concentra sul far risaltare gli strumenti in una canzone.
