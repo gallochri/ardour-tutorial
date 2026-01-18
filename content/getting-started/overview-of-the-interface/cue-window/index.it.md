@@ -48,12 +48,15 @@ dispone di un controller hardware grid e di tutte le clip pre-registrate necessa
 di clip nel normale flusso di lavoro lineare nella finestra _Editor_. 
 Per farlo, è necessario aggiungere dei marker nella timeline _Cue Markers_.
 
-Here is a simple example of that:
+Ecco un semplice esempio:
 
-![Combining linear and non-linear workflow](en/ardour7-linear-and-nonlinear.png)
+{{< figure src="it/ardour8-linear-and-nonlinear.png" alt="Combinazione di flussi di lavoro lineari e non lineari" >}}
 
-Ardour plays two bars of a regular MIDI track that uses a sampled instrument, then launches scene _A_ at bar 3, scene _B_ at bar 4, and stops all scenes at bar 5. You can trigger and stop scenes at any time in your otherwise linear project, as many times as you like.
+Ardour riproduce due battute di una traccia MIDI regolare che utilizza uno strumento campionato, quindi avvia la scena 
+_A_ alla battuta 3, la scena _B_ alla battuta 4 e interrompe tutte le scene alla battuta 5. 
+È possibile attivare e interrompere le scene in qualsiasi momento nel progetto lineare, tutte le volte che si desidera.
 
-**Continuing**
+**Continua**
 
-Now that you are familiar with main Ardour's windows, let's jump to the next section where we create a new track and then import some audio file.
+Ora che avete familiarità con le finestre principali di Ardour, passiamo alla sezione successiva dove creeremo una nuova
+traccia e poi importeremo alcuni file audio.
