@@ -1,47 +1,62 @@
 ---
-title: Cue window
-description: Basics of Ardour's cue window
+title: Finestra Cue
+description: Nozioni di base sulla finestra Cue di Ardour
 weight: 4
 cascade:
   type: docs
 ---
 
-The _Cue_ window provides tools to set up live performance using Ardour. We are not going to use _Cue_ in this tutorial, so this is just a quick overview to give you a basic idea what all this is about.
+La finestra _Cue_ fornisce gli strumenti per impostare le performance dal vivo utilizzando Ardour. In questo tutorial 
+non utilizzeremo _Cue_, quindi questa è solo una rapida panoramica per darvi un'idea di base di cosa si tratta.
 
-## User interface elements
+## Elementi dell'interfaccia utente
 
-The user interface follows the general approach expected by users of other applications with this type of a feature set.
+L'interfaccia utente segue l'approccio generale previsto dagli utenti di altre applicazioni con questo tipo di funzionalità.
 
-![Cue window sections](en/ardour7-cue-window-sections.png)
+{{< figure src="it/ardour8-cue-window-sections.png" alt="Sezioni della finestra cue" >}}
 
-Here are the main UI parts:
+Ecco le parti principali dell'interfaccia:
 
-1. Clip launchers grid
-2. Clip settings panel
-3. Reusable clips browser 
+1. Griglia dei lanciatori di clip
+2. Pannello delle impostazioni clip
+3. Browser di clip riutilizzabili
 
-From left to right you get tracks that contain clips (not visible on the timeline when you switch to the _Editor_ window). From top to bottom you get 8 rows called scenes, _A_ to _P_.
+Da sinistra a destra si visualizzano le tracce che contengono clip (non visibili sulla timeline quando si passa alla 
+finestra _Editor_). Dall'alto verso il basso si vedono 8 righe chiamate scene, da _A_ a _P_.
 
-The browser on the right allows easily dropping pre-recorded clips onto clip slots for playback. You can use both audio and MIDI clips. Dropping a clip on the empty space will create a new track and automatically fill the first slot (scene _A_) with that clip.
+Il browser sulla destra consente di trascinare facilmente clip preregistrate negli slot delle clip per la riproduzione. 
+È possibile utilizzare sia clip audio che MIDI. Trascinando una clip sullo spazio vuoto si creerà una nuova traccia e si
+riempirà automaticamente il primo slot (scena _A_) con quella clip.
 
-Settings below allow customizing how a clip is played, whether it is stretched to match certain bpm value, whether it triggers playback of a certain other clip etc.
+Le impostazioni riportate sotto consentono di personalizzare la riproduzione di una clip, stabilendo se deve essere
+allungata per adattarsi a un determinato valore bpm, se deve attivare la riproduzione di un'altra clip specifica, ecc.
 
-## Non-linear workflow
+## Flusso di lavoro non lineare
 
-Working with clip launchers is commonly referred to as non-linear workflow, because it is based on looped playback of pre-recorded clips where you don't have to go from scene A to scene H directly.
+Lavorare con il lanciatore di clip è comunemente definito come flusso di lavoro non lineare, poiché si basa sulla 
+riproduzione in loop di clip pre-registrate in cui non è necessario passare direttamente dalla scena A alla scena H.
 
-You can set up your clip launchers in a way that a clip in scene _B_ will play 4 times, trigger a clip in scene _A_ that will play 2 times, then jump to clip _C_ and play it 6 times, then go back to clip _B_, which will repeat the entire cycle again and again until you stop it manually. And all that without ever pressing the **Play** button in the transport to play a song from start to finish.
+È possibile impostare i lanciatori di clip in modo tale che una clip nella scena _B_ venga riprodotta 4 volte, attivi 
+una clip nella scena _A_ che verrà riprodotta 2 volte, quindi passi alla clip _C_ e la riproduca 6 volte, quindi torni 
+alla clip _B_, che ripeterà l'intero ciclo più e più volte fino a quando non lo si interrompe manualmente. E tutto 
+questo senza mai premere il pulsante **Play** nel trasporto per riprodurre un brano dall'inizio alla fine.
 
-## Combining linear and non-linear workflows
+## Combinazione di flussi di lavoro lineari e non lineari
 
-While you can play an entire song live without ever getting out of the _Cue_ window — especially when you have a hardware grid controller and all pre-recorded clips you might need — you can integrate clip launchers into regular linear workflow in the _Editor_ window. To do that, you need to add markers in the _Cue Markers_ timeline.
+Sebbene sia possibile riprodurre un intero brano dal vivo senza mai uscire dalla finestra _Cue_, specialmente se si 
+dispone di un controller hardware grid e di tutte le clip pre-registrate necessarie, è possibile integrare il lanciatore 
+di clip nel normale flusso di lavoro lineare nella finestra _Editor_. 
+Per farlo, è necessario aggiungere dei marker nella timeline _Cue Markers_.
 
-Here is a simple example of that:
+Ecco un semplice esempio:
 
-![Combining linear and non-linear workflow](en/ardour7-linear-and-nonlinear.png)
+{{< figure src="it/ardour8-linear-and-nonlinear.png" alt="Combinazione di flussi di lavoro lineari e non lineari" >}}
 
-Ardour plays two bars of a regular MIDI track that uses a sampled instrument, then launches scene _A_ at bar 3, scene _B_ at bar 4, and stops all scenes at bar 5. You can trigger and stop scenes at any time in your otherwise linear project, as many times as you like.
+Ardour riproduce due battute di una traccia MIDI regolare che utilizza uno strumento campionato, quindi avvia la scena 
+_A_ alla battuta 3, la scena _B_ alla battuta 4 e interrompe tutte le scene alla battuta 5. 
+È possibile attivare e interrompere le scene in qualsiasi momento nel progetto lineare, tutte le volte che si desidera.
 
-**Continuing**
+**Continua**
 
-Now that you are familiar with main Ardour's windows, let's jump to the next section where we create a new track and then import some audio file.
+Ora che avete familiarità con le finestre principali di Ardour, passiamo alla sezione successiva dove creeremo una nuova
+traccia e poi importeremo alcuni file audio.

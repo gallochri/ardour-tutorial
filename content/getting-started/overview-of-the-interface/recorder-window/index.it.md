@@ -1,45 +1,57 @@
 ---
-title: Recorder window
-description: Basics of Ardour's recorder window
+title: Finestra registratore
+description: Nozioni di base sulla finestra di registratore di Ardour 
 weight: 3
 cascade:
   type: docs
 ---
 
-The _Recorder_ window is streamlined for one particular use case: recording to multiple tracks. The interface is pointedly simplified to remove all distraction.
+La finestra _Registratore_ è ottimizzata per un caso d'uso particolare: la registrazione su più tracce. L'interfaccia 
+è volutamente semplificata per eliminare ogni distrazione.
 
-![Sections of the Recorder window](en/ardour7-recorder-window-sections.png)
+{{< figure src="it/ardour8-recorder-window-sections.png" alt="Sezioni della finestra Registratore" >}}
 
-There are three major sections in the Recorder window as outlined above:
+Come illustrato sopra, la finestra Registratore è suddivisa in tre sezioni principali:
 
-1. Window-specific toolbar
-2. The timeline and the tracks representation
-3. Inputs control
+1. Barra degli strumenti specifica della finestra 
+2. La timeline e la rappresentazione delle tracce 
+3. Controllo degli ingressi
 
-## Window-specific toolbar
+## Barra degli strumenti specifica della finestra
 
-The toolbar has specific commands and information: arming and disarming all tracks for recording, discarding the last take, automatically switching all inputs for signal monitoring, estimation of the time you can record to the disk until it's out of free space etc.
+La barra degli strumenti contiene comandi e informazioni specifici: attivazione e disattivazione di tutte le tracce per 
+la registrazione, eliminazione dell'ultima registrazione, commutazione automatica di tutti gli ingressi per il 
+monitoraggio del segnale, stima del tempo di registrazione disponibile sul disco fino all'esaurimento dello spazio 
+libero, ecc.
 
-![Recorder toolbar](en/ardour7-recorder-toolbar.png)
+{{< figure src="it/ardour8-recorder-toolbar.png" alt="Barra degli strumenti del registratore" >}}
 
-## The timeline and the tracks representation
+## La timeline e la rappresentazione delle tracce
 
-The timeline only displays timecode, and the tracks view has no waveform rendering at all. This helps with the use of system resources when recording dozens of tracks simultaneously.
+La timeline mostra solo il codice temporale e la vista delle tracce non presenta alcuna rappresentazione della forma 
+d'onda. Ciò contribuisce a ottimizzare l'utilizzo delle risorse di sistema durante la registrazione simultanea di decine
+di tracce.
 
-![Recorder timeline and tracks](en/ardour7-recorder-timeline-tracks.png)
+{{< figure src="it/ardour8-recorder-timeline-tracks.png" alt="Timeline e tracce del registratore" >}}
 
-## Inputs control
+## Controllo degli ingressi
 
-The bottom part of the window is where you control inputs: you can both monitor input volume and rename physical ports for convenience. To do the latter, just click on the input port name and give a new name.
+La parte inferiore della finestra è quella in cui si controllano gli ingressi: è possibile monitorare il volume di 
+ingresso e, per comodità, rinominare le porte fisiche. Per fare quest'ultima operazione, basta cliccare sul nome della 
+porta di ingresso e assegnarle un nuovo nome.
 
-![Rename the input](en/ardour7-recorder-input-renaming-dialog.png)
+{{< figure src="it/ardour8-recorder-input-renaming-dialog.png" alt="Rinomina dell'ingresso" >}}
 
-E.g. if you have two mic inputs, one for vocal and one for guitar, naming them accordingly will simplify picking the right one for the right track. This will be even more convenient for audio interfaces with e.g. 18 inputs.
+Ad esempio, se disponi di due ingressi microfonici, uno per la voce e uno per la chitarra, assegnare loro nomi 
+appropriati semplificherà la selezione di quello giusto per la traccia corretta. Ciò risulterà ancora più comodo per le 
+interfacce audio con, ad esempio, 18 ingressi.
 
-![New names](en/ardour7-recorder-input-new-names.png)
+{{< figure src="it/ardour8-recorder-input-new-names.png" alt="Nuovi nomi" >}}
 
-If you use [I/O plugins](https://manual.ardour.org/recording/io-plugins/), their inputs will be displayed next to track inputs.
+Se utilizzi i [plugin I/O](https://manual.ardour.org/recording/io-plugins/), i loro ingressi verranno visualizzati 
+accanto agli ingressi della traccia.
 
-**Continuing**
+**Continua**
 
-Finally, in the next section we'll take a quick look at the _Cue_ window that provides a familiar user interface to launching audio and MIDI clips.
+Infine, nella sezione successiva daremo una rapida occhiata alla finestra _Cue_, che offre un'interfaccia utente 
+familiare per l'avvio di clip audio e MIDI.
