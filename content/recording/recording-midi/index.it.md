@@ -63,6 +63,7 @@ seleziona _Inserimento a passi_. Si aprirà la finestra di dialogo _Inserimento 
 
 Ecco le opzioni:
 
+<<<<<<< HEAD
 1. Modalità di inserimento degli accordi: è possibile suonare più note contemporaneamente, che verranno registrate come 
 un accordo e appariranno una sopra l'altra sul pianoroll. 
 2. Preset di lunghezza delle note, da una nota intera a 1/64.
@@ -120,6 +121,70 @@ della prima battuta di tutte le tracce di percussioni nel progetto corrente.
 Ora hai una linea di basso di base che puoi ripetere.
 
 {{< figure src="it/bassline.png" alt="Linea di basso iniziale" >}}
+=======
+1. Chord entry mode — you can play multiple notes at once, they will be recorded like a chord and willl be above each other on the pianoroll.
+
+2. Note length presets, from a whole note to 1/64th.
+
+3. Dotted note presets
+
+4. Rest presets
+
+5. Velocity presets, from pianississimo to fortississimo
+
+6. Numeric inputs for MIDI data: channel, length of a note, velocity, octave (for
+entry from regular keyboard), MIDI bank and MIDI program (so that you could
+use e.g. pizzicato sample in a sample library rather than arc).
+
+Now you have three options:
+
+1. Click piano keys with a mouse
+2. Press keys on your regular keyboard
+3. Use a MIDI keyboard connected to track's input
+
+For option 2, the middle row of letter keys is used for white keys, and the upper letter row is for black keys:
+
+{{< figure src="en/keyboard-map-to-piano-keys.svg" alt="Keyboard map to piano keys" >}}
+
+All the settings you see in the _Step Entry_ dialog apply to the options 1 and
+2. For each note you input next, you can set: 
+
+- Length, from a whole note to 1/64 (or any length when using the 1/Note spinbox), with optional chord input
+- Channel
+- Velocity (z through < on English (US) keyboard can be used as keyboard shortcuts)
+- Octave (keys 1 through 9 can be used as shortcuts)
+
+You can also insert rests which basically means that Ardour shifts the editing
+cursor to the right by the currently selected note length.
+
+When you use a MIDI keyboard for step entry, only a subset of settings in the
+dialog apply. Ardour will use the defined note length, but it won't bother
+with either velocity, channel, or octave settings and will use whatever you
+send from the keyboard.
+
+Let's try to use it and create a simple bass line that we can later use in the
+project.
+
+1. Create a new track, select Surge XT as a virtual instrument.
+
+2. Open the _Factory Patches_ navigator and select _Bass 2_ in _Basses_.
+
+{{< figure src="en/surge-xt-bass-patch.png" alt="Selecting a bass patch in Surge XT" >}}
+
+3. Make sure the playhead is at the beginning of the session so that it
+matches the beginning of the first bar of all percussion tracks in the current
+project.
+
+4. Open the _Step Entry_ dialog
+
+5. Select 1/8 note length and octave 3
+
+6. On your regular keyboard press D,G,H,G,D,G,U,J,H,4,A,S,A,3,H,4,A,E,D.
+
+Now you have a basic bass line you can repeat.
+
+{{< figure src="en/bassline.png" alt="Initial bass line" >}}
+>>>>>>> main
 
 ## Drawing notes on the piano roll
 
