@@ -6,41 +6,54 @@ cascade:
   type: docs
 ---
 
-When you do overdubbing with punch in and out, all changes happen non-destructively. You do however have a choice over what Ardour does when it overdubs. For that you have three recording modes that you can select in the main toolbar: **Layered**, **Non-Layered**, and **Sound-on-Sound**.
+Quando si esegue il sovraincisione utilizzando il punch-in e il punch-out, tutte le modifiche avvengono in modo non 
+distruttivo. Tuttavia, è possibile scegliere come Ardour deve comportarsi durante la sovraincisione. A tal fine, nella 
+barra degli strumenti principale sono disponibili tre modalità di registrazione: **Stratificato**, **Non stratificato** 
+e **Snd su Snd** (suono su suono).
 
-![List of recording modes](en/recording-modes-list.png)
+{{< figure src="it/recording-modes-list.png" alt="Modalità di registrazione" >}}
 
-## Layered
+## Stratificato
 
-The **Layered** mode is used by default. When you overdub in layered mode, it creates a new opaque region on top of the existing one.
+La modalità **Stratificato** è utilizzata per impostazione predefinita. Quando si esegue la sovraincisione in modalità 
+stratificata, viene creata una nuova regione opaca sopra quella esistente.
 
-To see all takes stacked as layers, open the right-click menu above the track's header and switch from the **Overlaid** mode to the **Stacked** mode. When the playhead is above this new region, you only hear the sound from the top layer and you don’t hear the sound from the bottom layer.
+Per visualizzare tutte le registrazioni sovrapposte come livelli, apri il menu contestuale sopra l'intestazione della 
+traccia e passa dalla modalità **Sovrapposta** alla modalità **a strati**. Quando il cursore di riproduzione si trova
+sopra questa nuova regione, sentirai solo il suono del livello superiore e non quello del livello inferiore.
 
-![MIDI overdubs in Layered mode, stacked view](en/layered-mode-stacked.png)
+{{< figure src="it/layered-mode-stacked.png" alt="Sovraincisioni MIDI in modalità Stratificata, vista a strati" >}}
 
-**When to use it**: you want to have easy access to multiple takes when overdubbing.
+**Quando utilizzarlo**: quando si desidera avere accesso a più registrazioni durante la sovraincisione.
 
-## Non-Layered
+## Non Stratificato
 
-In the **Non-Layered** mode, Ardour trims the existing region so that the new one fits right in:
+Nella modalità **Non stratificata**, Ardour ritaglia la regione esistente in modo che quella nuova si adatti perfettamente:
 
-![Audio overdub in Non-Layered mode](en/non-layered-mode.png)
+{{< figure src="it/non-layered-mode.png" alt="Sovraincisione audio in modalità Non Stratificata" >}}
 
-Both regions are opaque. If you didn’t like the take, you can still undo it. Or if you made multiple changes after overdubbing and you want to undo, you can select the newer region, delete it from the timeline, and then tweak the edge of either of the two regions to reveal original audio or MIDI.
+Entrambe le regioni sono opache. Se non ti piace la registrazione, puoi ancora annullarla. Oppure, se hai apportato più 
+modifiche dopo la sovraincisione e desideri annullarle, puoi selezionare la regione più recente, eliminarla dalla 
+timeline e quindi modificare il bordo di una delle due regioni per rivelare l'audio o il MIDI originale.
 
-**When to use it**: you don’t want to preserve individual takes when overdubbing.
+**Quando utilizzarlo**: quando non si desidera conservare le singole registrazioni durante la sovraincisione.
 
-## Sound-on-Sound
+## Suono su suono (Snd su Snd)
 
-When you overdub in the **Sound-on-Sound** mode, Ardour creates a new region in a new layer at the top, but it makes this region transparent. This means that Ardour will play audio or MIDI from all takes at the same time.
+Quando si esegue un sovraincisione in modalità **suono su suono**, Ardour crea una nuova regione in un nuovo livello 
+nella parte superiore, ma rende questa regione trasparente.
 
-![Drum overdubs in Sound-on-Sound mode](en/sound-on-sound-overlaid.png)
+{{< figure src="it/sound-on-sound-overlaid.png" alt="Sovraincisioni in modalità Suono su Suono" >}}
 
-**When to use it**: a common use is progressively building up a drum track by adding kick drum, toms, snares, and hi-hats in each individual take.
+**Quando utilizzarlo**: un uso comune è quello di costruire progressivamente una traccia di batteria aggiungendo 
+grancassa, tom, rullanti e charleston in ogni singola registrazione.
 
 > [!TIP]
-> You can toggle the opacity of stacked regions at any time later. To do that, select a region, go to the main menu and use the `Region > Gain > Opaque` toggle. You can do the same in the right-click menu above the region. Or you can just press **Alt+0**.
+È possibile attivare o disattivare l'opacità delle regioni sovrapposte in qualsiasi momento. Per farlo, selezionare una 
+> regione, andare al menu principale e utilizzare il pulsante `Regione > Guadagno > Opaco`. È possibile eseguire la 
+> stessa operazione dal menu contestuale sopra la regione. Oppure è sufficiente premere **Alt+0**.
 
-**Continuing**
+**Continua**
 
-In the next chapter, we'll talk about helping yourself to perform in sync with the rest of the session material, whether you are using a MIDI keyboard to record a lead synth part or a bass guitar.
+Nel prossimo capitolo parleremo di come aiutarti a suonare in sincronia con il resto del materiale della sessione, sia 
+che tu stia usando una tastiera MIDI per registrare una parte di synth solista o un basso elettrico.
