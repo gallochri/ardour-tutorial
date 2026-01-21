@@ -6,86 +6,145 @@ cascade:
   type: docs
 ---
 
-Routing an audio signal is sending it from somewhere to somewhere else.
+Il routing di un segnale audio consiste nel trasmetterlo da un punto a un altro.
 
-In addition to getting audio signals to and from Ardour, routing plays an important part inside Ardour itself. Examples of using routing inside Ardour include routing audio from tracks to the _Master_ bus or to other busses, creating 'sends', routing the outputs from busses to the _Master_ bus, etc. (see chapter on **Creating a Track** for an explanation of tracks and busses). All routing, both internal and external to Ardour, is handled by JACK.
+Oltre a gestire i segnali audio da e verso Ardour, il routing svolge un ruolo importante all'interno dello stesso Ardour. 
+Esempi di utilizzo del routing all'interno di Ardour includono il routing dell'audio dalle tracce al bus _Master_ o ad 
+altri bus, la creazione di "sends", il routing delle uscite dai bus al bus _Master_, ecc. 
+(vedere il capitolo sulla **Creazione di una traccia** per una spiegazione delle tracce e dei bus). 
+Tutto il routing, sia interno che esterno ad Ardour, è gestito dal server JACK.
 
 ## Routing in Ardour
 
-The standard routing of inputs, tracks and busses in Ardour is determined when a new session is created in the _Advanced Options_ of the _New Session_ dialog box (see the [Starting Ardour](../../getting-started/starting-ardour/) page). By default, the routing is as follows:
+Il routing standard di ingressi, tracce e bus in Ardour viene determinato quando si crea una nuova sessione nelle 
+_Opzioni avanzate_ della finestra di dialogo _Nuova sessione_ (vedere la pagina 
+[Avvio di Ardour](../../getting-started/starting-ardour/)). Per impostazione predefinita, il routing è il seguente:
 
-- The audio device inputs are routed to the track inputs. - All outputs from tracks and busses are routed to the master bus inputs. - The _Master_ bus outputs are routed to the audio device outputs.
+- Gli ingressi del dispositivo audio vengono indirizzati agli ingressi delle tracce. 
+- Tutte le uscite delle tracce e dei bus vengono indirizzate agli ingressi del bus master. 
+- Le uscite del bus _Master_ vengono indirizzate alle uscite del dispositivo audio.
 
-Note that when a new bus is created, nothing is routed to its input.
+Si noti che quando viene creato un nuovo bus, nulla viene instradato al suo ingresso.
 
-This routing setup makes sense for sessions containing only tracks, but to make use of any busses (other than the _Master_ bus) or to get creative with the paths of the audio signals inside Ardour, we need to be able to change the routing.
+Questa configurazione di routing ha senso per sessioni contenenti solo tracce, ma per utilizzare qualsiasi bus 
+(diverso dal bus _Master_) o per essere creativi con i percorsi dei segnali audio all'interno di Ardour, dobbiamo essere
+in grado di modificare il routing.
 
-The _Audio Connection Manager_ window (also known as the patchbay) is the main way to make connections to, from ,and within Ardour's mixer. You can open this window with the shortcut **Shift + Alt + A**, or through the `Window >> Audio Connections` menu.
+La finestra _Audio Connection Manager_ (nota anche come patchbay) è lo strumento principale per effettuare connessioni 
+da, verso e all'interno del mixer di Ardour. È possibile aprire questa finestra con la scorciatoia **Shift + Alt + A** o
+tramite il menu `Finestre >> Connessioni audio`.
 
-![Audio Connection Manager](en/ardour7-audio-connections-in-menu.png?width=40vw)
+{{< figure alt="Audio Connection Manager" src="it/ardour8-audio-connections-in-menu.png" >}}
 
-The patchbay presents two groups of ports; one set of sources, and one of destinations. Sources and destinations are organized by tabs. The available sources are displayed vertically on the left side, and the destinations are displayed horizontally at the bottom.
+Il patchbay presenta due gruppi di porte: un set di sorgenti e uno di destinazioni. Le sorgenti e le destinazioni sono 
+organizzate per schede. Le sorgenti disponibili sono visualizzate verticalmente sul lato sinistro, mentre le 
+destinazioni sono visualizzate orizzontalmente nella parte inferiore.
 
-In the screenshot below, notice that the _Hardware_ tab is selected on the top left (that's a source), and the _*Ardour Tracks*_ is selected as a destination in the bottom. This means that the matrix you see displays connections from available hardware sound sources (for example, a microphone), into existing Ardour tracks.
+Nello screenshot qui sotto, nota che la scheda _Hardware_ è selezionata in alto a sinistra (sorgenti) e che 
+_*Tracce*_ è selezionato come destinazione in basso. Questo significa che la matrice che vedi mostra le 
+connessioni dalle sorgenti audio hardware disponibili (per esempio, un microfono) alle tracce Ardour esistenti.
 
-![ACM 1](en/ardour7-audio-connection-manager-1.png?width=40vw)
+{{< figure alt="ACM 1" src="it/ardour8-audio-connection-manager-1.png" >}}
 
-The green dots represent a connection. The screenshot above tells us that incoming sounds from _capture_1_ (the first input source of your soundcard, or the built-in microphone of your laptop) are going into Ardour track named _Audio 1_, and also that incoming sounds from _capture_2_ are going into input of Ardour track named _Audio 2_.
+I punti verdi rappresentano una connessione. Lo screenshot sopra ci dice che i suoni in entrata da Alder Lake Digital Microphone 
+_capture_FL_ (la prima sorgente di ingresso della scheda audio o il microfono integrato del laptop) vengono inviati alla
+traccia Ardour denominata _Audio 1_, e che i suoni in entrata da Alder Lake Stereo Microphone _capture_FL_ e _capture_FR_ vengono inviati all'ingresso della traccia
+Ardour denominata _Audio 2_.
 
-Notice we can see that _Audio 1_ is a Mono track because it only has one connection slot, while track _Audio 2_ is Stereo since it has two slots (Left and Right).
+Notiamo che _Audio 1_ è una traccia mono perché ha un solo slot di connessione, mentre la traccia _Audio 2_ è stereo 
+perché ha due slot (sinistro e destro).
 
-The next screenshot shows the signal path from _Ardour Tracks_ (selected vertical tab) into Ardour busses (selected horizontal tab). As mentioned earlier, the default setting for all _Ardour Tracks_ is that their sound goes to the _Master_ bus.
+La schermata seguente mostra il percorso del segnale dalle tracce Ardour (scheda verticale selezionata) ai bus Ardour 
+(scheda orizzontale selezionata). Come accennato in precedenza, l'impostazione predefinita per tutte le tracce Ardour è 
+che il loro suono venga inviato al bus Master.
 
-![ACM 2](en/ardour7-audio-connection-manager-2.png?width=40vw)
+{{< figure alt="ACM 2" src="it/ardour8-audio-connection-manager-2.png" >}}
 
-Note: remember that _Audio 1_ is a Mono track? We saw it in the earlier screenshot that _Audio 1_ only has one input slot. But now on the screenshot above you see that "Audio 1" has two outputs (left and right). This is normal: we define whether a track is Mono or Stereo by its _number of inputs_, not outputs. Mono tracks will hold a single channel of audio, but you can still choose to place the sound on the left or the right speaker (or anywhere in between). For more on this please see the _Panning_ chapter.
+Nota: ricordi che _Audio 1_ è una traccia mono? Abbiamo visto nella schermata precedente che _Audio 1_ ha un solo slot 
+di ingresso. Ma ora nella schermata sopra puoi vedere che "Audio 1" ha due uscite (sinistra e destra). Questo è normale:
+definiamo se una traccia è mono o stereo in base al suo _numero di ingressi_, non alle uscite. Le tracce mono contengono
+un solo canale audio, ma è comunque possibile scegliere di posizionare il suono sull'altoparlante sinistro o destro (o 
+in qualsiasi punto intermedio). Per ulteriori informazioni al riguardo, consultare il capitolo _Panning_.
 
-Finally, let's explore a couple more tabs in the _Audio Connection Manager_ to see the sound going from the _Master_ bus to the actual hardware outputs (your loudspeakers or headphones):
+Infine, esploriamo un altro paio di schede nel _Gestore delle connessioni audio_ per vedere il suono che passa dal bus 
+_Master_ alle uscite hardware effettive (altoparlanti o cuffie):
 
-![ACM 3](en/ardour7-audio-connection-manager-3.png?width=40vw)
+{{< figure alt="ACM 3" src="it/ardour8-audio-connection-manager-3.png" >}}
 
-As you can see, the selected source tab is now _Ardour Busses_, and the destination tab is _Hardware_. This session happens to have only one bus, the default "master out". The green dots show that all sounds coming out of the _Master_ bus are going to system playback 1 and 2, which are the outputs of your soundcard.
+Come puoi vedere, la scheda sorgente selezionata ora è _Bus_, mentre la scheda di destinazione è _Hardware_. Questa 
+sessione ha un solo bus, il "master out" predefinito. I punti verdi indicano che tutti i suoni provenienti dal bus 
+_Master_ vengono inviati alle uscite di riproduzione 1 e 2 del sistema, che sono le uscite della tua scheda audio.
 
-## How to connect and disconnect?
+## Come collegarsi e scollegarsi?
 
-To make a connection, click on the desired empty square in the matrix; a green dot will appear to indicate the connection is made.
+Per creare una connessione, clicca sul quadrato vuoto desiderato nella matrice; apparirà un punto verde per indicare che
+la connessione è stata creata.
 
-To undo a connection, simply click on an existing green dot and it will disappear.
+Per annullare una connessione, basta cliccare su un punto verde esistente e questo scomparirà.
 
-There is a neat trick you can use when you need to map many mono/stereo outputs to many mono/stereo inputs: rather than making many single clicks, draw a connection line. Here is how you do it:
+C'è un trucchetto che puoi usare quando devi mappare molte uscite mono/stereo su molte entrate mono/stereo: invece di 
+fare tanti clic singoli, traccia una linea di connessione. Ecco come fare:
 
-![Drawing connection lines](en/ardour7-drawing-connection-lines.gif?height=75vh)
+{{< figure alt="Drawing connection lines" src="it/ardour7-drawing-connection-lines.gif" >}}
 
-## Practical example of routing to a bus
+## Esempio pratico di routing verso un bus
 
-In the following example session, there are two guitar tracks and one unused bus called _Guitar_ bus, all Stereo.
+Nella seguente sessione di esempio, ci sono due tracce di chitarra e un bus inutilizzato chiamato _Bus chitarra_, tutti 
+stereo.
 
-![ACM 4](en/ardour7-audio-connection-manager-4.png?width=30vw)
+{{< figure alt="ACM 4" src="it/ardour8-audio-connection-manager-4.png" >}}
 
-Suppose you want to send the output from the two guitar tracks to the _Guitar_ bus instead of the _Master_ bus. This can be useful to control the volume of both guitars with just one fader (in this case the _Guitar_ bus fader) or placing two instruments into the same virtual room by using a reverb plugin on the bus. Then the output of the _Guitar_ bus, which is the sum of the two guitars, goes directly to the _Master_ bus.
+Supponiamo che tu voglia inviare l'output delle due tracce di chitarra al bus _Guitar_ invece che al bus _Master_. 
+Questo può essere utile per controllare il volume di entrambe le chitarre con un solo fader (in questo caso il fader del 
+_Bus chitarra_) o per inserire due strumenti nella stessa stanza virtuale utilizzando un plugin di riverbero sul bus. 
+Quindi l'output del _Bus chitarra_, che è la somma delle due chitarre, va direttamente al bus _Master_.
 
-Here is how to edit the patchbay to get the desired routing. Select _Ardour Tracks_ tab from _Sources_ (vertical tabs), and _Ardour Busses_ from destinations (horizontal bottom tabs). Undo existing connections from both tracks to _Master_. Then create connections from both tracks to _Guitar_ bus. The final result would look like this:
+Ecco come modificare il gestore delle connessioni per ottenere il routing desiderato. Seleziona la scheda _Tracce_ da 
+_Sorgenti_ (schede verticali) e _Bus_ dalle destinazioni (schede orizzontali in basso). Annulla le connessioni esistenti
+da entrambe le tracce a _Master_. Quindi crea connessioni da entrambe le tracce al _Bus chitarra_. Il risultato finale 
+sarà simile a questo:
 
-![ACM 5](en/ardour7-audio-connection-manager-5.png?width=40vw)
+{{< figure alt="ACM 5" src="it/ardour8-audio-connection-manager-5.png" >}}
 
-Now both guitar tracks are routed to the _Guitar_ bus, and no longer directly connected to the _Master_ bus. We then make sure that the _Guitar_ bus is, by its turn, routed to the _Master_ bus (the output routing of a bus is edited in the same way as for a track), so that we can still hear the sound from both guitar tracks. Now we can control the volume of both guitar tracks together by changing the fader of the _Guitar_ bus. What's more, we can now add plugins to the Guitar Bus to process the sound of both guitar Tracks together.
+Ora entrambe le tracce di chitarra sono indirizzate al _Bus chitarra_ e non sono più collegate direttamente al bus 
+_Master_. Ci assicuriamo quindi che il _Bus chitarra_ sia a sua volta indirizzato al bus _Master_ (l'indirizzamento 
+dell'uscita di un bus viene modificato allo stesso modo di una traccia), in modo da poter ancora ascoltare il suono di 
+entrambe le tracce di chitarra. Ora possiamo controllare il volume di entrambe le tracce di chitarra insieme modificando
+il fader del _Bus chitarra_. Inoltre, ora possiamo aggiungere plugin al _Bus chitarra_ per elaborare il suono di 
+entrambe le tracce di chitarra insieme.
 
-## Track- or Bus-specific views of the Patchbay
+## Viste specifiche per traccia o bus del gestore delle connessioni
 
-The _Audio Connection Manager_ (Patchbay) that you open with **Alt + P** shows you the complete matrix of every single source and every single destination available in Ardour. Sometimes this is too much: you just want to quickly change the routing of a single track input or output, for example. Ardour allows you to access a relevant subset of Patchbay connections when you click directly on the **Inputs** or **Outputs** button of a track or bus in the mixer strip.
+Il gestore delle connessioni audio (Patchbay) che si apre con **Alt + P** mostra la matrice completa di ogni singola 
+sorgente e ogni singola destinazione disponibile in Ardour. A volte questo è eccessivo: si desidera solo modificare 
+rapidamente il routing di un singolo ingresso o uscita di traccia. Ardour consente di accedere a un sottoinsieme 
+rilevante delle connessioni Patchbay quando si fa clic direttamente sul pulsante **Inputs** o **Outputs** di una traccia
+o di un bus nella striscia del mixer.
 
-The **Inputs** button is at the top, and the **Outputs** button is on the bottom of the strip. Clicking on either one will show you a menu of connection options. In the screenshot below, for example, you would click on the **1/2** button right under the track name _Guitar 1_ in order to access this menu:
+Il pulsante **Inputs** si trova nella parte superiore, mentre il pulsante **Outputs** si trova nella parte inferiore 
+della striscia. Cliccando su uno dei due pulsanti verrà visualizzato un menu con le opzioni di connessione. Nello 
+screenshot qui sotto, ad esempio, è necessario cliccare sul pulsante **Bus chitarra** proprio sotto il nome della bus 
+_Master_ per accedere a questo menu:
 
-![Editor Mixer In Out](en/ardour7-editor-mixer-in-out.png?width=30vw)
+{{< figure alt="Editor Mixer In Out" src="it/ardour8-editor-mixer-in-out.png" >}}
 
-You may select a connection right there from the menu, or choose _Routing Grid_ to see a simpler version of the _Audio Connection Manager_ with only the **Inputs** or **Outputs** of the selected track or bus.
+È possibile selezionare una connessione direttamente dal menu oppure scegliere _Cablaggio_ per visualizzare una versione
+semplificata del _Manager delle connessioni audio_ con solo gli **Input** o gli **Output** della traccia o del bus 
+selezionato.
 
-## All Ardour connections are JACK connections
+## Tutte le connessioni Ardour sono connessioni JACK.
 
-It is important to realize that any routings that you make or disconnect from within Ardour are in fact JACK routings, which you can see from other applications like _Qjackctl_ or _Catia_, depending on your operating system. Below is an example of a _Catia_ window (Linux only) displaying the same JACK connections discussed above:
+È importante rendersi conto che qualsiasi routing effettuato o disconnesso all'interno di Ardour è in realtà un routing 
+JACK, che è possibile visualizzare da altre applicazioni come _Qjackctl_ o _Catia_, a seconda del sistema operativo in 
+uso. Di seguito è riportato un esempio di una finestra _Catia_ (solo Linux) che mostra le stesse connessioni JACK 
+discusse sopra:
 
 {{< figure alt="Catia" src="en/Ardour4_Catia_Example.png" >}}
 
-**Continuing**
+**Continua**
 
-In this chapter, we covered how to manage routing inside Ardour, or between Ardour and the sound card. However, one of the strengths of using the JACK system is that it can also manage connections between applications on the same computer. To gain a better understanding of how this works, please continue to the chapter [Routing Between Applications](/recording/routing-between-applications/). If you would prefer to work only with Ardour, then skip ahead to the section on [Arranging Tracks](/editing-sessions/arranging-tracks/).
+In questo capitolo abbiamo visto come gestire il routing all'interno di Ardour o tra Ardour e la scheda audio. Tuttavia,
+uno dei punti di forza dell'utilizzo del sistema JACK è che può anche gestire le connessioni tra applicazioni sullo 
+stesso computer. Per comprendere meglio come funziona, continua con il capitolo 
+[routing tra applicazioni](/recording/routing-between-applications/). 
+Se preferisci lavorare solo con Ardour, passa alla sezione [disposizione delle tracce](/editing-sessions/arranging-tracks/).
