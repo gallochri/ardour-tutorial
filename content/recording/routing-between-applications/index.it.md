@@ -6,39 +6,59 @@ cascade:
   type: docs
 ---
 
-Sometimes you may need to record the audio output of another program into Ardour, e.g. the sound of a YouTube video playing in Firefox, or the output of SuperCollider or PureData. This chapter shows how to accomplish that.
+A volte potrebbe essere necessario registrare l'audio di un altro programma in Ardour, ad esempio il suono di un video
+di YouTube riprodotto in Firefox o l'output di SuperCollider o PureData. Questo capitolo mostra come farlo.
 
-The examples on this page were created on a computer running Ubuntu Linux. Beware that things may work differently if you are on another OS (in particular if you are using a Mac). The general principles are always the same, though.
+Gli esempi riportati in questa pagina sono stati creati su un computer con sistema operativo openSUSE Linux. Si prega di
+notare che il funzionamento potrebbe variare se si utilizza un altro sistema operativo (in particolare se si utilizza un
+Mac). Tuttavia, i principi generali rimangono sempre gli stessi.
 
-## From your browser to Ardour
+## Dal tuo browser ad Ardour
 
-Web browsers (Firefox, Chromium, etc.) are not JACK-aware applications. Fortunately, PipeWire now makes it fairly easy to connect any application that makes sounds to any JACK-aware recording application such as Ardour.
+I browser web (Firefox, Chromium, ecc.) non sono applicazioni compatibili con JACK. Fortunatamente, PipeWire ora rende 
+abbastanza facile collegare qualsiasi applicazione che riproduce suoni a qualsiasi applicazione di registrazione 
+compatibile con JACK, come Ardour.
 
-All you have to do is launch Qjackctl, start JACK, then start making sounds in the browser, then connect browser's outputs to a track in Ardour. You can use either Connections or Graph windows in Qjackctl to do that, or you can do it directly in Ardour. For that, in the Audio Connection Manager switch to the _Other_ tab in _Sources_ on the left and connect your browser's output to an Ardour track that is called _From YT_ here:
+Tutto quello che devi fare è avviare Qjackctl, avviare JACK, quindi iniziare a riprodurre suoni nel browser e infine 
+collegare le uscite del browser a una traccia in Ardour. Per farlo, puoi utilizzare le finestre Patchbay o Grafico in 
+Qjackctl, oppure puoi farlo direttamente in Ardour. A tal fine, nel Gestore dei collegamenti Audio passa alla scheda 
+_Esterno_ in _Sorgenti_ sulla sinistra e collega l'uscita del browser a una traccia di Ardour chiamata _From YT_ qui:
 
-![Connection to YouTube output](en/ardour7-youtube-connection-in-ardour.png?width=40vw)
+{{< figure src="it/ardour8-youtube-connection-in-ardour.png" alt="Gestore dei collegamenti Audio" >}}
 
-As applications like web browsers do not usually have persistent audio output ports, you do need to make your browser output some audio for the ports to be created. That usually means playing a video or starting a videoconference.
+Poiché le applicazioni come i browser web non dispongono solitamente di porte di uscita audio permanenti, è necessario 
+che il browser riproduca dell'audio affinché le porte possano essere create. Ciò significa solitamente riprodurre un 
+video o avviare una videoconferenza.
 
-After that, all you have to do is arm the track for recording, then start recording:
+Dopodiché, tutto quello che devi fare è attivare la traccia per la registrazione, quindi avviare la registrazione:
 
-{{< figure src="en/ardour7-youtube-recording.png" alt="Start recording" >}}
+{{< figure src="it/ardour7-youtube-recording.png" alt="Inizia la registrazione" >}}
 
 > [!IMPORTANT]
-> Please make sure you disconnected all other outputs (such as a mic) from the track's input, otherwise your track might catch more than you wanted and mix  it with the audio from your browser.
+> Assicurati di aver scollegato tutte le altre uscite (come il microfono) dall'ingresso della traccia, altrimenti la 
+> traccia potrebbe catturare più del necessario e mixarlo con l'audio del browser.
 
-## From JACK-aware applications to Ardour
+## Dalle applicazioni compatibili con JACK ad Ardour
 
-Other music software like SuperCollider, Hydrogen, and PureData are JACK-aware. This means they will show up directly as source and destination options in Ardour's Audio Connection Manager. You don't need to worry about any PulseAudio / Jack bridge as in the YouTube example above.
+Altri software musicali come SuperCollider, Hydrogen e PureData sono compatibili con JACK. Ciò significa che appariranno
+direttamente come opzioni di origine e destinazione nel Gestore dei collegamenti Audio di Ardour. Non è necessario 
+preoccuparsi di alcun bridge PulseAudio / Jack come nell'esempio YouTube sopra riportato.
 
-The procedure is essentially the same: create a mono or stereo track to record the audio, set that track's inputs to the desired source, and record as usual. 
+La procedura è sostanzialmente la stessa: creare una traccia mono o stereo per registrare l'audio, impostare gli 
+ingressi di quella traccia sulla sorgente desiderata e registrare come di consueto.
 
-{{< figure src="en/ardour7-hydrogen.png" alt="Hydrogen" >}} 
+{{< figure src="it/ardour7-hydrogen.png" alt="Hydrogen" >}} 
 
-The screenshot above was taken while recording a drum pattern from Hydrogen directly into an Ardour tracks named _Drum N_ where N is a number from 1 to 18. By default, Hydrogen creates a stereo output from its own mix. However you tell it to create per-instrument output ports instead (the checkbox is on the _Audio System_ page of the _Preferences_ dialog).
+Lo screenshot sopra è stato acquisito durante la registrazione di un pattern di batteria da Hydrogen direttamente in una
+traccia Ardour denominata _Drum N_, dove N è un numero compreso tra 1 e 18. Per impostazione predefinita, Hydrogen crea 
+un'uscita stereo dal proprio mix. Tuttavia, è possibile impostare la creazione di porte di uscita per singolo strumento 
+(la casella di controllo si trova nella pagina _Audio System_ della finestra di dialogo _Preferences_).
 
-Hydrogen's window is on the right. Ardour's patchbay window was left open for demonstration: notice that the application _Hydrogen_ shows up as a source under the _Other_ tab. Its ports are connected directly to the inputs of the tracks.
+La finestra di Hydrogen si trova sulla destra. La finestra patchbay di Ardour è stata lasciata aperta per la 
+dimostrazione: si noti che l'applicazione _Hydrogen_ appare come sorgente nella scheda _Other_ (Esterno). Le sue porte sono collegate direttamente agli ingressi delle tracce.
 
-**Continuing**
+**Continua**
 
-This concludes the _Recording_ chapter. Now that you have some audio imported, recorded from a line or microphone input, or even from another application, proceed to the [Arranging Tracks](/editing-sessions/arranging-tracks/) section and learn how to arrange your composition.
+Questo conclude il capitolo _Registrazione_. Ora che hai importato alcuni file audio, registrati da un ingresso di linea
+o microfono, o anche da un'altra applicazione, passa alla sezione 
+[disposizione delle tracce](/editing-sessions/arranging-tracks/) e impara come organizzare la tua composizione.
