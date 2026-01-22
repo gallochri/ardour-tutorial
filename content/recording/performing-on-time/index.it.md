@@ -64,7 +64,7 @@ conservato da modificare.
 **Continua**
 
 A questo punto, potresti voler passare direttamente alla sezione 
-[Disposizione delle tracce](../../editing-sessions/arranging-tracks/) per imparare come disporre le regioni in una 
+[arrangiamento delle tracce](../../editing-sessions/arranging-tracks/) per imparare come disporre le regioni in una 
 composizione. Se hai intenzione di effettuare registrazioni più complesse di quelle che abbiamo discusso qui, in 
 particolare con una scheda audio multicanale o da altri programmi audio abilitati per JACK sul tuo computer, dovresti 
 anche dare un'occhiata al capitolo [Comprendere il routing](../understanding-routing).

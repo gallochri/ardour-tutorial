@@ -147,4 +147,4 @@ In questo capitolo abbiamo visto come gestire il routing all'interno di Ardour o
 uno dei punti di forza dell'utilizzo del sistema JACK è che può anche gestire le connessioni tra applicazioni sullo 
 stesso computer. Per comprendere meglio come funziona, continua con il capitolo 
 [routing tra applicazioni](/recording/routing-between-applications/). 
-Se preferisci lavorare solo con Ardour, passa alla sezione [disposizione delle tracce](/editing-sessions/arranging-tracks/).
+Se preferisci lavorare solo con Ardour, passa alla sezione [arrangiamento delle tracce](/editing-sessions/arranging-tracks/).

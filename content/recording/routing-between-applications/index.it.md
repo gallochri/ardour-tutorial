@@ -61,4 +61,4 @@ dimostrazione: si noti che l'applicazione _Hydrogen_ appare come sorgente nella 
 
 Questo conclude il capitolo _Registrazione_. Ora che hai importato alcuni file audio, registrati da un ingresso di linea
 o microfono, o anche da un'altra applicazione, passa alla sezione 
-[disposizione delle tracce](/editing-sessions/arranging-tracks/) e impara come organizzare la tua composizione.
+[arrangiamento delle tracce](/editing-sessions/arranging-tracks/) e impara come organizzare la tua composizione.
