@@ -61,4 +61,4 @@ clap sia in alto.
 
 Nel prossimo passaggio impareremo come impostare il metronomo per organizzare questi campioni in un ritmo.
 
-Successivo: [Impostazione del tempo musicale](../setting-up-time-signature)
+Successivo: [Impostazione dell'indicazione metrica (time signature)](../setting-up-time-signature)

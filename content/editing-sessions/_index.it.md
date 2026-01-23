@@ -12,7 +12,7 @@ Contenuti:
 
 1. [Modifica non distruttiva](non-destructive-editing/) 
 2. [Arrangiamento delle tracce](arranging-tracks/) 
-3. [Impostazione del tempo musicale](setting-up-time-signature/) 
+3. [Impostazione dell'indicazione metrica (time signature)](setting-up-time-signature/) 
 4. [Utilizzo degli intervalli](using-ranges/)
 5. [Lavorare con le regioni](working-with-regions/) 
 6. [Ulteriori operazioni sulle regioni](further-region-operations/) 

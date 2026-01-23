@@ -92,8 +92,8 @@ del mouse, e così via.
 
 Cliccando con il tasto destro sui nomi dei righelli si aprirà un menu con tutti i righelli disponibili. Puoi 
 deselezionare i righelli che non ti servono per risparmiare spazio sullo schermo. Maggiori informazioni su queste 
-operazioni sono disponibili nei capitoli [Impostazione della timeline](../../setting-up-the-timeline/) e 
-[Impostazione del tempo musicale](../../../editing-sessions/setting-up-time-signature/).
+operazioni sono disponibili nei capitoli [impostazione della timeline](../../setting-up-the-timeline/) e 
+[impostazione della metrica](../../../editing-sessions/setting-up-time-signature/).
 
 {{< figure src="it/ardour8-overview-rulers.png" alt="Timeline Rulers" >}}
 
