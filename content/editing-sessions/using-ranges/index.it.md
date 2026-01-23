@@ -37,71 +37,63 @@ l'opzione _Allineamento_ nella barra degli strumenti e seleziona _Nessuna grigli
 
 {{< figure src="it/ardour8-snap-to-region-boundaries.png" alt="Aggancia ai confini della regione" >}}
 
-## Editing ranges
+## Modifica intervalli
 
-Once you created a range, you can easily tweak it's start and end positions by
-hovering range boundaries with the mouse pointer, grabbing them and dragging to
-the left or to the right.
+Una volta creato un intervallo, puoi facilmente modificarne le posizioni iniziale e finale passando con il puntatore del
+mouse sui confini dell'intervallo, selezionandoli e trascinandoli verso sinistra o verso destra.
 
 {{< figure src="it/ardour7-editing-ranges.gif" alt="Modifica intervalli" >}}
 
-If you forgot to include a track into a range, you don't need to redo the range
-selection. Just hold **Ctrl** button and click on the track's header on the
-canvas. Alternatively, hold **Ctrl** and click on track's name in the _Tracks &
-Busses_ tab of the _Editor List_ dock.
+Se hai dimenticato di includere una traccia in un intervallo, non è necessario ripetere la selezione dell'intervallo. 
+Basta tenere premuto il tasto **Ctrl** e fare clic sull'intestazione della traccia nell'area di lavoro. In alternativa, 
+tieni premuto **Ctrl** e fai clic sul nome della traccia nella scheda _Tracce e bus_ della _Lista dell'editor_.
 
 {{< figure src="it/ardour7-adding-track-to-range.gif" alt="Aggiunta di traccia all'intervallo" >}}
 
-## Playing back ranges in a loop
+## Riproduzione di intervalli in loop
 
-Returning to our rhythmic passage example, we will want to hear the passage we
-are composing, perhaps as a loop, while we are moving the samples around. To do
-that, we must create a range to listen to within our session, so that we can
-return to exactly this point in the session again and again.
+Tornando al nostro esempio di passaggio ritmico, vorremo ascoltare il passaggio che stiamo componendo, magari in loop, 
+mentre spostiamo i campioni. Per farlo, dobbiamo creare un intervallo di ascolto nella nostra sessione, in
+modo da poter tornare esattamente a questo punto più e più volte.
 
 {{< figure src="it/ardour8-loop-range-menu-command.png" alt="Intervallo di loop nel menu contestuale" >}}
 
-Zoom out if needed (**-**) to see full bars in the timeline. Use the _Range_
-tool to select an entire bar, then right-click inside a range and pick one of
-the two commands:
+Se necessario, ridurre lo zoom (**-**) per visualizzare le barre complete nella timeline. Utilizzare lo strumento 
+_Intervallo_ per selezionare un'intera barra, quindi fare clic con il pulsante destro del mouse all'interno di un 
+intervallo e scegliere uno dei due comandi:
 
-1. _Loop Range_ (on the screenshot above) to create a loop and start playing it
-immediately.
+1. _Riproduci l'intervallo_ (nella schermata sopra) per creare un loop e avviarne immediatamente la riproduzione.
 
-2. _Set loop from selection_ to only create loop markers without immediate
-playback.
+2. _Ciclo sull'intervallo_ per creare solo indicatori di loop senza riproduzione immediata.
 
 {{< figure src="it/ardour8-looped-range-playback.png" alt="Looped range playback" >}}
 
-As long as loop markers are there, you can start playing back that portion of
-the timeline in a loop whenever you like (on the screenshot above). To do that,
-either click the **Play loop range** button in the _Transport_ toolbar or press
-the **L** shortcut.
+Finché sono presenti i marcatori di loop, è possibile riprodurre quella parte della timeline in loop ogni volta che lo 
+si desidera (nell'immagine sopra). Per farlo, fare clic sul pulsante **Riproduci intervallo di ciclo** nella barra degli 
+strumenti _Trasporto_ oppure premere il tasto di scelta rapida **L**.
 
 {{< figure src="it/ardour8-play-loop-range-button.png" alt="Pulsante Intervallo loop in Trasporto" >}}
 
-You can also tweak the position of loop markers while playing the range in a
-loop. Just grab a marker and drag it to the left or to the right.
+È anche possibile modificare la posizione dei marcatori di loop durante la riproduzione dell'intervallo in loop. Basta
+selezionare un marcatore e trascinarlo verso sinistra o verso destra.
 
-## More editing options for ranges
+## Ulteriori opzioni di modifica degli intervalli
 
-There are more operations you can do on ranges, all available in the right-click
-menu:
+Ci sono altre operazioni che puoi fare sugli intervalli, tutte disponibili nel menu che si apre cliccando con il tasto 
+destro del mouse:
 
-- _Separate_ will cut the original regions at range borders.
-- _Duplicate_ will create one copy of the range and place it starting at the
-right border of the range. Any existing data will be overlaid, so you can still
-access it.
-- _Crop Region To Range_ will trim affected regions to the extent of the range.
+- _Separa_ taglierà le regioni originali ai confini dell'intervallo. 
+- _Duplica intervallo_ creerà una copia dell'intervallo e la posizionerà a partire dal confine destro dell'intervallo. 
+Tutti i dati esistenti verranno sovrapposti, quindi potrai comunque accedervi. 
+- _Ritaglia regione in base all'intervallo_ ritaglierà le regioni interessate all'estensione dell'intervallo.
 
-You can also inspect loudness and spectral characteristics of data in a range or
-export just the data inside a range rather than the entire session (see [this
-chapter](../../exporting-sessions/exporting-a-range/) for more info on exporting
-ranges).
+È anche possibile controllare il volume e le caratteristiche spettrali dei dati in un intervallo o esportare solo i dati
+all'interno di un intervallo anziché l'intera sessione (vedere 
+[questo capitolo](../../exporting-sessions/exporting-a-range/) per ulteriori informazioni sull'esportazione di 
+intervalli).
 
-## Continuing
+## Continua
 
-In the next step, we will learn about working with regions to compose a rhythm
-with these samples.
+Nel prossimo capitolo impareremo a lavorare con le regioni per comporre un ritmo con questi campioni.
 
-Next: [WORKING WITH REGIONS](../working-with-regions)
+Successivo: [Lavorare con le regioni](../working-with-regions)
