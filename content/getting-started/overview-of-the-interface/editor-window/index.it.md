@@ -92,8 +92,8 @@ del mouse, e così via.
 
 Cliccando con il tasto destro sui nomi dei righelli si aprirà un menu con tutti i righelli disponibili. Puoi 
 deselezionare i righelli che non ti servono per risparmiare spazio sullo schermo. Maggiori informazioni su queste 
-operazioni sono disponibili nei capitoli [Impostazione della timeline](../../setting-up-the-timeline/) e 
-[Impostazione del tempo musicale](../../../editing-sessions/setting-up-time-signature/).
+operazioni sono disponibili nei capitoli [impostazione della timeline](../../setting-up-the-timeline/) e 
+[impostazione della metrica](../../../editing-sessions/setting-up-time-signature/).
 
 {{< figure src="it/ardour8-overview-rulers.png" alt="Timeline Rulers" >}}
 
@@ -141,7 +141,7 @@ _Intervalli e marcatori_.
 {{< figure src="it/ardour8-sources-list.png" alt="Elenco dell'editor" >}}
 
 - _Tracce e bus_ fornisce una panoramica di tutte le tracce e i bus presenti nel progetto, compresi quelli invisibili. 
-Questa scheda è trattata nel capitolo [Disposizione delle tracce](../../../editing-sessions/arranging-tracks/).
+Questa scheda è trattata nel capitolo [arrangiamento delle tracce](../../../editing-sessions/arranging-tracks/).
 - _Sorgenti_ elenca tutti i file presenti sul disco importati nella sessione.
 - _Regioni_ è un elenco di tutte le registrazioni della sessione. È possibile riutilizzare sia le sorgenti che le 
 regioni trascinandole sull'area di lavoro. Maggiori informazioni sulle regioni sono disponibili nel capitolo 

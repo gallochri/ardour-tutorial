@@ -1,69 +1,64 @@
 ---
-title: Disposizione delle tracce
+title: Arrangiamento delle tracce
 description: Come organizzare le regioni sulla timeline in Ardour
 weight: 2
 cascade:
   type: docs
 ---
 
-In the following chapters we will use Ardour to create a short rhythmic passage
-using several drumkit samples.
+Nei capitoli seguenti useremo Ardour per creare un breve passaggio ritmico utilizzando diversi campioni di batteria.
 
-We will continue working on this passage in later tutorials, such as _Working
-with Regions_ and _Creating Looped Sections_. We assume that you have read
-the chapters in the _Getting Started_ section already, and are familiar with
-_Importing Audio_, _Tracks_, and the _Timeline_.
+Continueremo a lavorare su questo passaggio nei tutorial successivi, come _Lavorare con le regioni_ e 
+_Creare sezioni in loop_. Partiamo dal presupposto che abbiate già letto i capitoli della sezione _Per Iniziare_ e che 
+abbiate familiarità con _Importazione di audio_, _Tracce_ e _Timeline_.
 
-## Importing Samples
 
-The first step is to add some sounds, which is discussed at length in the
-_Importing Audio_ chapter. Here, we are using the _Add existing media_
-dialog (**Ctrl + I**) to import some drumkit samples as regions. The samples
-used in this tutorial were obtained from a sample pack from the
-[freesound.org](http://www.freesound.org/) website (the
-[Nord Drum Mini Kit](https://freesound.org/people/menegass/packs/10430/) sample
-pack).
+## Importazione di campioni
 
-{{< figure alt="FS1" src="en/ardour7-freesound-1.png" >}}
+Il primo passo consiste nell'aggiungere alcuni suoni, come descritto in dettaglio nel capitolo _Importazione di audio_.
+In questo caso, utilizziamo la finestra di dialogo _Aggiungi media esistenti_ (**Ctrl + I**) per importare alcuni 
+campioni di batteria come regioni. I campioni utilizzati in questo tutorial sono stati ottenuti da un pacchetto di 
+campioni dal sito web [freesound.org](http://www.freesound.org/) (il pacchetto di campioni 
+[Nord Drum Mini Kit](https://freesound.org/people/menegass/packs/10430/)).
 
-After importing a few sounds from the downloaded sample pack (bass drum, snare,
-hi-hat, clap), our session looks like this (in this case we used the _Add files
-as new tracks_ option, and inserted _at session start_. The drumkit samples
-appear as new individual tracks in the _Editor_ window, each with the name of the
-audio file used. If the file names are too long or obscure, you may want to
-rename your tracks for clarity.
+{{< figure alt="FS1" src="it/ardour8-freesound-1.png" >}}
 
-{{< figure alt="FS2" src="en/ardour7-freesound-2.png" >}}
+Dopo aver importato alcuni suoni dal pacchetto di campioni scaricato (grancassa, rullante, charleston, clap), la nostra 
+sessione appare così (in questo caso abbiamo utilizzato l'opzione _Aggiungi file come nuove tracce_ e li abbiamo 
+inseriti _all'inizio della sessione_. I campioni della batteria appaiono come nuove tracce individuali nella finestra 
+_Editor_, ciascuna con il nome del file audio utilizzato. Se i nomi dei file sono troppo lunghi o poco chiari, è 
+possibile rinominare le tracce per maggiore chiarezza.
 
-## Organizing the Tracks
+{{< figure alt="FS2" src="it/ardour7-freesound-2.png" >}}
 
-Let's rename the tracks so we can quickly see the location of each instrument.
-To do that, double-click on the track name to edit it.
+## Organizzazione delle tracce
 
-{{< figure alt="FS3" src="en/ardour7-freesound-3.png" >}}
+Rinominiamo le tracce in modo da poter vedere rapidamente la posizione di ciascuno strumento. 
+Per farlo, fai doppio clic sul nome della traccia per modificarlo.
 
-You may also wish to rearrange the order of the tracks from top to bottom in the
-editor window. Do that by clicking the _Tracks & Busses_ tab at the far right
-of the _Editor_ window and drag-and-dropping the tracks in the order you want.
+{{< figure alt="FS3" src="it/ardour7-freesound-3.png" >}}
 
-{{< figure alt="FS4" src="en/ardour7-freesound-4.png" >}}
+È anche possibile riorganizzare l'ordine delle tracce dall'alto verso il basso nella finestra dell'editor. Per farlo, 
+cliccare sulla scheda _Tracce e bus_ all'estrema destra della finestra _Editor_ e trascinare le tracce nell'ordine 
+desiderato.
 
-Another option to rearrange tracks is to select a track and use **Ctrl+Arrow
-Up/Down** shortcut to move it up or down.
+{{< figure alt="FS4" src="it/ardour8-freesound-4.png" >}}
+
+Un'altra opzione per riorganizzare le tracce è selezionare una traccia e utilizzare la scorciatoia 
+**Ctrl+Freccia su/giù** per spostarla verso l'alto o verso il basso.
 
 {{< callout type="info" >}}
-You can also use the V check boxes in this tab to view or hide
-tracks in the main canvas.
+È inoltre possibile utilizzare le caselle di controllo V in questa scheda per visualizzare o nascondere le tracce 
+nell'area di lavoro principale.
 {{< /callout >}}
 
-Here we have ordered the drumkit so that the kick drum is on the bottom, the
-snare and high-hat are in the middle, and the clap is on top.  
+Qui abbiamo ordinato la batteria in modo che la grancassa sia in basso, il rullante e il charleston siano al centro e il
+clap sia in alto.
 
 {{< figure alt="FS6" src="en/ardour7-freesound-5.png" >}}
 
-## Continuing
+## Continua
 
-In the next step we will learn about setting up the meter to organize these
-samples into a rhythm.
+Nel prossimo passaggio impareremo come impostare il metronomo per organizzare questi campioni in un ritmo.
 
-Next: [SETTING UP TIME SIGNATURE](../setting-up-time-signature)
+Successivo: [Impostazione dell'indicazione metrica (time signature)](../setting-up-time-signature)
