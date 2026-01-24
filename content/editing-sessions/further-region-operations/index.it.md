@@ -59,69 +59,63 @@ dettaglio nel capitolo [lavorare con le regioni](../working-with-regions).
 Sentiti libero di esplorare da solo gli altri sotto-menu non menzionati sopra. Molti di essi rispecchiano le opzioni che
 trovi nel menu *Regione* di Ardour. Di seguito approfondiamo alcune delle funzioni più utili.
 
-## Pitch Shifting
+## Cambia intonazione
 
-The _Pitch Shift_ (**Alt+8**) function alters the pitch of a region without 
-changing its duration. The function applies a pitch-shifting algorithm to
-create a new audio clip based on the source clip.
+La funzione _Cambia intonazione_ (**Alt+8**) modifica l'intonazione di una regione senza alterarne la durata. La 
+funzione applica un algoritmo di modifica dell'intonazione per creare una nuova clip audio basata sulla clip sorgente.
 
-The _Pitch Shift_ window allows the user to specify the amount and direction of
-transposition desired. The window includes a _Preserve Formants_ option. When
-pitch shifting by large amounts, the preserve formants option can give results
-that sound slightly more natural, particularly when used on vocal material.
+La finestra _Cambia intonazione_ consente all'utente di specificare l'entità e la direzione della trasposizione 
+desiderata. La finestra include un'opzione denominata _Preserva timbro_. Quando si effettuano trasposizioni di entità 
+rilevante, l'opzione "preserva timbro" può fornire risultati leggermente più naturali, in particolare se utilizzata su 
+materiale vocale.
 
-![Pitch Shift](en/ardour7-pitch-shift-window.png?height=30vh)
+{{< figure alt="Cambia intonazione" src="it/ardour8-pitch-shift-window.png" >}}
 
-## Normalize
+## Normalizza
 
-The _Normalize_ function (**Alt+3** shortcut) non-destructively boosts the level
-of the  selected region so that the _peaks_ are at 0 dB or less. When
-normalizing  to 0.0, the region will be as loud as possible while avoiding
-clipping.  Sometimes you may find useful to normalize a region to a value less
-than 0,  such as -1.0, -3.0, or -6.0 decibels, so it doesn't become too loud. 
+La funzione _Normalizza_ (scorciatoia **Alt+3**) aumenta in modo non distruttivo il livello della regione selezionata in
+modo che i _picchi_ siano pari o inferiori a 0 dB. Quando si normalizza a 0,0, la regione avrà il volume massimo 
+possibile evitando il clipping.  A volte può essere utile normalizzare una regione a un valore inferiore a 0, ad esempio
+-1,0, -3,0 o -6,0 decibel, in modo che non diventi troppo forte.
 
-![Normalize](en/ardour7-normalize-window.png?width=20vw)
+{{< figure alt="Normalizza" src="it/ardour8-normalize-window.png" >}}
 
-Two other useful gain operations for regions are _Boost Gain_ (**Alt+6**) and
-_Cut Gain_ (**Alt+7**), both incrementing gain by 1dB upwards or downwards.
-Be sure to try them out.
+Altre due operazioni utili per le regioni sono _Aumenta guadagno_ (**Alt+6**) e _Riduci guadagno_ (**Alt+7**), che 
+aumentano o diminuiscono il guadagno di 1dB. Provale!
 
-## Reverse
+## Inverti
 
-The _Reverse_ (**Alt+4**) function reverses the selected region of audio, in 
-effect causing it to play backwards. Reversing a region creates a new audio
-file "behind the scenes".
+La funzione _Inverti_ (**Alt+4**) inverte la regione audio selezionata, effettuando la riproduzione al contrario. 
+L'inversione di una regione crea un nuovo file audio "dietro le quinte".
 
-## Operations On Two Or More Selected Ranges
+## Operazioni su due o più intervalli selezionati
 
-If more than one range is selected, the operation will apply to all of them (for
-example, _Normalize_, _Reverse_, etc.)
+Se viene selezionata più di una regione, l'operazione verrà applicata a tutte (ad esempio, _Normalizza_, _Inverti_, 
+ecc.).
 
-### Combine
+### Combina
 
-Some operations from the context menu will only become available when two or
-more regions are selected. For example, let's take a look at the _Combine_
-function, under the sub-menu _Edit_. First we select two adjacent regions:
+Alcune operazioni dal menu contestuale saranno disponibili solo quando sono selezionate due o più regioni. Ad esempio, 
+diamo un'occhiata alla funzione _Combina_, nel sotto-menu _Modifica_. Per prima cosa selezioniamo due regioni adiacenti:
 
-{{< figure alt="combine" src="en/ardour7-region-combine-1.png" >}}
+{{< figure alt="Combina 1" src="it/ardour8-region-combine-1.png" >}}
 
-Then we choose _Combine_ from the right-click context menu, or from Ardour's
-main menu `Region > Edit > Combine`: 
+Quindi selezioniamo _Combina_ dal menu contestuale del tasto destro del mouse o dal menu principale di Ardour 
+`Regione > Modifica > Combina`:
 
-{{< figure alt="combine 2" src="en/ardour7-region-combine-2.png" >}}
+{{< figure alt="Combina 2" src="en/ardour8-region-combine-2.png" >}}
 
-As a result, the selected regions are combined into one. This is particulary
-useful when you have found an exact sequence of regions that works just as you
-want, and then you would like to copy and/or move the whole sequence as group.
+Le regioni selezionate vengono unite in un'unica regione. Ciò è particolarmente utile quando si è individuata una 
+sequenza esatta di regioni che funziona esattamente come desiderato e si desidera copiare e/o spostare l'intera sequenza
+come gruppo.
 
-Notice that the resulting combined region has the word "compound" attached to
-its name. 
+Si noti che alla regione combinata risultante è stata aggiunta la parola "compound" al nome.
 
-{{< figure alt="combine 3" src="en/ardour7-region-combine-3.png" >}} 
+{{< figure alt="Combina 3" src="it/ardour8-region-combine-3.png" >}} 
 
-## Continuing
+## Continua
 
-In the following chapter, we will learn a bit more about the powerful
-tools Ardour has available by changing **Edit Modes**.
+Nel capitolo seguente impareremo qualcosa in più sui potenti strumenti messi a disposizione da Ardour modificando le 
+**modalità di editing**.
 
-Next: [CHANGING EDIT MODES](../changing-edit-modes)
+Successivo: [Modifica della modalità di editing](../changing-edit-modes)
