@@ -6,289 +6,254 @@ cascade:
   type: docs
 ---
 
-Sections of audio are called _regions_ in Ardour. To compose the short rhythmic
-passage we've been working on, we will need to know how to _select_, _move_,
-_split_ and _trim_ these regions, as well as how to _fade in_ or _fade out_
-their volume and create _crossfades_ between them. Some of these options may
-need to happen at specific _edit points_ in the composition, or according to the
-musical _meter_ we can define with the _timeline_ and the _grid_ as well.
+Le sezioni audio sono chiamate _regioni_ in Ardour. Per comporre il breve passaggio ritmico su cui stiamo lavorando, 
+dovremo sapere come _selezionare_, _spostare_, _dividere_ e _tagliare_ queste regioni, nonché come _sfumare_ o 
+_attenuare_ il loro volume e creare _dissolvenze incrociate_ tra di esse. Alcune di queste opzioni potrebbero dover 
+essere applicate in specifici _punti di modifica_ della composizione, oppure in base al _metro_ musicale che possiamo 
+definire con la _timeline_ e la _griglia_.
 
-## Selecting Regions
+## Selezione delle regioni
 
-The _Grab_ mode (**G** shortcut) is the tool to select and move objects. It is
-located just below the transport menu in the _Editor_ window (the little "hand"
-icon). You will use this tool a lot in your Ardour work.
+La modalità _Mano_ (scorciatoia **G**) è lo strumento che consente di selezionare e spostare gli oggetti. Si trova 
+appena sotto il menu di trasporto nella finestra _Editor_ (la piccola icona a forma di "mano"). Utilizzerete spesso 
+questo strumento durante il vostro lavoro con Ardour.
 
-![Object Tool](en/ardour7-grab-mode.png?width=30vw)
+{{< figure alt="Strumento mano" src="it/ardour8-grab-mode.png" >}}
 
-When it is active, your mouse pointer will look like a little hand icon.
+Quando è attivo, il puntatore del mouse assumerà l'aspetto di una piccola icona a forma di mano.
 
-Try all of the operations below, for practice:
+Prova tutte le operazioni riportate di seguito, per fare pratica:
 
-- Click on the waveform of the region to select it. Click and drag on a region
-to move it around (left and right within the same track, but also up and down
-onto other tracks).
+- Clicca sulla forma d'onda della regione per selezionarla. Clicca e trascina su una regione per spostarla (a sinistra e
+a destra all'interno della stessa traccia, ma anche su e giù su altre tracce).
 
-- Use **Ctrl+Click** to create and drag around a _copy_ of the region.
+- Utilizza **Ctrl+clic** per creare e trascinare una _copia_ della regione.
 
-- You can select multiple regions by holding the **Shift** key while clicking
-on each region you want to select.
+- È possibile selezionare più regioni tenendo premuto il tasto **Shift** mentre si fa clic su ciascuna regione che si 
+desidera selezionare.
     
-- You can also drag a selection box over multiple regions to select them all.
+- È anche possibile trascinare un riquadro di selezione su più regioni per selezionarle tutte.
 
-![Object selection](en/ardour7-object-selection.png?width=50vw)
+{{< figure alt="Selezione oggetto" src="it/ardour8-object-selection.png" >}}
 
-- Move multiple regions at the same time after selecting them. 
+- Seleziona più regioni contemporaneamente e spostale tutte insieme.
 
-- You can select several sequential regions on one track all at once by holding
-down the **Shift** key while selecting the first and the last regions of the
-sequence (copy a few regions on the same track to try this out).
+- È possibile selezionare più regioni sequenziali su una traccia contemporaneamente tenendo premuto il tasto **Shift** 
+mentre si selezionano la prima e l'ultima regione della sequenza (copiare alcune regioni sulla stessa traccia per 
+provare questa funzione).
 
-- When you select a single region, make sure to click on the waveform section of
-its rectangle. The lower stripe with the region name is used for a different
-action (see the _Trimming Regions_ section below).
+- Quando selezioni una singola regione, assicurati di cliccare sulla sezione della forma d'onda del suo rettangolo. La 
+striscia inferiore con il nome della regione viene utilizzata per un'azione diversa (vedi la sezione _Rifilatura delle 
+regioni_ più avanti).
     
-- Use the **Del** key to delete selected regions.
+- Utilizzare il tasto **Canc** per eliminare le regioni selezionate.
 
-- Standard copy (**Ctrl+C**), cut (**Ctrl+X**), and paste (**Ctrl+V**)
-operations also work with regions. 
+- Le operazioni standard di copia (**Ctrl+C**), taglia (**Ctrl+X**) e incolla (**Ctrl+V**) funzionano anche con le 
+regioni.
 
-## Moving Regions
+## Muovendo le regioni
 
-While moving a region, a _timecode_ will appear on the screen in yellow numbers.
-This timecode is the region's starting point on the timeline. The unit of this
-timecode is the same as the unit of the primary clock, which you can change by
-right-clicking on the clock and choosing a new unit (_Minutes:Seconds_,
-_Bars:Beats_, etc).
+Durante lo spostamento di una regione, sullo schermo apparirà un _codice temporale_ in numeri verdi. Questo codice 
+temporale è il punto di inizio della regione sulla timeline. L'unità di misura di questo codice temporale è la stessa 
+dell'unità di misura dell'orologio principale, che è possibile modificare facendo clic con il tasto destro del mouse 
+sull'orologio e selezionando una nuova unità di misura (_Minuti:Secondi_, _Battute:Battiti_, ecc.).
 
-You can move regions horizontally (sideways) to a different point in time on the
-same track, or you can move the selected region vertically (up or down) to a
-different track. 
+È possibile spostare le regioni orizzontalmente (di lato) in un punto diverso della stessa traccia, oppure spostare la 
+regione selezionata verticalmente (verso l'alto o verso il basso) in una traccia diversa.
 
-When a set of one or more regions is selected, you can move the whole set by
-dragging with the mouse.
+Quando si seleziona un insieme di una o più regioni, è possibile spostare l'intero insieme trascinandolo con il mouse.
 
 {{< callout type="info" >}}
-Make sure to select the region in its waveform section, because selecting the
-bottom title bar area is used for a different action (see _Trimming Regions_
-below).
+Assicurati di selezionare la regione nella sezione della forma d'onda, perché selezionando l'area della barra del titolo
+inferiore si attiva un'azione diversa (vedi _Rifilatura delle regioni_ di seguito).
 {{< /callout >}}
 
-## Duplicating Regions
+## Duplicazione delle regioni
 
-In addition to **Ctrl+Click+Drag** and standard copy/paste, Ardour offers
-other handy ways to duplicate regions. Use the _Grab_ mode (select/move
-objects) to select one or more regions, then use the _Duplicate_ function to
-make one or more copies (menu `Regions > Duplicate`). Three options are
-available:
+Oltre a **Ctrl+Clic+Trascina** e al copia/incolla standard, Ardour offre altri modi pratici per duplicare le regioni. 
+Usa la modalità _mano_ (seleziona/sposta oggetti) per selezionare una o più regioni, quindi usa la funzione _Duplica_ 
+per creare una o più copie (menu `Regione > Duplica`). Sono disponibili tre opzioni:
 
-- _Duplicate_ (shortcut **Alt+D**): make a copy of the selected region on
-the same track, immediately after the original.
+- _Duplica_ (scorciatoia **Alt+D**): crea una copia della regione selezionata sulla stessa traccia, immediatamente dopo
+l'originale.
 
-- _Multi-Duplicate_ (shortcut **Shift+D**): make multiple copies of the
-selected region at once (same track, in sequence). You can specify the number
-of duplications.
+- _Replica_ (scorciatoia **Shift+D**): crea più copie della regione selezionata contemporaneamente (stessa traccia, 
+in sequenza). È possibile specificare il numero di duplicazioni.
 
-- _Fill Track_: make as many copies of the selected region as needed to fill
-the entire track, all the way up to the _End_ marker on the timeline. 
+- _Riempi traccia_: crea tutte le copie della regione selezionata necessarie a riempire l'intera traccia, fino al 
+marcatore _Fine_ sulla timeline.
 
-In the following screenshot, regions have been duplicated using the methods
-above.
+Nella schermata seguente, le regioni sono state duplicate utilizzando i metodi sopra indicati.
 
-{{< figure alt="Duplicate" src="en/Ardour4_Region_Duplicate.png" >}} 
+{{< figure alt="Duplica" src="it/ardour8-region-duplicate.png" >}}
 
-## Using Edit Points
+## Utilizzo dei punti di modifica
 
-When you use the standard copy/cut/paste commands, where exactly will the
-regions be pasted? The exact location is determined by the edit point
-drop-down menu.
+Quando si utilizzano i comandi standard copia/taglia/incolla, dove verranno incollate esattamente le regioni? La 
+posizione esatta è determinata dal menu a tendina del punto di modifica.
 
-![Edit Point](en/ardour7-edit-point-menu.png?width=25vw)
+{{< figure alt="Punto di Modifica" src="it/ardour8-edit-point-menu.png" >}}
 
-If _Mouse_ is selected as the edit point, the copied region will be pasted at
-the current position of the mouse.
+Se _Mouse_ è selezionato come punto di modifica, la regione copiata verrà incollata nella posizione corrente del mouse.
 
-If _Playhead_ is selected as the edit point, the copied region will be pasted
-at the red playhead line on the same track where the original region is.
+Se _Testina_ è selezionato come punto di modifica, la regione copiata verrà incollata sulla linea rossa della testina 
+nella stessa traccia in cui si trova la regione originale.
 
-Finally, if _Marker_ is selected as the edit point, then the copied region
-will be pasted immediately after the currently selected _location marker_.
+Infine, se _Marcatore_ è selezionato come punto di modifica, la regione copiata verrà incollata immediatamente dopo il 
+_marcatore di posizione_ attualmente selezionato.
 
-## Markers
+## Marcatori di posizione
 
-It is very useful to be able to tag different locations in a session for later
-use when editing and mixing. Ardour supports several ways for doing this. The
-most common method is using _location markers_, which define specific positions
-in time. 
+È molto utile poter contrassegnare diverse posizioni in una sessione per poterle riutilizzare in seguito durante 
+l'editing e il mixaggio. Ardour supporta diversi modi per farlo. Il metodo più comune è l'uso dei 
+_marcatori di posizione_, che definiscono posizioni specifiche nel tempo.
  
-Location markers can be added to the timeline by right-clicking on the
-_Location Markers_ strip and selecting _Add New Location Marker_. If you don't
-see the _Location Markers_ strip, right-click on the timeline and select it to
-make it visible. Location markers can also be selected with the mouse and
-moved to new positions. Right-clicking on a location marker lets you rename
-the marker, among other options. 
+È possibile aggiungere marcatori di posizione nella timeline facendo clic con il pulsante destro del mouse sulla barra 
+_Marcatore di posizione_ e selezionando _Aggiungi_. Se la barra _Marcatore di posizione_ non è visibile, fare clic con 
+il pulsante destro del mouse sulla timeline e selezionarla per renderla visibile. Gli indicatori di posizione possono 
+anche essere selezionati con il mouse e spostati in nuove posizioni. Facendo clic con il pulsante destro del mouse su un
+marcatore di posizione è possibile rinominarlo, oltre ad altre opzioni.
 
-{{< figure alt="Location Marker" src="en/Ardour4_Location_Marker.png" >}} 
-
-{{< callout type="info" >}}
-When you first create a new session, two location markers are automatically
-added by default. These are the _start_ and _end_ markers that you see in
-the screenshot above. If you don't see the _end_ marker, zoom out enough and
-you will find it. 
-{{< /callout >}}
-
-## Splitting Regions
-
-To _split_ a region simply means to divide a single region into two independent
-regions. There are two ways of accomplishing this:
-
-* You can use the _Cut_ mode (**C** shortcut) to point and click anywhere you
-want to split; or
-
-* You can stay in the _Grab_ mode and use the **S** shortcut (for "Split").
-In this last case, the point at which a region will be split depends on the
-currently selected edit point. If _Mouse_ is selected as your current edit
-point, select a region and place the cursor at the point you would like to
-_Split_, then type **S**" (same as going to menu `Edit > Split/Separate`).
-
-{{< figure alt="Split" src="en/Ardour4_Split_Region.png" >}}
-
-After being split, the original single region becomes two independent regions, 
-with a new name for each, as in the image above. The two new regions are now 
-entirely independent. You can move and edit them separately.
-
-{{< figure alt="Split" src="en/Ardour4_Split_Region_Moved.png" >}}
-
-Regions can also be split by using the playhead or a marker as the edit point. 
-
-The split regions will receive a name derived from the original name of its
-parent region, and you will see this reflected in your regions list. For
-example, in the image above, you see two regions called _pink.15_ and _pink.16_,
-which means they were split from a parent region called "pink" (not shown in
-image).
+{{< figure alt="Marcatore di posizione" src="it/ardour8-location-marker.png" >}}
 
 {{< callout type="info" >}}
-Splitting ranges will follow your grid settings. For example, if you have an
-active grid set for bars, splits will happen at the bar boundaries. If you
-choose _No Grid_, splits will happen wherever the edit point is, regardless of
-any grid.
+Quando crei una nuova sessione, vengono aggiunti automaticamente due marcatori di posizione. Si tratta dei marcatori 
+_inizio_ e _fine_ che vedi nella schermata sopra. Se non vedi l'indicatore _fine_, riduci lo zoom e lo troverai.
 {{< /callout >}}
 
-## Trimming Regions
+## Divisione delle regioni
 
-If you move the cursor near the left or right side edge of a region, you will
-see that the pointer becomes an arrow. Click and drag inwards from either end
-of the region, and the region will be shortened accordingly. This is called
-_trimming_ the region. Regions can be trimmed from the start of the region
-(drag from left to right at the edge) or from the end (drag from right to
-left).
+_Dividere_ una regione significa semplicemente suddividere una singola regione in due regioni indipendenti. Ci sono due 
+modi per farlo:
 
-This action is non-destructive: no audio is actually being deleted. It is as
-if you were just "hiding" those portions of the region that you don't want or
-don't need anymore. Later on, you can "un-trim" the region (i.e., extend it
-back to its original full size), even if it has been moved or copied to a new
-track.
+* È possibile utilizzare la modalità _forbice_ (scorciatoia **C**) per selezionare il punto in cui si desidera dividere 
+il documento; oppure
 
-{{< figure alt="Trim" src="en/Ardour4_Trimming_Regions.gif" >}}
+* È possibile rimanere in modalità _mano_ e utilizzare la scorciatoia **S** (per "Split"). In quest'ultimo caso, il 
+punto in cui una regione verrà divisa dipende dal punto di modifica attualmente selezionato. Se _Mouse_ è selezionato 
+come punto di modifica corrente, selezionare una regione e posizionare il cursore nel punto in cui si desidera 
+_dividere_, quindi digitare **S**" (come se si andasse al menu `Modifica > Dividi/Separa`).
+
+{{< figure alt="Strumento forbice" src="it/ardour8-split-tool.png" >}}
+
+Dopo la divisione, la regione singola originale diventa due regioni indipendenti, ciascuna con un nuovo nome, come 
+nell'immagine sopra. Le due nuove regioni sono ora completamente indipendenti. È possibile spostarle e modificarle 
+separatamente.
+
+{{< figure alt="Dividi" src="it/ardour8-split-region-moved.png" >}}
+
+Le regioni possono anche essere divise utilizzando la testina o un marcatore come punto di modifica.
+
+Le regioni suddivise riceveranno un nome derivato dal nome originale della regione madre e questo sarà visibile 
+nell'elenco delle regioni. Ad esempio, nell'immagine sopra sono presenti due regioni denominate _nord-drum-can_1.9_ e 
+_nord-drum-can_1.10_, il che significa che sono state suddivise da una regione madre denominata "nord-drum-can" 
+(non mostrata nell'immagine).
 
 {{< callout type="info" >}}
-Like splitting, trimming will obey grid settings. If you don't want your
-trimming to be constrained to any grid, simply turn the grid off (_No Grid_).
+La suddivisione delle regioni seguirà le impostazioni della griglia. Ad esempio, se è attiva una griglia impostata 
+per le battute, la suddivisione avverrà ai confini delle battute. Se si seleziona _Nessuna griglia_, la suddivisione 
+avverrà ovunque si trovi il punto di modifica, indipendentemente dalla griglia.
 {{< /callout >}}
 
-## Deleted Regions
+## Rifilature delle regioni
 
-Because Ardour is non-destructive, the regions you have deleted from tracks
-are not completely removed from the session. They can always be accessed again
-from the region list on the far right side of the _Editor_ window (Regions can
-be dragged from the list onto any tracks).
+Se si sposta il cursore vicino al bordo sinistro o destro di una regione, si noterà che il puntatore assume la forma di 
+una freccia. Clicca e trascina verso l'interno da entrambe le estremità della regione e questa verrà ridotta di 
+conseguenza.
+Questa operazione è chiamata _rifilatura_ della regione. Le regioni possono essere rifilate dall'inizio della regione 
+(trascinando da sinistra a destra sul bordo) o dalla fine (trascinando da destra a sinistra).
 
-## Creating Fades in Regions
+Questa operazione non è distruttiva: nessun audio viene effettivamente eliminato. È come se si "nascondessero" quelle 
+parti della regione che non si desiderano o non servono più. In seguito, è possibile "annullare il taglio" della regione
+(ovvero, riportarla alle dimensioni originali), anche se è stata spostata o copiata su una nuova traccia.
 
-A _fade_ is a change in the volume of a region, either as the region starts or
-as it ends. A fade at the start of the region is a _fade in_, and at the end
-of a region it is a _fade out_. Each region has two small handles along the
-top corners, which can be dragged inwards from either edge to create a fade in
-or fade out. The screenshot below shows a fade in (indicated by the shaded
-area). 
+{{< figure alt="Rifilatura" src="it/Ardour4_Trimming_Regions.gif" >}}
 
-{{< figure alt="Fades1" src="en/Ardour4_Fades_1.png" >}} 
+{{< callout type="info" >}}
+Come la divisione, anche la rifilatura rispetta le impostazioni della griglia. Se non desideri che la rifilatura sia 
+vincolata alla griglia, disattiva semplicemente la griglia (_Nessuna griglia_).
+{{< /callout >}}
 
-In fact, every region has a fade in and fade out built-in. By default, the
-region fade is very short and serves to avoid clicks in the transitions at
-the start and end of the region. By adjusting the regions fade length as shown
-above, a more gradual transition can be accomplished.
+## Regioni eliminate
 
-By right-clicking on one of the fades (the shaded area), the speed of the fade
-can also be adjusted.
+Appurato che Ardour non è distruttivo, le regioni eliminate dalle tracce non vengono rimosse completamente dalla 
+sessione. È sempre possibile accedervi nuovamente dall'elenco delle regioni situato all'estrema destra della finestra 
+_Editor_ (le regioni possono essere trascinate dall'elenco su qualsiasi traccia).
 
-{{< figure alt="Fade Options" src="en/Ardour4_Fade_Options.png" >}} 
+## Creazione di dissolvenze nelle regioni
 
-## Crossfading Between Two Regions
+La _dissolvenza_ è una variazione del volume di una regione, all'inizio o alla fine della stessa. Una dissolvenza 
+all'inizio della regione è un chiamata _Dissolvenza in entrata_, mentre alla fine della regione è chiamata 
+_Dissolvenza in uscita_. Ogni regione ha due piccole maniglie agli angoli superiori, che possono essere trascinate verso
+l'interno da entrambi i bordi per creare una dissolvenza in entrata o in uscita. La schermata sottostante mostra una
+dissolvenza in entrata(indicato dall'area ombreggiata).
 
-When one region fades out while another fades in, this is called a
-_crossfade_. If the two regions are in different tracks, you can use the
-method described above with the fade in and fade out handles. The following
-screenshot shows an example. 
+{{< figure alt="Dissolvenza1" src="it/ardour8-fades-1.png" >}}
 
-{{< figure alt="Crossfade" src="en/Ardour4_Crossfade_1.png" >}} 
+Infatti, ogni regione ha una dissolvenza in entrata e in uscita incorporata. Per impostazione predefinita, la 
+dissolvenza della regione è molto breve e serve a evitare clic nelle transizioni all'inizio e alla fine della regione. 
+Regolando la durata della dissolvenza delle regioni come mostrato sopra, è possibile ottenere una transizione più 
+graduale.
 
-However, if both regions are in the same track, you need to overlap them in
-order to create a crossfade. When regions overlap on the same track, Ardour
-treats them as *layers*, that is, one of the regions is considered to be on
-top of the other. The important rule to understand is:
+Cliccando con il tasto destro del mouse su una delle dissolvenze (l'area ombreggiata), è possibile regolare anche la 
+velocità della dissolvenza.
 
-*The fade in (or fade out) of the topmost region represents the crossfade
-between the two regions.*
+{{< figure alt="Opzioni dissolvenza" src="it/ardour8-fade-options.png" >}}
 
-Once you understand this principle, it's easy to create and control crossfades
-between regions. Here's an example. The two separate regions seen below will
-be made to overlap in order to create a crossfade.
+## Dissolvenza incrociata tra due regioni
 
-{{< figure alt="Crossfade2" src="en/Ardour4_Crossfade_2.png" >}} 
+Quando una regione sfuma mentre un'altra entra in dissolvenza, si parla di _dissolvenza incrociata_. Se le due regioni 
+si trovano in tracce diverse, è possibile utilizzare il metodo descritto sopra con le maniglie di dissolvenza in entrata
+e in uscita. La schermata seguente mostra un esempio.
 
-Note that we did not add any extra fade out to the first region, but we did
-add a longer fade in to the second region. Then we drag the second region
-partly on top of the first:
+{{< figure alt="Dissolvenza incrociata1" src="it/ardour8-crossfade-1.png" >}}
 
-{{< figure alt="Crossfade3" src="en/Ardour4_Crossfade_3.png" >}} 
+Tuttavia, se entrambe le regioni si trovano nella stessa traccia, è necessario sovrapporle per creare una dissolvenza 
+incrociata. Quando le regioni si sovrappongono sulla stessa traccia, Ardour le tratta come *livelli*, ovvero una delle 
+regioni viene considerata sovrapposta all'altra. La regola importante da comprendere è:
 
-The fade in of the second region works now as the crossfade between the two
-regions. In other words, the first region will fade out in a mirror image way
-as the second region fades in.
+*La dissolvenza in entrata (o in uscita) della regione superiore rappresenta la dissolvenza incrociata tra le due 
+regioni.*
 
-In order for this to work, though, we need to make sure that the region that
-has the desired fade is *on top* in Ardour's layering system. In order to
-change layering of regions, select a region and go to the menu `Region >
-Layering`. 
+Una volta compreso questo principio, è facile creare e controllare le dissolvenze incrociate tra le regioni. Ecco un 
+esempio. Le due regioni separate visibili di seguito verranno sovrapposte per creare una dissolvenza incrociata.
 
-![Crossfade4](en/ardour7-crossfade-4.png?width=50vw)
+{{< figure alt="Dissolvenza incrociata2" src="it/ardour8-crossfade-2.png" >}}
 
-The difference may be hard to hear if you are doing this with the very short
-percussive sounds we imported earlier. To really hear the effect, import a
-couple of longer samples to try it out (for example, a sample of rain sounds,
-and another of a human voice). Overlap several seconds of your long samples on
-the same track. You will hear the difference as you move the second region to
-the bottom (_Lower to Bottom_), and then back to top (_Raise to Top_). When
-it's on top, we will hear the desired crossfade. When it's at the bottom, we
-will hear no crossfade, just an abrupt change from first to second region
-(assuming your first region has no fade out specified, as in the screenshots
-above).
+Si noti che non abbiamo aggiunto alcun dissolvenza in uscita alla prima regione, ma abbiamo aggiunto una dissolvenza in
+entrata più lunga alla seconda regione. Quindi trasciniamo la seconda regione parzialmente sopra la prima:
 
-## Using Grid Settings
+{{< figure alt="Dissolvenza incrociata3" src="it/ardour8-crossfade-3.png" >}}
 
-Experiment with the _Grid Mode_ setting, as discussed in the _Setting Up the
-Timeline_ chapter, to give different kinds of quantization — in other
-words, to constrain the boundaries of each region to certain grid points.
-Here, the grid has been activated and set to _Beats/16_, to quantize the
-regions to sixteenth notes within each bar. You may wish to trim the endpoints
-of some of the samples, as discussed above, to fit within the metric structure
-you have set up.
+La dissolvenza in ingresso della seconda regione ora funziona come dissolvenza incrociata tra le due regioni. In altre 
+parole, la prima regione svanirà in modo speculare mentre la seconda regione apparirà gradualmente.
 
-{{< figure alt="Beat" src="en/ardour7-beat.png" >}} 
+Affinché ciò funzioni, però, dobbiamo assicurarci che la regione con la dissolvenza desiderata sia *in primo piano* nel
+sistema di strati di Ardour. Per modificare la posizione degli starti delle regioni, seleziona una regione
+e vai al menu `Regione > Strato`.
 
-## Continuing
+{{< figure alt="Menu Strato" src="it/ardour8-crossfade-4.png" >}}
 
-In the next chapter, we will explore a few more things you can do with regions
+La differenza potrebbe essere difficile da percepire se si utilizza uno dei suoni di percussioni molto brevi importati 
+in precedenza. Per sentire davvero l'effetto, è necessario importare un paio di campioni più lunghi (ad esempio, un 
+campione di rumore di pioggia e un altro di voce umana). Sovrapporre alcuni secondi dei campioni lunghi sulla stessa 
+traccia. Sentirai la differenza quando sposti la seconda regione in basso (_Porta in fondo_) e poi di nuovo in alto 
+(_Porta in cima_). Quando è in alto, sentiremo la dissolvenza incrociata desiderata. Quando è in basso, non sentiremo 
+alcuna dissolvenza incrociata, ma solo un cambiamento brusco dalla prima alla seconda regione (supponendo che la prima 
+regione non abbia una dissolvenza in uscita specificata, come negli screenshot sopra).
 
-Next: [FURTHER REGION OPERATIONS](../further-region-operations)
+## Utilizzo delle impostazioni della griglia
+
+Sperimenta con l'impostazione _Modo griglia_, come descritto nel capitolo _Impostazione della timeline_, per ottenere 
+diversi tipi di quantizzazione, ovvero per limitare i confini di ciascuna regione a determinati punti della griglia.
+In questo caso, la griglia è stata attivata e impostata su _1/16_, per quantizzare le regioni in sedicesimi all'interno 
+di ogni battuta. Potresti voler tagliare i punti finali di alcuni campioni, come discusso in precedenza, per adattarli 
+alla struttura metrica che hai impostato.
+
+{{< figure alt="Battito" src="it/ardour8-beat.png" >}}
+
+## Continua
+
+Nel prossimo capitolo esploreremo alcune altre cose che è possibile fare con le regioni.
+
+Prossimo: [Ulteriori operazioni sulle regioni](../further-region-operations)
