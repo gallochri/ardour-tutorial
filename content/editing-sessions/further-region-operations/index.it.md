@@ -1,69 +1,63 @@
 ---
 title: Ulteriori operazioni sulle regioni
-description: Variazione dell'intonazione, normalizzazione e altre operazioni sulle regioni in Ardour
+description: Cambio dell'intonazione, normalizzazione e altre operazioni sulle regioni in Ardour
 weight: 6
 cascade:
   type: docs
 ---
 
-In this section you will learn a few more things you can do with regions.
+In questa sezione imparerai alcune altre cose che puoi fare con le regioni.
 
-Right-clicking a selected region reveals a context menu. The first item
-in the menu (labeled with the region's name) contains a large sub-menu.
-All of these operations are also available from Ardour's main *Region*
-menu.
+Cliccando con il tasto destro su una regione selezionata si apre un menu contestuale. La prima voce del menu 
+(contrassegnata dal nome della regione) contiene un ampio sotto-menu. Tutte queste operazioni sono disponibili anche dal
+menu principale *Regione* di Ardour.
 
-This section describes a few of the most commonly used operations
-accessible from these menus.
+Questa sezione descrive alcune delle operazioni più comunemente utilizzate accessibili da questi menu.
 
-{{< figure alt="Region menu" src="en/ardour7-region-menu.png" >}}
+{{< figure alt="Menu regione" src="it/ardour8-region-menu.png" >}}
 
-**Play**
-: Play back from the beginning to the end of that region (**H** shortcut).
+**Riproduci**
+: Riproduci dall'inizio alla fine di quella regione (scorciatoia **H**).
 
-**Tag**
-: Give a region some meaningful tag, e.g. "Good" that helps distinguishing it
-from others in the _Regions_ list
+**Etichetta**
+: Assegna a una regione una etichetta significativa, ad esempio "Buona", che aiuti a distinguerla dalle altre 
+nell'elenco _Regioni_.
 
-**Loop**
-: Set the loop range to fit that region's duration, and start looping it right
-away.
+**Ciclo**
+: Imposta l'intervallo di ripetizione in modo che corrisponda alla durata di quella regione e avvia immediatamente la 
+ripetizione.
 
-**Rename**
-: Change a region's name.
+**Rinomina**
+: Cambia il nome della regione selezionata.
 
-**Properties**
-: Lots of information on the region, plus the ability to change its gain.
+**Proprietà**
+: Molte informazioni sulla regione, oltre alla possibilità di modificarne il guadagno.
 
-**Position**
-: Among other options, in this sub-menu you will find the _Lock_ toggle box: it
-locks the region so that it cannot be moved or trimmed. It can still be split,
-however, and the resulting regions will be unlocked.
+**Posizione**
+: Tra le altre opzioni, in questo sotto-menu troverai la casella di selezione _Blocca_: blocca la regione in modo che 
+non possa essere spostata o tagliata. Tuttavia, può ancora essere divisa e le regioni risultanti saranno sbloccate.
 
-**Edit**
-: This submenu contains useful tools such as _Pitch Shift_ (**Alt+8**) and
-_Reverse_ (**Alt+4**). _Pitch Shift_ alters the pitch of a region without
-changing its duration. _Reverse_ makes the region play backwards.
+**Modifica**
+: Questo sotto-menu contiene strumenti utili come _Cambia intonazione_ (**Alt+8**) e _Inverti_ (**Alt+4**). 
+_Cambia intonazione_ altera l'intonazione di una regione senza modificarne la durata. _Inverti_ riproduce la regione al
+contrario.
 
-**Gain**
-: Has useful options such as _Mute_ (**Alt+1**), _Normalize_ (**Alt+3**),
-_Boost Gain_ (**Alt+6**), and _Cut Gain_ (**Alt+7**).
+**Guadagno**
+: Dispone di opzioni utili quali _Muto_ (**Alt+1**), _Normalizza_ (**Alt+3**), _Aumenta guadagno_ (**Alt+6**) e 
+_riduci guadagno_ (**Alt+7**).
 
-**Duplicate**
-: Includes _Duplicate_ (shortcut **Alt+D**), _Multi-Duplicate_, and _Fill Track_.
-These were explained in detail in the
-[Working with Regions](../working-with-regions) chapter.
+**Duplica**
+: Include _Duplica_ (scorciatoia **Alt+D**), _Replica_ e _Riempi traccia_. Queste funzioni sono state spiegate in 
+dettaglio nel capitolo [lavorare con le regioni](../working-with-regions).
 
-**Loudness Analysis**
-: Estimates loudness of a region in LUFS, as well as _Peak_ and _True Peak_
-values.
+**Analisi potenza**
+: Stima il volume di una regione in LUFS, nonché i valori _Picco_ e _Picco reale_.
 
-**Spectral Analysis**
-: Window displaying the overall frequency content of the region.
+**Analisi spettrale**
+: Finestra che mostra il contenuto di frequenza complessivo della regione.
 
-Feel free to explore by yourself other submenus not mentioned above. Many of
-them are mirrors of the options you find under Ardour's *Region* menu. Below we
-go into a bit more details on some of the most useful functions. 
+Sentiti libero di esplorare da solo gli altri sotto-menu non menzionati sopra. Molti di essi rispecchiano le opzioni che
+trovi nel menu *Regione* di Ardour. Di seguito approfondiamo alcune delle funzioni più utili.
 
 ## Pitch Shifting
 

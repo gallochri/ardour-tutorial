@@ -20,7 +20,7 @@ I file AIFF sono compatibili con i sistemi operativi Windows, Macintosh e Linux.
 **ALSA** (Linux)
 : Advanced Linux Sound Architecture. ALSA fornisce funzionalità audio e MIDI al sistema operativo Linux.
 
-**Ampiezza** (mixing)
+**Ampiezza** (mixaggio)
 : L'intensità di un segnale audio. La scala dell'ampiezza è _*logaritmica_, poiché esprime il rapporto fisico di potenza
 tra un suono e l'altro. I livelli nei sistemi audio digitali sono solitamente rappresentati come il numero di decibel al
 di sotto del punto di clipping di 0 dB. Vedi anche _volume_.
@@ -63,72 +63,60 @@ Return, Auto Input, Click, Solo e Audition
 **Ampiezza**
 : Il livello o l'intensità di un segnale. I segnali audio con un'ampiezza maggiore di solito hanno un volume più alto.
 
-**Bands** (equalization)
+**Bande** (equalizzazione)
 : The particular frequency regions to be boosted or attenuated in the
 process of _Equalization_.
 
-**Bars** (music)
-: Same as 'measure', a bar is a metrical unit. In Western notation, it is
-the space comprised between two vertical lines drawn through the staff.
-The specific duration of a bar depends of its _time signature_ and the
-current _tempo_ of the music.
+**Battuta** (musica)
+: Come la "misura", anche la battuta è un'unità metrica. Nella notazione occidentale, è lo spazio compreso tra due linee
+verticali tracciate sul pentagramma. La durata specifica di una battuta dipende dalla sua _indicazione metrica_ e dal 
+_tempo_ corrente della musica.
 
-**Bass** (Frequencies)
-: A generic way of referring to the lower frequencies of the _spectrum_
-of a sound.
+**Basso** (Frequenza)
+: Un modo generico per riferirsi alle frequenze più basse dello _spettro_ di un suono.
 
-**Beat**
-: The basic pulse underlying a piece of music.
+**Battito**
+: Il battito fondamentale che sta alla base di un brano musicale.
 
-**Beats per Minute**
-: Beats per minute (BPM) is a measure of tempo in music. A rate of 60
-beats per minute means that one beat will occur every second; 120 bpm
-equals two beats per second, and so on. BPM indications usually appear
-at the beginning of a traditional musical score as a metronome mark (for
-example, "quarter note equals 60", meaning one quarter note per second).
+**Battiti al minuto**
+: I battiti al minuto (BPM) sono una misura del tempo nella musica. Una frequenza di 60 battiti al minuto significa che 
+ogni secondo si verifica un battito; 120 bpm equivalgono a due battiti al secondo e così via. Le indicazioni dei BPM 
+compaiono solitamente all'inizio di uno spartito musicale tradizionale come indicazione del metronomo (ad esempio, 
+"nota da un quarto uguale a 60", che significa una nota da un quarto al secondo).
 
 **Bit**
-: A bit (**bi**nary dig**it**) is a single number with a value of either 0
-or 1. 
+: Un bit (**bi**nary dig**it**) è un singolo numero con valore 0 o 1.
 
-**Bit Depth**
-: Refers to the number of bits used to write a _sample_. In the CD
-standard, each sample of audio is represented by a 16-bit number. This
-gives 2\^16 (two to the power of sixteen = 65,536) possible values that
-a sample can have. A higher bit depth means a greater possible _dynamic
-range_. Studio recordings are usually first made recorded with a bit
-depth of 24 (or even 32) to preserve as much detail before transfer to
-CD. DVDs are made at 24 bit, while video games from the 1980s remain
-famous for their distinctively rough "8 bit sound". Bit depth is also
-referred to as **word length**. 
+**Profondità di bit**
+: Si riferisce al numero di bit utilizzati per scrivere un _campione_. Nello standard CD, ogni campione audio è 
+rappresentato da un numero a 16 bit. Ciò fornisce 2\^16 (due alla potenza di sedici = 65.536) valori possibili che un 
+campione può avere. Una profondità di bit maggiore significa una maggiore _gamma dinamica_ possibile. Le registrazioni 
+in studio vengono solitamente effettuate con una profondità di bit di 24 (o anche 32) per preservare il maggior numero 
+possibile di dettagli prima del trasferimento su CD. I DVD vengono realizzati a 24 bit, mentre i videogiochi degli anni 
+'80 rimangono famosi per il loro caratteristico "suono a 8 bit" piuttosto grezzo. La profondità di bit è anche 
+denominata **lunghezza di parola**.
 
-**Buffer Size** (JACK)
-: The buffer is a section of memory specifically allotted to temporary
-signal data. Small buffer sizes allow a lower latency and so are needed
-when using audio applications that require real-time interaction. The
-drawback is that CPU consumption for the system is higher with smaller
-buffer sizes. Larger buffers (like 512 or 1024) can be used when there
-is no such requirement.
+**Dimensione Buffer** (JACK)
+: Il buffer è una sezione di memoria specificatamente assegnata ai dati temporanei dei segnali. I buffer di piccole 
+dimensioni consentono una latenza inferiore e sono quindi necessari quando si utilizzano applicazioni audio che 
+richiedono un'interazione in tempo reale. Lo svantaggio è che il consumo di CPU per il sistema è maggiore con buffer di 
+dimensioni inferiori. Quando non vi è tale requisito, è possibile utilizzare buffer più grandi (come 512 o 1024).
 
-**Built-in Input and Output**
-: These are the default interfaces for getting sound in and out of your
-computer if you don't have an external sound card. In a laptop, they are
-the common input (mic) and output (headphone) connections.
+**Ingresso e uscita Built-in**
+: Queste sono le interfacce predefinite per l'ingresso e l'uscita dell'audio dal computer se non si dispone di una 
+scheda audio esterna. In un laptop, sono le comuni connessioni di ingresso (microfono) e uscita (cuffie).
 
 **Bus**
-: A bus is similar to a track except that it does not contain its
-own regions. You cannot record directly into a bus or drag regions into
-it. The _Mixer_ strip vertically represents the signal flow of a bus,
-whereas the Main Canvas horizontally displays time-based information for
-each bus (such as automation lines).
+: Un bus è simile a una traccia, tranne per il fatto che non contiene regioni proprie. Non è possibile registrare 
+direttamente in un bus né trascinarvi regioni. La striscia _Mixer_ rappresenta verticalmente il flusso del segnale di un
+bus, mentre l'area di lavoro principale visualizza orizzontalmente le informazioni temporali relative a ciascun bus 
+(come le linee di automazione).
 
 **BWF**
-: Broadcast Wave Format (BWF) is an extension of the popular Microsoft
-WAVE audio format and is the recording format of most file-based
-non-linear digital recorders used for motion picture and television
-production. This file format allows the inclusion of metadata to
-facilitate the seamless exchange of sound data between different
-computer platforms and applications.
+: Broadcast Wave Format (BWF) è un'estensione del popolare formato audio Microsoft WAVE ed è il formato di registrazione
+della maggior parte dei registratori digitali non lineari basati su file utilizzati per la produzione cinematografica e 
+televisiva. Questo formato di file consente l'inclusione di metadati per facilitare lo scambio continuo di dati audio 
+tra diverse piattaforme e applicazioni informatiche.
 
 **CAF**
 : CAF (Core Audio Format) is a file format for storing audio, developed by
