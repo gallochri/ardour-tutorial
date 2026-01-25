@@ -6,106 +6,94 @@ cascade:
   type: docs
 ---
 
-A _range_ is a selection of the timeline that can include one or more tracks. It
-has many uses like selecting a portion of audio/MIDI data to cut it.
+Un _intervallo_ è una selezione della timeline che può includere una o più tracce. Ha molti usi, come selezionare una 
+porzione di dati audio/MIDI per tagliarla.
 
-{{< figure src="en/ardour7-range-example.png" alt="Range example" >}}
+{{< figure src="it/ardour8-range-example.png" alt="Esempio di intervallo" >}}
 
-## Creating ranges
+## Creazione di intervalli
 
-There are two common ways to create a range:
+Esistono due modi comuni per creare un intervallo:
 
-1. You can do it with the _Grab_ tool (**G** shortcut) when the _Smart_ mode is
-enabled. In that case you need to position the mouse pointer around the middle
-of a track vertically to start selecting data rather than picking and moving a
-region. The mouse pointer looking like a vertical line means you are good to
-start selecting.
+1. È possibile farlo con lo strumento _Mano_ (scorciatoia **G**) quando è abilitata la modalità _Intelligente_. In tal 
+caso, è necessario posizionare il puntatore del mouse al centro di una traccia in verticale per iniziare a selezionare 
+i dati, anziché selezionare e spostare una regione. Il puntatore del mouse che appare come una linea verticale indica 
+che è possibile iniziare la selezione.
 
-2. You can also use the dedicated _Range_ tool (**R** shortcut). In this case,
-just click and drag anywhere on the canvas to start selecting.
+2. È anche possibile utilizzare lo strumento dedicato _Intervallo_ (scorciatoia **R**). In questo caso, è sufficiente 
+fare clic e trascinare in un punto qualsiasi dell'area di lavoro per avviare la selezione.
 
-You can select data of multiple tracks at once as seen on the screenshot above.
-To do that, just drag the mouse pointer upwards or downwards crossing the
-border between tracks.
+È possibile selezionare i dati di più tracce contemporaneamente, come mostrato nella schermata sopra. Per farlo, basta 
+trascinare il puntatore del mouse verso l'alto o verso il basso attraversando il confine tra le tracce.
 
-When the _Editor List_ dock is available, you can see range properties on top of
-it: start/end times of the range as well as its duration. When a range is
-created, the _Tracks & Busses_ tab will also select tracks that the range
-crosses.
+Quando la _Lista dell'Editor_ è disponibile, è possibile visualizzare le proprietà dell'intervallo nella parte 
+inferiore: i tempi di inizio/fine dell'intervallo e la sua durata. Quando viene creato un intervallo, la scheda 
+_Tracks & Busses_ selezionerà anche le tracce che l'intervallo attraversa.
 
-![Range properties](en/ardour7-range-properties.png?height=60vh)
+{{< figure src="it/ardour8-range-properties.png" alt="Proprietà intervallo" >}}
 
-It can be useful to create ranges that align with the edges of regions on your
-timeline. To do that, enable the _Snap_ option in the toolbar and select _No
-Grid_ in the drop-down list next to it.
+Può essere utile creare intervalli che si allineino con i bordi delle regioni sulla timeline. Per farlo, abilita 
+l'opzione _Allineamento_ nella barra degli strumenti e seleziona _Nessuna griglia_ nell'elenco a discesa accanto ad essa.
 
-![Snap to region boundaries](en/ardour7-snap-to-region-boundaries.png?width=10vw)
+{{< figure src="it/ardour8-snap-to-region-boundaries.png" alt="Aggancia ai confini della regione" >}}
 
-## Editing ranges
+## Modifica intervalli
 
-Once you created a range, you can easily tweak it's start and end positions by
-hovering range boundaries with the mouse pointer, grabbing them and dragging to
-the left or to the right.
+Una volta creato un intervallo, puoi facilmente modificarne le posizioni iniziale e finale passando con il puntatore del
+mouse sui confini dell'intervallo, selezionandoli e trascinandoli verso sinistra o verso destra.
 
-{{< figure src="en/ardour7-editing-ranges.gif" alt="Editing ranges" >}}
+{{< figure src="it/ardour7-editing-ranges.gif" alt="Modifica intervalli" >}}
 
-If you forgot to include a track into a range, you don't need to redo the range
-selection. Just hold **Ctrl** button and click on the track's header on the
-canvas. Alternatively, hold **Ctrl** and click on track's name in the _Tracks &
-Busses_ tab of the _Editor List_ dock.
+Se hai dimenticato di includere una traccia in un intervallo, non è necessario ripetere la selezione dell'intervallo. 
+Basta tenere premuto il tasto **Ctrl** e fare clic sull'intestazione della traccia nell'area di lavoro. In alternativa, 
+tieni premuto **Ctrl** e fai clic sul nome della traccia nella scheda _Tracce e bus_ della _Lista dell'editor_.
 
-{{< figure src="en/ardour7-adding-track-to-range.gif" alt="Adding track to range" >}}
+{{< figure src="it/ardour7-adding-track-to-range.gif" alt="Aggiunta di traccia all'intervallo" >}}
 
-## Playing back ranges in a loop
+## Riproduzione di intervalli in loop
 
-Returning to our rhythmic passage example, we will want to hear the passage we
-are composing, perhaps as a loop, while we are moving the samples around. To do
-that, we must create a range to listen to within our session, so that we can
-return to exactly this point in the session again and again.
+Tornando al nostro esempio di passaggio ritmico, vorremo ascoltare il passaggio che stiamo componendo, magari in loop, 
+mentre spostiamo i campioni. Per farlo, dobbiamo creare un intervallo di ascolto nella nostra sessione, in
+modo da poter tornare esattamente a questo punto più e più volte.
 
-{{< figure src="en/ardour7-loop-range-menu-command.png" alt="Loop Range in the right-click menu" >}}
+{{< figure src="it/ardour8-loop-range-menu-command.png" alt="Intervallo di loop nel menu contestuale" >}}
 
-Zoom out if needed (**-**) to see full bars in the timeline. Use the _Range_
-tool to select an entire bar, then right-click inside a range and pick one of
-the two commands:
+Se necessario, ridurre lo zoom (**-**) per visualizzare le barre complete nella timeline. Utilizzare lo strumento 
+_Intervallo_ per selezionare un'intera barra, quindi fare clic con il pulsante destro del mouse all'interno di un 
+intervallo e scegliere uno dei due comandi:
 
-1. _Loop Range_ (on the screenshot above) to create a loop and start playing it
-immediately.
+1. _Riproduci l'intervallo_ (nella schermata sopra) per creare un loop e avviarne immediatamente la riproduzione.
 
-2. _Set loop from selection_ to only create loop markers without immediate
-playback.
+2. _Ciclo sull'intervallo_ per creare solo indicatori di loop senza riproduzione immediata.
 
-{{< figure src="en/ardour7-looped-range-playback.png" alt="Looped range playback" >}}
+{{< figure src="it/ardour8-looped-range-playback.png" alt="Looped range playback" >}}
 
-As long as loop markers are there, you can start playing back that portion of
-the timeline in a loop whenever you like (on the screenshot above). To do that,
-either click the **Play loop range** button in the _Transport_ toolbar or press
-the **L** shortcut.
+Finché sono presenti i marcatori di loop, è possibile riprodurre quella parte della timeline in loop ogni volta che lo 
+si desidera (nell'immagine sopra). Per farlo, fare clic sul pulsante **Riproduci intervallo di ciclo** nella barra degli 
+strumenti _Trasporto_ oppure premere il tasto di scelta rapida **L**.
 
-![Loop range button in Transport](en/ardour7-play-loop-range-button.png?width=35vw)
+{{< figure src="it/ardour8-play-loop-range-button.png" alt="Pulsante Intervallo loop in Trasporto" >}}
 
-You can also tweak the position of loop markers while playing the range in a
-loop. Just grab a marker and drag it to the left or to the right.
+È anche possibile modificare la posizione dei marcatori di loop durante la riproduzione dell'intervallo in loop. Basta
+selezionare un marcatore e trascinarlo verso sinistra o verso destra.
 
-## More editing options for ranges
+## Ulteriori opzioni di modifica degli intervalli
 
-There are more operations you can do on ranges, all available in the right-click
-menu:
+Ci sono altre operazioni che puoi fare sugli intervalli, tutte disponibili nel menu che si apre cliccando con il tasto 
+destro del mouse:
 
-- _Separate_ will cut the original regions at range borders.
-- _Duplicate_ will create one copy of the range and place it starting at the
-right border of the range. Any existing data will be overlaid, so you can still
-access it.
-- _Crop Region To Range_ will trim affected regions to the extent of the range.
+- _Separa_ taglierà le regioni originali ai confini dell'intervallo. 
+- _Duplica intervallo_ creerà una copia dell'intervallo e la posizionerà a partire dal confine destro dell'intervallo. 
+Tutti i dati esistenti verranno sovrapposti, quindi potrai comunque accedervi. 
+- _Ritaglia regione in base all'intervallo_ ritaglierà le regioni interessate all'estensione dell'intervallo.
 
-You can also inspect loudness and spectral characteristics of data in a range or
-export just the data inside a range rather than the entire session (see [this
-chapter](../../exporting-sessions/exporting-a-range/) for more info on exporting
-ranges).
+È anche possibile controllare il volume e le caratteristiche spettrali dei dati in un intervallo o esportare solo i dati
+all'interno di un intervallo anziché l'intera sessione (vedere 
+[questo capitolo](../../exporting-sessions/exporting-a-range/) per ulteriori informazioni sull'esportazione di 
+intervalli).
 
-## Continuing
+## Continua
 
-In the next step, we will learn about working with regions to compose a rhythm
-with these samples.
+Nel prossimo capitolo impareremo a lavorare con le regioni per comporre un ritmo con questi campioni.
 
-Next: [WORKING WITH REGIONS](../working-with-regions)
+Successivo: [Lavorare con le regioni](../working-with-regions)
