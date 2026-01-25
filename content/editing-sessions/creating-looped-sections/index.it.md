@@ -55,43 +55,37 @@ loop, seleziona _Consolida (con elaborazione)_.
 
 {{< figure alt="consolida" src="it/ardour8-consolidate-range-1.png" >}} 
 
-When the range is consolidated, new regions will appear in each track, each
-containing all the repetitions of the samples which you set up in the previous
-steps. Remember, once the range is consolidated, there is no way to undo this
-operation. In any case, if you find that you need to alter the rhythm in any
-way, you can always retrieve the original individual samples from the region
-List and rebuild the pattern with them.
+Una volta consolidato l'intervallo, in ogni traccia appariranno nuove regioni, ciascuna contenente tutte le ripetizioni
+dei campioni impostati nei passaggi precedenti. Ricordate che, una volta consolidato l'intervallo, non è possibile 
+annullare questa operazione. In ogni caso, se ritenete necessario modificare il ritmo in qualche modo, potete sempre 
+recuperare i singoli campioni originali dall'elenco delle regioni e ricostruire il pattern con essi.
 
-{{< figure alt="consolidate2" src="en/ardour7-consolidate-range-2.png" >}}
+{{< figure alt="consolida2" src="it/ardour8-consolidate-range-2.png" >}}
 
-## Duplicating the Range
+## Duplicazione dell'intervallo
 
-After you have merged individual regions that form your pattern (using
-either _Combine_ or _Consolidate_), it's time to duplicate the
-pattern to make it loop for several bars.
+Dopo aver unito le singole regioni che compongono il pattern (utilizzando _Combina_ o _Consolida_), è il momento di 
+duplicare il pattern per ripeterlo su più battute.
 
-The _Multi-Duplicate_ feature (seen in the [Working with
-regions](../working-with-regions/) chapter) is a good way to accomplish this.
-Go back to _Grab_ mode (**G**) , select all regions,  and hit
-**Shift+D**. Choose how many times you want to duplicate the pattern (for
-example, 16). After duplication our session looks something like this:
+La funzione _Replica_ (descritta nel capitolo [Lavorare con le regioni](../working-with-regions/)) è un ottimo modo per 
+ottenere questo risultato. Torna alla modalità _mano_ (**G**), seleziona tutte le regioni e premi **Shift+D**. Scegli 
+quante volte desideri duplicare il pattern (ad esempio, 16). Dopo la duplicazione, la nostra sessione apparirà simile a 
+questa:
 
-{{< figure alt="multi-dup" src="en/ardour7-multi-duplicate.png" >}} 
+{{< figure alt="replica" src="it/ardour8-multi-duplicate.png" >}} 
 
-Just for review, other options you could have used for duplication are:
+Solo per completezza, altre opzioni che avresti potuto utilizzare per la duplicazione sono:
 
-- The _Fill Track_ command from menu `Region > Duplicate > Fill Track`. This
-would fill the entire track with copies of the selected regions, all the way up
-to the _End Marker_. 
+- Il comando _Riempi traccia_ dal menu `Regione > Duplica > Riempi traccia`. Questo riempirebbe l'intera traccia con 
+copie delle regioni selezionate, fino al _marcatore fine_.
 
-- The single _Duplicate_ command from the same menu (**Alt+D**). This
-lets you make a single copy at a time. 
+- Il comando singolo _Duplica_ dallo stesso menu (**Alt+D**). Questo ti permette di creare una sola copia alla volta.
 
-- The single duplicate action with **Ctrl+Click** on the region + _Drag a copy_.
+- L'unica azione duplicata con **Ctrl+clic** sulla regione + _Trascina una copia_.
 
-## Continuing
+## Continua
 
-In the next tutorial we will learn about stretching/shrinking regions that are
-longer or shorter than one bar in order to fit the rhythm of our passage.
+Nel prossimo tutorial impareremo come allungare/accorciare le regioni che sono più lunghe o più corte di una battuta per
+adattarle al ritmo del nostro brano.
 
-Next: [STRETCHING/SHRINKING REGIONS](../stretching-shrinking-regions)
+Successivo: [Allungamento e accorciamento delle regioni](../stretching-shrinking-regions)
