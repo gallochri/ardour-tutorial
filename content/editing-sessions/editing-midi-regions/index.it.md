@@ -174,8 +174,8 @@ prima nota di ogni battuta suona più forte rispetto alle altre note della stess
 
 ## Continua
 
-Questo era l'ultimo capitolo della sezione _Sessioni di editing_. Passiamo ora alla sezione _Esibizione dal vivo_.
+Questo era l'ultimo capitolo della sezione _Sessioni di editing_. Passiamo ora alla sezione _Esibirsi dal vivo_.
 
-Successivo: [Esibizione dal vivo](../../performing-live/)
+Successivo: [Esibirsi dal vivo](../../performing-live/)
 
 <!-- ## Editing and creating automation -->
