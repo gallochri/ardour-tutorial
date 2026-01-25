@@ -74,120 +74,108 @@ numero di ottave e semitoni da trasporre.
 
 {{< figure src="it/transpose.png" alt="Trasporre note MIDI" >}}
 
-## Editing velocity
+## Modificare la dinamica
 
-Ardour uses two ways to represent a note's velocity: through color coding and
-through a 2D chart.
+Ardour utilizza due modi per rappresentare la dinamica di una nota: tramite codifica a colori e tramite un grafico 2D.
 
-{{< figure src="en/velocities.png" alt="Velocities" >}}
+{{< figure src="it/velocities.png" alt="Velocità" >}}
 
-The paler the note and the shorter the dark line inside the note, the lower the
-velocity. A deep red note and the dark line going through the entire note mean
-the velocity is at (on near) its maximum value.
+Più chiara è la nota e più corta è la linea scura al suo interno, minore è la dinamica. Una nota di colore rosso intenso
+e una linea scura che attraversa l'intera nota indicano che la dinamica è (quasi) al suo valore massimo.
 
-To quickly change a note's velocity, hover its middle on the canvas, then start
-scrolling the mouse wheel up and down to change the velocity value. When
-multiple notes are selected, each will receive the same amount of adjustment. So
-you can select, let's say, 3 notes at 25, 50, and 100 velocity values
-respectively, increment each one by 20, and end up with notes that have 45, 70,
-and 120 for velocities.
+Per modificare rapidamente la dinamica di una nota, posizionare il cursore al centro della nota, quindi iniziare a 
+far scorrere la rotellina del mouse verso l'alto e verso il basso per modificare il valore della dinamica. Quando sono 
+selezionate più note, ciascuna riceverà la stessa regolazione. Quindi è possibile selezionare, ad esempio, 3 note con 
+valori di dinamica rispettivamente pari a 25, 50 e 100, incrementare ciascuna di esse di 20 e ottenere note con dinamica
+pari a 45, 70 e 120.
 
-{{< figure src="en/velocity-tooltip.png" alt="Velocity tooltip" >}}
+{{< figure src="it/velocity-tooltip.png" alt="Suggerimento sulla velocità" >}}
 
-A simple way to numerically change velocity (as well as MIDI channel, pitch, and
-position) is to use the note's properties dialog. Right-click on a note or
-multiple notes, then select _Edit…_.
+Un modo semplice per modificare numericamente la dinamica (così come il canale MIDI, l'intonazione e la posizione) è 
+quello di utilizzare la finestra di dialogo delle proprietà della nota. Fare clic con il tasto destro del mouse su una o
+più note, quindi selezionare _Modifica…_.
 
-![Editing note properties](en/note-properties.png?width=45vw)
+{{< figure src="it/note-properties.png" alt="Modifica delle proprietà della nota" >}}
 
-If multiple notes have been selected, you can mass-change them to the same
-value. For that enable the _Set selected notes to this velocity_ option before
-applying changes.
+Se sono state selezionate più note, è possibile modificarle in blocco assegnando loro lo stesso valore. A tal fine, 
+abilitare l'opzione _Imposta le note selezionate su questa dinamica_ prima di applicare le modifiche.
 
+## Esempio di modifica dall'inizio alla fine
 
-## Editing example start to end
+Diamo un'occhiata a questa acquisizione in tempo reale.
 
-Let's have a look at this quick real-time performance capture.
+{{< figure src="it/example-original.png" alt="" >}}
 
-{{< figure src="en/example-original.png" alt="" >}}
+Anche senza ascoltarlo, alcune cose saltano all'occhio:
 
-Even without listening to it, a few things stand out:
+- tempo di partenza sbagliato; 
+- durate errate; 
+- velocità completamente sballata.
 
-- wrong start times;
-- wrong durations;
-- velocity all over the place.
+Risolviamo il problema e iniziamo con le posizioni e le durate.
 
-Let's fix it and start with positions and durations.
+1. Premere **E** per passare alla modalità _Modifica interna_. Selezionare tutte le note visibili con la selezione a 
+elastico.
 
-1. Press **E** to switch to the _Internal Edit_ mode.
-Rubberband-select all visible notes.
+{{< figure src="it/example-select-all.png" alt="" >}}
 
-{{< figure src="en/example-select-all.png" alt="" >}}
+2. Clicca con il tasto destro del mouse e seleziona _Quantizza_ (oppure premi semplicemente **Q**). Usa _1/8 di nota_ o 
+_Griglia principale_ per l'inizio e la fine delle note, perché in questo caso è la stessa cosa.
 
-2. Right-click and select _Quantize_ (or just press **Q**). Use _1/8 Note_
-or _Main Grid_ for note starts and ends, because in this case, it's the
-same thing.
+{{< figure src="it/example-quantize-dialog.png" alt="" >}}
 
-{{< figure src="en/example-quantize-dialog.png" alt="" >}}
+Questo è già molto meglio:
 
-This is already much better:
+{{< figure src="it/example-quantize-result.png" alt="" >}}
 
-{{< figure src="en/example-quantize-result.png" alt="" >}}
+Ma ci sono alcune note che si sovrappongono.
 
-But there are some overlapping notes.
+3. Clicca con il tasto destro del mouse e seleziona _Lega_.
 
-3. Right-click and select _Legatize_.
+{{< figure src="it/example-legatize.png" alt="" >}}
 
-{{< figure src="en/example-legatize.png" alt="" >}}
+4. Premere una sola volta il tasto **Freccia sinistra** per spostare tutte le note selezionate di un'unità della griglia
+(ovvero _1/8 di nota_) in modo che inizino proprio all'inizio della battuta:
 
-4. Press **Arrow Left** key just once to shift all selected notes by one grid
-unit (it's _1/8 Note_) so that they start right at the beginning of the bar:
+{{< figure src="it/example-shift-left.png" alt="" >}}
 
-{{< figure src="en/example-shift-left.png" alt="" >}}
+Le posizioni ora sono tutte a posto. Ma c'è dell'altro.
 
-Positions are all fine now. But there's more.
+5. È ora di ripulire la dinamica. Seleziona tutte le note tranne la prima in ciascuna delle due battute. Puoi farlo 
+premendo **Ctrl+A**, quindi tenendo premuto **Ctrl** e cliccando sulla prima nota di ciascuna battuta per 
+deselezionarle. Oppure puoi selezionare la prima porzione (esclusa la prima nota) con la selezione elastica, quindi 
+tenere premuto **Shift** e aggiungere la seconda porzione (esclusa anche la prima nota di quella battuta).
 
-5. It's time to cleanup velocity. Select all notes but the first one in each of
-the two bars. You can do that by pressing **Ctrl+A**, then press and hold
-**Ctrl** and click on the first note in each bars to deselect them. Or you can
-rubber-band select the first portion (sans the first note), then press and hold
-**Shift** and add the second portion (sans the first note in that bar as well).
+{{< figure src="it/example-select-all-but-firsts.png" alt="" >}}
 
-{{< figure src="en/example-select-all-but-firsts.png" alt="" >}}
+6. Clicca con il tasto destro del mouse e seleziona _Trasforma_. Dobbiamo impostare più o meno la stessa dinamica 
+inferiore, diciamo 60. Quindi impostiamo la dinamica un valore esatto e utilizziamo 60:
 
-6. Right-click, select _Transform_. We need to set this to more or less the same
-lower velocity, let's say, 60. So we set Velocity, we set it to an exact value,
-and we use 60:
+{{< figure src="it/example-transform-all-60.png" alt="" >}}
 
-{{< figure src="en/example-transform-all-60.png" alt="" >}}
+Questo, ancora una volta, è molto meglio:
 
-This, again, much better:
+{{< figure src="it/example-now-all-60.png" alt="" >}}
 
-{{< figure src="en/example-now-all-60.png" alt="" >}}
+Ma se lo lasciamo così, sembrerà un po' troppo robotico.
 
-But it's going to sound a little too robotic if we keep it that way.
+7. Richiamiamo nuovamente la finestra di dialogo _Transforma_ e aggiungere una piccola variazione casuale:
 
-7. Let's call the _Transform_ dialog again and add a tiny bit of random
-variation:
+{{< figure src="it/example-transform-variation-56-to-64.png" alt="" >}}
 
-{{< figure src="en/example-transform-variation-56-to-64.png" alt="" >}}
+Data la ridotta ampiezza della variazione, la differenza non sarà molto evidente. Tuttavia, passando con il mouse sulle 
+singole note, si noterà che le dinamiche delle note ora sono comprese tra 56 e 64.
 
-Given the small range of the variation, the difference won't be very visible.
-But if you hover individual notes, you'll see that notes' velocities are now
-somewhere between 56 and 64.
+8. Infine, clicca sulla prima nota della prima battuta e usa la rotellina del mouse per impostare la sua velocità a 82, 
+poi ripeti l'operazione per la prima nota della seconda battuta. Ora avrai un pattern di velocità regolare in cui la 
+prima nota di ogni battuta suona più forte rispetto alle altre note della stessa battuta.
 
-8. Finally, click the first note of the first bar and use mouse wheel scrolling
-to set its velocity to 82, then repeat for the first note of the second bar. You
-will now have a regular velocity pattern where the first note of each bar sounds
-louder than the rest of the notes in each bar.
+{{< figure src="it/example-regular-velocity-pattern.png" alt="" >}}
 
-{{< figure src="en/example-regular-velocity-pattern.png" alt="" >}}
+## Continua
 
-## Continuing
+Questo era l'ultimo capitolo della sezione _Sessioni di editing_. Passiamo ora alla sezione _Esibizione dal vivo_.
 
-This was the last chapter of the _Editing Regions_ section. Next we go into
-_Mixing_.
-
-Next: [PERFORMING LIVE](../../performing-live/)
+Successivo: [Esibizione dal vivo](../../performing-live/)
 
 <!-- ## Editing and creating automation -->
