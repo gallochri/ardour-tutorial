@@ -118,4 +118,4 @@ Si noti che alla regione combinata risultante è stata aggiunta la parola "compo
 Nel capitolo seguente impareremo qualcosa in più sui potenti strumenti messi a disposizione da Ardour modificando le 
 **modalità di editing**.
 
-Successivo: [Modifica della modalità di editing](../changing-edit-modes)
+Successivo: [Cambiare la modalità di modifica](../changing-edit-modes)

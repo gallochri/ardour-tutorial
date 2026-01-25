@@ -16,7 +16,7 @@ Contenuti:
 4. [Utilizzo degli intervalli](using-ranges/)
 5. [Lavorare con le regioni](working-with-regions/) 
 6. [Ulteriori operazioni sulle regioni](further-region-operations/) 
-7. [Modificare le modalità di Editing](changing-edit-modes/) 
+7. [Cambiare la modalità di modifica](changing-edit-modes/) 
 8. [Creare sezioni in loop](creating-looped-sections/)
 9. [Allungamento e accorciamento delle regioni](stretching-shrinking-regions/) 
 10. [Modifica delle regioni MIDI](editing-midi-regions/)
