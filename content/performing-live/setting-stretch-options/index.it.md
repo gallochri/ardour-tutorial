@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle opzioni di allungamento
+title: Impostazione delle opzioni di dilatazione
 description: A volte un loop di batteria che vorresti davvero usare in una canzone ha un tempo più lento o più veloce 
   rispetto al tempo della tua sessione.
 weight: 4
@@ -13,34 +13,48 @@ cascade:
 
 {{< /details >}}
 
-Sometimes a drum loop that you would really like to use in a song has slower or faster tempo than your session’s tempo. Stretch options help keep it perfectly in sync with the rest of the song.
+A volte un loop di batteria che vorresti davvero utilizzare in una canzone ha un tempo più lento o più veloce rispetto 
+al tempo della tua sessione. Le opzioni di dilatazione aiutano a mantenerlo perfettamente sincronizzato con il resto 
+della canzone.
 
-## How Ardour handles clip tempo by default
+## Come Ardour gestisce il tempo delle clip per impostazione predefinita
 
-By default, Ardour will estimate the actual tempo in an audio file. Then when you play it back, it will stretch or compress that audio file on the fly to match the current session tempo. This works even within a tempo ramp, so the clip’s tempo will follow acceleration and deceleration.
+Per impostazione predefinita, Ardour stimerà il tempo effettivo di un file audio. Quindi, durante la riproduzione, 
+allungherà o comprimerà il file audio al volo per adattarlo al tempo della sessione corrente. Questo funziona anche 
+all'interno di una rampa di tempo, quindi il tempo della clip seguirà l'accelerazione e la decelerazione.
 
-You can override this default behavior for artistic purposes and play a clip at its original tempo by disabling the stretching of this clip in the **Stretch Options** panel.
+È possibile sovrascrivere questo comportamento predefinito per scopi artistici e riprodurre una clip col suo tempo 
+originale disabilitando l'allungamento di questa nel pannello **Opzioni di dilatazione**.
 
-![Stretch Options](en/stretch-options.png)
+{{< figure src="it/stretch-options.png" alt="Opzioni di dilatazione" >}}
 
-## Overriding clip's tempo
+## Sovrascrivere il tempo della clip
 
-You can also easily make the clip’s tempo two, four, eight or more times faster or slower by clicking these two buttons.
+È anche possibile aumentare o diminuire facilmente il tempo della clip di due, quattro, otto o più volte cliccando su 
+questi due pulsanti.
+
+{{< figure src="it/stretch-multiply-divide.png" alt="Moltiplicare o dividere il tempo della clip" >}}
+
+Supponiamo che il tempo della clip originale sia 120 bpm e quello della sessione sia 140 bpm. Ciò significa che la clip 
+verrà riprodotta solo con una velocità superiore del 14%. Ma se si fa supporre ad Ardour che il tempo originale sia 
+60 bpm, allora Ardour dovrà compensare la differenza di 80 bpm anziché 20 bpm. E quindi riprodurrà il clip più di due 
+volte più velocemente.
+
+È possibile aumentare o diminuire il tempo della clip in piccoli incrementi modificando il numero di battiti in cui è 
+misurata la clip. Quindi, se si desidera che questa clip venga riprodotta in 14 battute, il suo nuovo tempo presunto 
+sarà di 105 bpm.
 
 <!-- FIXME SCREENSHOT -->
 
-Let’s say your original clip’s tempo is 120 bpm and your session’s tempo is 140 bpm. This means that the clip will play only 14% faster. But if you make Ardour assume that the original tempo is 60 bpm, then Ardour will have to make up for the 80 bpm of difference rather than 20 bpm. And thus it will play the clip more than two times faster.
+## Opzioni specifiche dal tipo di materiale audio
 
-You can increase or decrease the clip’s tempo in smaller steps by editing the amount of beats this clip is measured in. So if you want this clip to play in 14 bars, its new assumed tempo will become 105 bpm.
+Non è possibile allungare o comprimere i loop di batteria e quelli di pianoforte allo stesso modo, quindi Ardour offre 
+tre opzioni.
 
-<!-- FIXME SCREENSHOT -->
+{{< figure src="it/stretch-presets.png" alt="Preimpostazioni di dilatazione" >}}
 
-## Material-specific options
-
-You can’t stretch or compress drum loops and piano loops the same way, so Ardour provides three options.
-
-<!-- FIXME SCREENSHOT -->
-
-- The _Crisp_ preset works best with drum loops and other material where you have fast attack, high decay, and then fast sustain and release.
-- The _Smooth_ preset works best with long sustained notes that have a slow attack, like a synth pad or bowed strings.
-- And the _Mixed_ preset is for something between those two cases, like vocals or piano chords.
+- Il preset _Crisp_ funziona al meglio con loop di batteria e altro materiale caratterizzato da attacco veloce, 
+decadimento elevato e sustain e rilascio rapidi.
+- Il preset _Liscio_ funziona al meglio con note lunghe e sostenute che hanno un attacco lento, come un pad sintetizzato
+o archi suonati con l'archetto.
+- E il preset _Mixed_ è per qualcosa a metà strada tra questi due casi, come la voce o gli accordi di pianoforte.
