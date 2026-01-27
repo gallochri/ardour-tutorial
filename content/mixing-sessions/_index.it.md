@@ -10,7 +10,7 @@ Come utilizzare gli strumenti di base per far risaltare ogni strumento in un mix
 
 Contenuti:
 
-1. [Utilizzo del mixer](the-mixer-strip/)
+1. [La barra del mixer](the-mixer-strip/)
 2. [Livelli di mixaggio](mixing-levels/) 
 3. [Panning](panning/) 
 4. [Utilizzo dei plugin](using-plugins/)
