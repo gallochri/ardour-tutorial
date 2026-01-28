@@ -52,11 +52,11 @@ del mixer (è possibile riattivarla in un secondo momento).
 È facile individuare le differenze tra la modalità stretta e quella normale: didascalie più brevi sui pulsanti, nessuna 
 legenda per il misuratore di picco, ecc.
 
-### Nome traccia e pulsante di instradamento
+### Nome traccia e pulsante di instradamento ingresso
 
 Proseguendo dall'alto verso il basso, la sezione successiva della barra del mixer contiene tre piccole aree. 
 La prima di queste aree mostra il nome della traccia (ovvero la parola "Audio 1" nell'immagine sottostante). L'area 
-successiva, denominata "FL" nell'immagine sottostante, è un pulsante che consente di accedere all'instradamento 
+successiva, denominata "FL" nell'immagine sottostante, è un pulsante che consente di accedere al routing (instradamento)
 dell'ingresso. Per ulteriori informazioni sul routing degli ingressi, consultare i capitoli _Comprendere il routing_ e
 _Registrare l'audio_. L'ultima area stretta controlla l'inversione di fase (non approfondiremo questo argomento in 
 questo tutorial).
@@ -115,75 +115,68 @@ panning. Nella schermata sottostante, una traccia mono è sulla sinistra e una t
 
 Per ulteriori informazioni, consultare il capitolo _Panning_.
 
-### Soloing and Muting
+### Solo e Muto
 
-Tracks and busses can have two additional related states: soloing and being
-muted.
+Le tracce e i bus possono avere due stati aggiuntivi correlati: solo e muto.
 
-Any track or bus on _mute_ will be inaudible through the _Master_ bus or the
-_Audition_. The track mixer also contains a miniaturized **Mute** button, in
-between the **Record Arm** button and the **Solo** button. Right-clicking on the
-**Mute** button gives you advanced options for the behavior of the mute button.
+Qualsiasi traccia o bus su _muto_ non sarà udibile attraverso il bus _Master_ o l'_Audition_. Il mixer della traccia 
+contiene anche un pulsante **Muto** in miniatura, situato sotto il pulsante **Iso** vicino al pulsante **Solo**. 
+Cliccando con il tasto destro del mouse sul pulsante **Muto** si accede alle opzioni avanzate relative al comportamento 
+del pulsante mute.
 
-![Mute button in on and off states](en/ardour7-mute.png?width=20vw)
+{{< figure alt="Pulsante Mute in stato attivo e disattivo" src="it/ardour8-mute.png" >}}
 
-When a track or a bus is _soloing_, all the other tracks and busses are
-inaudible through the _Master_ bus or the _Audition_, unless you solo them. So
-if you need to play just two tracks out of eight, you don't have to mute six
-other tracks, you only need to solo those two. Please note that soloing a bus
-will not silence any tracks and vice-versa. 
+Quando una traccia o un bus sono in modalità _Solo_, tutte le altre tracce e i bus non sono udibili attraverso il bus 
+_Master_ o l'_Audition_, a meno che non vengano messi in modalità solo. Quindi, se è necessario riprodurre solo due 
+tracce su otto, non è necessario silenziare le altre sei tracce, ma è sufficiente mettere in modalità _Solo_ quelle due.
+Si noti che mettere in modalità solo un bus non silenzierà alcuna traccia e viceversa.
 
-![Solo button](en/ardour7-solo.png?width=20vw)
+{{< figure alt="Pulsante Solo in stato attivo e disattivo" src="it/ardour8-solo.png" >}}
 
-When any track or bus is on solo, the _solo indicator_ in the _Auxiliary
-Controls_ menu will flash red. Clicking the solo indicator while it is flashing
-will deactivate every solo in the session.
+Quando una traccia o un bus è in modalità solo, l'indicatore _Solo_ nel menu Controlli ausiliari lampeggerà in rosso. 
+Cliccando sull'indicatore _Solo_ mentre lampeggia si disattiveranno tutte le modalità _Solo_ nella sessione.
 
-![Soloing](en/ardour7-soloing-flash-button.png?width=40vw)
+{{< figure alt="Indicatore Solo lampeggiante" src="it/ardour8-soloing-flash-button.png" >}}
 
-### Arm Record
+### Armare la registrazione
 
-The _Rec_ button arms the track for recording, as seen in the _Recording Audio_ chapter.
+Il pulsante _Rec_ attiva la traccia per la registrazione, come illustrato nel capitolo _Registrazione audio_.
 
-![Arm for recording](en/ardour7-arm-rec.png?width=20vw)
+{{< figure alt="" src="it/ardour8-arm-rec.png" >}}
 
-### Fader, Fade/Peak Meters
+### Fader, Misuratori di attenuazione/picco
 
-The most prominent control present in a mixer strip is the _fader_, used to
-adjust the overall gain for the corresponding track or bus. The _peak meter_
-shows the _peak value_ of the selected track, and is located directly to the
-right of the fader. Each peak meter consists of one _bar graph_ in the case of a
-mono track, and two bar graphs in case of a stereo track. The small rectangular
-field above the meters shows the highest peak value that has been played on that
-track so far.
+Il controllo più importante presente in una striscia del mixer è il _fader_, utilizzato per regolare il guadagno 
+complessivo della traccia o del bus corrispondente. Il _misuratore di picco_ mostra il _valore di picco_ della traccia 
+selezionata e si trova direttamente a destra del fader. Ogni misuratore di picco è costituito da un _grafico a barre_ 
+nel caso di una traccia mono e da due grafici a barre nel caso di una traccia stereo. Il piccolo campo rettangolare 
+sopra i misuratori mostra il valore di picco più alto che è stato riprodotto su quella traccia fino a quel momento.
 
-{{< figure alt="strip 7" src="en/Ardour4_Mixer_Strip_5.png" >}} 
+{{< figure alt="strip 7" src="it/ardour8-mixer-strip-5.png" >}} 
 
-By clicking the right-hand button at the bottom of the mixer strip (it reads
-"post" in the image above), you will be able to select the _metering point_, for
-example the direct "in" from the sound card, the "pre" Fader signal, or the
-"post" fader signal.
+Cliccando sul pulsante a destra nella parte inferiore della barra del mixer (nell'immagine sopra è indicato con la 
+dicitura "post"), potrai selezionare il _punto di misurazione_, ad esempio l'ingresso diretto dalla scheda audio, il 
+segnale "Pre" Fader o il segnale "Post" Fader.
 
-As you can see in the image below, there is a smaller version of the mixer strip
-in each track, called the _track mixer_, which contains a horizontal fader, a
-vertical peak meter, as well as miniature buttons for arm record, mute, and
-solo. They all mirror those found in the mixer strip for that track.
+Come puoi vedere nell'immagine sottostante, in ogni traccia è presente una versione ridotta della barra del mixer, 
+chiamata _mixer di traccia_, che contiene un fader orizzontale, un misuratore di picco verticale e pulsanti in miniatura
+per l'attivazione della registrazione, il muto e il solo. Tutti questi elementi rispecchiano quelli presenti nella 
+striscia del mixer per quella traccia.
 
-{{< figure alt="strip 6" src="en/Ardour4_Mixer_Strip_6.png" >}} 
+{{< figure alt="strip 6" src="it/Ardour4_Mixer_Strip_6.png" >}}
 
-Please refer to the chapter on _Mixing Levels_ for more detailed instruction
-about using the fader and peak meters.
+Per istruzioni più dettagliate sull'uso dei fader e dei misuratori di picco, consultare il capitolo sui 
+_livelli di mixaggio_.
 
 ### Routing
 
-Finally, we reach the bottom of the mixer strip. Here we find the **Output
-Routing** button, marked as "Master" in the earlier screenshot, because it
-connects to a bus called "Master". This was discussed earlier in the
-_Understanding Routing_ chapter.
+Infine, arriviamo alla parte inferiore della striscia del mixer. Qui troviamo il pulsante **USCITA**, 
+contrassegnato come "Master" nella schermata precedente, perché si collega a un bus chiamato "Master". Questo argomento 
+è stato trattato in precedenza nel capitolo _Comprendere il routing (instradamento)_.
 
-## Continuing
+## Continua
 
-Now that we've had a look at the main areas of the mixer strip, we can proceed
-to the _Mixing Levels_ chapter to see how we can start to use it. 
+Ora che abbiamo dato un'occhiata alle principali aree della barra del mixer, possiamo passare al capitolo 
+_Livelli di mixaggio_ per vedere come iniziare a utilizzarlo.
 
 Next: [MIXING LEVELS](../mixing-levels)
