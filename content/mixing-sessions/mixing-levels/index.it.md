@@ -8,63 +8,57 @@ cascade:
 
 I _livelli_ sono i volumi di ciascuna traccia rispetto alle altre.
 
-If you can't hear a bass line above the other instruments, one obvious option
-would be to raise the bass line volume. Levels can be adjusted using the fader
-in the mixer strip or in each track, just below the track name. The first step
-in mixing is to listen to everything that has been recorded and adjust the
-levels of all tracks so you can hear everything clearly, but in a manner that is
-appropriate for the song. For example, the vocal track is normally louder than
-the rhythm guitar because the voice is the focal point of the song.
+Se non riesci a sentire la linea di basso sopra gli altri strumenti, un'opzione ovvia sarebbe quella di alzare il volume
+della linea di basso. I livelli possono essere regolati utilizzando il fader nella barra del mixer o in ogni traccia, 
+proprio sotto il nome della traccia. Il primo passo nel missaggio è ascoltare tutto ciò che è stato registrato e 
+regolare i livelli di tutte le tracce in modo da poter sentire tutto chiaramente, ma in modo appropriato per la canzone.
+Ad esempio, la traccia vocale è normalmente più forte della chitarra ritmica perché la voce è il punto focale della 
+canzone.
 
-## Using the Fader
+## Utilizzo del fader
 
-The fader is the primary control of levels for each track. The exact value of
-the track's levels are displayed in the small rectangular field above the fader.
-You can change the levels by either dragging the slider or typing in a new
-number directly into the rectangle with the number.
+Il fader è il controllo principale dei livelli per ogni traccia. Il valore esatto dei livelli della traccia è 
+visualizzato nel piccolo campo rettangolare sopra il fader. È possibile modificare i livelli trascinando il cursore o 
+digitando un nuovo numero direttamente nel rettangolo.
 
-By default the fader is set to −0.0 dB, meaning that the levels of the track are
-not changed. In the screenshot below, the fader for the track named "kick" is
-set to -0.0, and the peak meter indicates that the highest peak so far was
--5.1dB.
+Per impostazione predefinita, il fader è impostato su −0,0 dB, il che significa che i livelli della traccia non vengono
+modificati. Nella schermata sottostante, il fader della traccia denominata "kick" è impostato su -0,0 e il misuratore di
+picco indica che il picco più alto raggiunto finora è stato di -8,3 dB.
 
-{{< figure alt="levels1" src="en/Ardour4_Mixing_Levels_1.png" >}} 
+{{< figure alt="levels1" src="it/ardour8-mixing-levels-1.png" >}} 
 
-## Avoiding Clipping
+## Evitare il clipping
 
-One other important task in mixing is to avoid _clipping_. The peak value on
-the mixer strip turns red when the signal has peaked above 0.0dB. You can use
-this tool to monitor the highest levels of your track while mixing. 
+Un altro compito importante nel mixaggio è evitare il clipping. Il valore di picco sulla barra del mixer diventa rosso 
+quando il segnale ha superato i 0,0 dB. È possibile utilizzare questo strumento per monitorare i livelli più alti della 
+traccia durante il mixaggio. 
 
-In the screenshot below, the synth track has just clipped to +5.9. You can also
-see little red edges on the waveform itself, indicating the exact locations
-where the recorded sound clipped. 
+Nello screenshot qui sotto, la traccia clap ha appena raggiunto il clipping a +0.4. È anche possibile 
+vedere dei piccoli bordi rossi sulla forma d'onda stessa, che indicano i punti esatti in cui il suono registrato ha r
+aggiunto il clipping.
 
-{{< figure alt="levels2" src="en/Ardour4_Mixing_Levels_2.png" >}}
+{{< figure alt="levels2" src="it/ardour8-mixing-levels-2.png" >}}
 
-Click on the red number in the peak meter to reset it.
+Clicca sul numero rosso nel misuratore di picco per azzerarlo.
 
 {{< callout type="info" >}}
-For the sake of the exercise, try to record your voice so that it clips. Hear
-how the playback is distorted.
+Ai fini dell'esercizio, prova a registrare la tua voce in modo che risulti distorta. Ascolta come viene riprodotta la 
+registrazione.
 {{< /callout >}}
 
-You should make sure that anything that you send to your sound card or that you
-will eventually export as a sound file (such as for CD mastering) **never** goes
-above 0.0dB to avoid actual clipping.
+È necessario assicurarsi che qualsiasi cosa inviata alla scheda audio o che verrà esportata come file audio (ad esempio 
+per il mastering di un CD) non superi **mai** i 0,0 dB per evitare il clipping effettivo.
 
-If the clipping occurs in a very percussive sound and it is almost unnoticeable,
-you may be able to hide it by decreasing the gain (for example, normalize the
-region to 0.0dB, or a lower number like -1.0dB). However, often the clipping
-results in audible distortion of the recorded sound. The best solution in this
-case is to just record again with lower levels.
+Se il clipping si verifica in un suono molto percussivo ed è quasi impercettibile, è possibile nasconderlo diminuendo 
+il guadagno (ad esempio, normalizzando la regione a 0,0 dB o a un valore inferiore come -1,0 dB). Tuttavia, spesso il 
+clipping provoca una distorsione udibile del suono registrato. La soluzione migliore in questo caso è semplicemente 
+registrare di nuovo con livelli più bassi.
 
-## Continuing
+## Continua
 
-When you are finished with this chapter of the tutorial, you should have a
-collection of tracks whose levels are well adjusted to each other and do not
-clip when added together in the _Master_ bus. Once this is accomplished, we can
-proceed to learn about panning in the next chapter, so that our mix takes on a
-strong feeling of stereo space.
+Una volta completato questo capitolo del tutorial, dovresti avere una serie di tracce i cui livelli sono ben regolati 
+tra loro e non si sovrappongono quando vengono aggiunte insieme nel bus _Master_. Una volta fatto questo, possiamo 
+passare al capitolo successivo per imparare il panning, in modo che il nostro mix acquisisca un forte senso di spazio 
+stereo.
 
-Next: [PANNING](../panning)
+Successivo: [Panning](../panning)

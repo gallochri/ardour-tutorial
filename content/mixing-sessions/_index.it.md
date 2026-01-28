@@ -15,6 +15,6 @@ Contenuti:
 3. [Panning](panning/) 
 4. [Utilizzo dei plugin](using-plugins/)
 5. [Utilizzo dei send](using-sends/) 
-6. [Dinamiche](dynamics/) 
+6. [Dinamica](dynamics/) 
 7. [Equalizzazione](equalizing/)
 8. [Automazione](using-automation/)

@@ -6,128 +6,111 @@ cascade:
   type: docs
 ---
 
-_Plugins_ can be used to enhance or transform the sound of individual tracks.
+I _plugin_ possono essere utilizzati per migliorare o trasformare il suono delle singole tracce.
 
-They can be applied directly to a single track, or to a group of tracks using
-a _send_. Later in this tutorial, we will discuss some plugins specific to the
-Mixing process, such as _Compressors_, _Limiters_, _Parametric Equalizers_,
-_Reverbs_ and others.
+Possono essere applicati direttamente a una singola traccia o a un gruppo di tracce utilizzando un _send_. Più avanti 
+in questo tutorial, discuteremo alcuni plugin specifici per il processo di mixaggio, come _Compressori_, _Limitatori_, 
+_Equalizzatori Parametrici_, _Riverberi_ e altri.
 
-## Processor Box
+## Casella del processore
 
-In Ardour terminology, a _processor_ is anything that gets plugged into a mixer
-strip and treats the signal in some way. Ardour provides several built-in
-processors such as the fader or panners. Processors can also be plugins used for
-effects or as instruments, as well as sends or inserts which affect signal
-routing. The arrangement of processors is arbitrary, and there is no limit to
-how many there can be.
+Nella terminologia di Ardour, un _processore_ è qualsiasi cosa che viene collegata a una barra del mixer e tratta il 
+segnale in qualche modo. Ardour fornisce diversi processori integrati, come il fader o i panner. I processori possono 
+anche essere plugin utilizzati per effetti o come strumenti, nonché invii o inserti che influenzano l'instradamento 
+del segnale. La disposizione dei processori è arbitraria e non vi è alcun limite al loro numero.
 
-![mixer strip 2](en/ardour7-default-processor-box.png?width=150)
+{{< figure alt="Casella del Processore predefinita" src="it/ardour7-default-processor-box.png" >}}
  
-The main space shown in the screenshot above is the _processor box_. The blue
-box fader is in fact a _processor_ that comes by default inside the processor
-box. It represents the fader that you use to control the track's volume. All
-processors are shown as colored rectangles, with a small "LED" beside them that
-lights up when the processor is enabled. The colour of the processor depends on
-its location in the sequence; processors that are pre-fader are colored in red,
-and post-fader processors are colored in green. 
+Lo spazio principale mostrato nella schermata sopra è la _casella del processore_. Il fader della casella blu è in 
+realtà un _processore_ che viene fornito di default all'interno della casella del processore. Rappresenta il fader che 
+si utilizza per controllare il volume della traccia. Tutti i processori sono visualizzati come rettangoli colorati, con
+un piccolo "LED" accanto che si illumina quando il processore è abilitato. Il colore del processore dipende dalla sua 
+posizione nella sequenza; i processori pre-fader sono colorati in rosso, mentre quelli post-fader sono colorati in verde.
 
-## Adding a Plugin to a Track or a Bus
+## Aggiungere un plugin a una traccia o a un bus
 
-Plugins can be added by right-clicking in the processor box of the track or
-bus. A menu of options is presented. From the menu, new processors can be
-inserted. 
+I plugin possono essere aggiunti facendo clic con il tasto destro del mouse nella casella del processore della traccia o
+del bus. Viene visualizzato un menu di opzioni. Dal menu è possibile inserire nuovi processori.
 
-![plugins1](en/ardour7-plugin-selector-in-menu.png?height=450)
+{{< figure alt="plugins1" src="it/ardour8-plugin-selector-in-menu.png" >}}
 
-The _Plugin Selector_ is a convenient way to browse and choose plugins:
+Il _Selettore plugin_ è un modo pratico per sfogliare e scegliere i plugin:
 
-{{< figure alt="plugins2" src="en/ardour7-plugin-selector.png" >}}
+{{< figure alt="plugins2" src="it/ardour8-plugin-selector.png" >}}
 
-From the _Plugin Selector_, you can search them by name, type, or other criteria
-available from the drop-down menu. Let's add the reverb plugin called _ACE
-Reverb_:
+Dal _Selettore plugin_, è possibile cercare i plugin per nome, tipo o altri criteri disponibili dal menu a tendina. 
+Aggiungiamo il plugin di riverbero chiamato _ACE Reverb_:
 
-{{< figure alt="Selecting ACE Reverb" src="en/ardour7-select-ace-reverb.png" >}}
+{{< figure alt="Selezione  ACE Reverb" src="it/ardour8-select-ace-reverb.png" >}}
 
-Once selected, click **Add** and the plugin will show up in the bottom list of
-"Plugins to be connected". Then click **Insert Plugin(s)**, and they will show
-up in the processor box.
+Una volta selezionato, clicca su **+Add** e il plugin apparirà nell'elenco in basso dei "Plugin da collegare". 
+Quindi clicca su **Inserisci plugin** e questi appariranno nella casella del processore.
 
-![plugins reverb](en/ardour7-ace-reverb-added-to-processor-box.png?width=150)
+{{< figure alt="Plugin riverbero" src="it/ardour8-ace-reverb-added-to-processor-box.png" >}}
 
-## Editing Plugin Parameters
+## Modifica dei parametri del plugin
 
-Double-click a plugin to edit its parameters. In this example, we double click
-the "ACE Reverb" red box and get this window:
+Fai doppio clic su un plugin per modificarne i parametri. In questo esempio, facciamo doppio clic sulla casella rossa 
+"ACE Reverb" e otteniamo questa finestra:
 
-![ACE Reverb](en/ardour7-ace-reverb-settings.png?width=400)
+{{< figure alt="Impostazioni ACE Reverb" src="it/ardour8-ace-reverb-settings.png" >}}
 
-Here you can control reverb parameters such as _Blend_ and _Room Size_. The
-effect will apply to all sounds contained in the track.
+Qui è possibile controllare i parametri del riverbero, come _Blend_ e _Room Size_. L'effetto verrà applicato a tutti i 
+suoni contenuti nella traccia.
 
 {{< callout type="info" >}}
-Double-click on a slider to switch to numeric input mode, type the new value in,
-then press **Enter** to confirm the change or **Esc** to abort.
+Fai doppio clic su un cursore per passare alla modalità di immissione numerica, digita il nuovo valore, quindi premi 
+**Invio** per confermare la modifica o **Esc** per annullarla.
 {{< /callout >}}
 
-## Bypassing Plugins
+## Bypassare i plugin
 
-To bypass the plugin, press the **Bypass** button in the plugin settings window,
-or simply click the LED of the plugin in the processor box. This turns the
-plugin off and allows the signal to pass by it unaffected. This is useful when
-you want to compare how a track sounds with and without the plugin. 
+Per bypassare il plugin, premi il pulsante **Bypass** nella finestra delle impostazioni del plugin, oppure clicca 
+semplicemente sul LED del plugin nella casella del processore. In questo modo il plugin viene disattivato e il segnale 
+lo attraversa senza subire alcuna modifica. Ciò è utile quando si desidera confrontare il suono di una traccia con e 
+senza il plugin.
 
-![bypass](en/ardour7-ace-reverb-bypass-in-mixer-strip.png?width=150)
+{{< figure alt="bypass" src="it/ardour8-ace-reverb-bypass-in-mixer-strip.png" >}}
 
-Bypassed plugins are shown with the LED turned off. On the screenshot above, the
-fader is enabled and the _ACE Reverb_ plugin is bypassed.
+I plugin bypassati vengono visualizzati con il LED spento. Nella schermata sopra, il fader è abilitato e il plugin 
+_ACE Reverb_ è bypassato.
 
-Right-clicking the plugins will give a menu with several options, including
-_Delete_. 
+Cliccando con il tasto destro sui plugin apparirà un menu con diverse opzioni, tra cui _Elimina_.
 
-## Pre-Fader vs Post-Fader
+## Pre-Fader contro Post-Fader
 
-You have a choice whether you would like to add your plugin before or after the
-fader rectangle in the _processor box_. Pre-fader plugins are inserted in the
-signal path *before* the fader, so that the fader controls the level of the
-signal coming out of the plugin. Post-fader plugins are inserted *after* the
-fader: the fader controls the level of the signal going into the plugin.
+È possibile scegliere se aggiungere il plugin prima o dopo il fader nella _casella del processore_. I plugin pre-fader 
+vengono inseriti nel percorso del segnale *prima* del fader, in modo che il fader controlli il livello del segnale in 
+uscita dal plugin. I plugin post-fader vengono inseriti *dopo* il fader: il fader controlla il livello del segnale in 
+entrata nel plugin.
 
-For some plugins, pre- or post-fader placement does not matter. For others,
-the difference is subtle. For others still, inserting them in the right place
-is absolutely essential  (for more details, see for example [this
-thread](https://discourse.ardour.org/t/fader-before-or-after-plugins/100666)
-at the Ardour discussion forum).
+Per alcuni plugin, il posizionamento pre o post fader non ha importanza. Per altri, la differenza è minima. Per altri 
+ancora, inserirli nel posto giusto è assolutamente essenziale (per maggiori dettagli, vedere ad esempio 
+[questo thread](https://discourse.ardour.org/t/fader-before-or-after-plugins/100666) sul forum di discussione di Ardour).
 
-## Plugin Formats
+## Formati plugin
 
-For those interested in learning more about plugin formats, here's a quick
-overview:
+Per chi fosse interessato ad approfondire la conoscenza dei formati dei plugin, ecco una breve panoramica:
 
-**LADSPA plugins** are a somewhat obsolete plugin format mainly used on Linux.
+**Plugin LADSPA** sono un formato di plugin piuttosto obsoleto utilizzato principalmente su Linux.
 
-**LV2** is an extensible successor to LADSPA. LV2 plugins are available on
-Linux, Windows, and macOS, should respective developers choose to build them
-for these systems.
+**LV2** è un successore estensibile di LADSPA. I plugin LV2 sono disponibili su Linux, Windows e macOS, qualora i 
+rispettivi sviluppatori decidessero di crearli per questi sistemi.
 
-**AU plugins** are the native plugin format for macOS and will only work in
-that operating system.
+**Plugin AU** sono il formato plugin nativo per macOS e funzionano solo su quel sistema operativo.
 
-**VST plugins** is fairly common on both Windows and macOS. Some VST plugins
-built for Windows can be used on Linux, however they may not function correctly
-and require 3rd party software to run. Others are built natively for Linux and
-tend to work fine.
+**Plugin VST** è piuttosto comune sia su Windows che su macOS. Alcuni plugin VST creati per Windows possono essere 
+utilizzati su Linux, tuttavia potrebbero non funzionare correttamente e richiedere software di terze parti per essere 
+eseguiti. Altri sono creati in modo nativo per Linux e tendono a funzionare bene.
 
-More information about using plugins with Ardour can be found
-[in the user manual](http://manual.ardour.org/working-with-plugins/).
+Maggiori informazioni sull'uso dei plugin con Ardour sono disponibili 
+[nel manuale utente].(http://manual.ardour.org/working-with-plugins/).
 
-## Continuing
+## Continua
 
-In this chapter, we learned how to add a plugin to a single track. This is
-useful if that track needs a specific plugin, but if you have a plugin which is
-used for many tracks at the same time, you should continue to the next chapter
-about using sends. You can also continue to the various, plugin-specific
-chapters such as _Dynamics_ and _Equalizing_.
+In questo capitolo abbiamo imparato come aggiungere un plugin a una singola traccia. Ciò è utile se quella traccia 
+necessita di un plugin specifico, ma se avete un plugin che venga utilizzato per più tracce contemporaneamente, dovreste
+passare al capitolo successivo sull'uso dei send. Potete anche passare ai vari capitoli specifici sui plugin, come 
+_Dinamica_ ed _Equalizzazione_.
 
-Next: [USING SENDS](../using-sends)
+Successivo: [Utilizzo dei send](../using-sends)
