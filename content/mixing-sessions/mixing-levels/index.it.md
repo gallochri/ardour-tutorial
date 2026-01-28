@@ -6,7 +6,7 @@ cascade:
   type: docs
 ---
 
-_Levels_ are the volumes of each track relative to the others.
+I _livelli_ sono i volumi di ciascuna traccia rispetto alle altre.
 
 If you can't hear a bass line above the other instruments, one obvious option
 would be to raise the bass line volume. Levels can be adjusted using the fader

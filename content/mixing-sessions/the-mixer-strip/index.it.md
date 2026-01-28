@@ -171,7 +171,7 @@ _livelli di mixaggio_.
 ### Routing
 
 Infine, arriviamo alla parte inferiore della striscia del mixer. Qui troviamo il pulsante **USCITA**, 
-contrassegnato come "Master" nella schermata precedente, perché si collega a un bus chiamato "Master". Questo argomento 
+contrassegnato come "Master" nella schermata precedente, perché la traccia si collega al bus "Master". Questo argomento 
 è stato trattato in precedenza nel capitolo _Comprendere il routing (instradamento)_.
 
 ## Continua
@@ -179,4 +179,4 @@ contrassegnato come "Master" nella schermata precedente, perché si collega a un
 Ora che abbiamo dato un'occhiata alle principali aree della barra del mixer, possiamo passare al capitolo 
 _Livelli di mixaggio_ per vedere come iniziare a utilizzarlo.
 
-Next: [MIXING LEVELS](../mixing-levels)
+Successivo: [Livelli di Mixaggio](../mixing-levels)
