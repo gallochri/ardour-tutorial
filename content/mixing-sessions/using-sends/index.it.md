@@ -9,114 +9,104 @@ cascade:
 Un _Send_ è semplicemente un'uscita aggiuntiva per una traccia o un bus con un proprio fader separato che può essere 
 utilizzato per indirizzare il segnale verso altri punti in Ardour.
 
-Also known as _auxiliary sends_, they tap the signal at a specific point in
-the signal flow (pre-fader, post-fader, before or after EQs and other plugins,
-etc.) and send a copy of that signal somewhere else, without affecting the
-normal signal flow downwards to the channel fader.
+Conosciuti anche come _mandate ausiliarie_, prelevano il segnale in un punto specifico del flusso del segnale 
+(pre-fader, post-fader, prima o dopo gli equalizzatori e altri plugin, ecc.) e inviano copia di quel segnale altrove, 
+senza influire sul normale flusso del segnale verso il fader del canale.
 
-In Ardour, you can easily add _sends_ to tracks and busses through the mixer
-strip. Sends are processors, just like plugins.
+In Ardour, puoi facilmente aggiungere _sends_ alle tracce e ai bus tramite la barra del mixer. I send sono processori, 
+proprio come i plugin.
 
-## When is a Send Useful?
+## Quando è utile utilizzare un send?
 
-In earlier chapters, we built a drum kit pattern with four separate tracks:
-kick, snare, hihat, and clap. Let's say now you'd like to add a reverb to the
-drums. You could of course add a separate plugin for each individual track,
-and tweak their settings separately, but this method unnecessarily increases
-the amount of work. Every time you want to change a reverb setting across the
-board for all drums, you'd have to open all four reverb plugins and change
-them in the same way.
+Nei capitoli precedenti abbiamo creato un pattern di batteria con quattro tracce separate: cassa (kick), rullante 
+(snare), charleston (hihat) e clap. Supponiamo ora che tu voglia aggiungere un riverbero alla batteria. Ovviamente 
+potresti aggiungere un plugin separato per ogni singola traccia e modificarne le impostazioni separatamente, ma questo 
+metodo aumenta inutilmente la quantità di lavoro. Ogni volta che desideri modificare un'impostazione di riverbero per 
+tutta la batteria, dovresti aprire tutti e quattro i plugin di riverbero e modificarli allo stesso modo.
 
-This is where sends come in handy: you can use them to add a particular
-effect to a set of tracks without creating multiple instances of the same
-plugin.
+È qui che i send tornano utili: puoi usarli per aggiungere un effetto particolare a una serie di tracce senza creare più
+istanze dello stesso plugin.
 
-Here's the overview of how we will do this:
+Ecco una panoramica di come procederemo:
 
-1. Create a single bus with the desired plugin.
-2. Add a send to each drum track to which you want to apply the effect.
-3. Route these sends to the bus.
+1. Crea un unico bus con il plugin desiderato.
+2. Aggiungi un send a ciascuna traccia di batteria a cui desideri applicare l'effetto.
+3. Indirizza questi send al bus.
 
-## Creating the Bus and adding a Plugin
+## Creazione del bus e aggiunta di un plugin
 
-Create a bus (`Track > Add Track, Bus, or VCA...` in the menu), name it
-appropriately, and add a plugin in the pre-fader region (right-click just
-above the fader's blue rectangle in the processor box), as discussed in the
-previous chapter, _Using Plugins_.
+Crea un bus (`Traccia > Aggiungi traccia, bus o VCA...` nel menu), assegnagli un nome appropriato e aggiungi un plugin 
+nella regione pre-fader (clicca con il tasto destro del mouse appena sopra il rettangolo blu del fader nella casella del
+processore), come descritto nel capitolo precedente, _Utilizzo dei plugin_.
 
-In this example, we have created a stereo bus called _Drums_, and added the
-_ACE Reverb_ plugin to the bus.
+In questo esempio abbiamo creato un bus stereo chiamato _Batteria_ e aggiunto il plugin _ACE Reverb_ al bus.
 
-![sends1](en/ardour7-ace-reverb-in-mixer-strip.png?height=200)
+{{< figure alt="sends1" src="it/ardour8-ace-reverb-in-mixer-strip.png" >}}
 
-### Bus inputs
+### Ingressi Bus
 
-The "-" display in the bus input button indicates that nothing is routed to
-this bus yet. We will take care of this later.
+Il segno "-" visualizzato nel pulsante di ingresso del bus indica che non è stato ancora indirizzato nulla a questo bus.
+Ci occuperemo di questo più avanti.
 
-### Bus output
+### Uscita Bus
 
-Before routing a send to this bus, first make sure that the bus outputs are
-routed to the _Master_ bus, as shown below (button at bottom reads "*master*").
+Prima di instradare un send a questo bus, assicurarsi che le uscite del bus siano instradate al bus _Master_, come 
+mostrato di seguito (il pulsante in basso riporta la dicitura "*master*").
 
-{{< figure alt="sends2" src="en/Ardour4_Sends_2.png" >}} 
+{{< figure alt="sends2" src="it/Ardour4_Sends_2.png" >}} 
 
-Also, open the plugin window (double click on the _ACE Reverb_ rectangle) and
-set the plugin's signal mix to 1.0 _Blend_ value.
+Inoltre, apri la finestra del plugin (doppio clic sul rettangolo _ACE Reverb_) e imposta il mix del segnale del plugin 
+sul valore _Blend_ a 1.
 
-![sends3](en/ardour7-ace-reverb-settings.png?width=400)
+{{< figure alt="sends3" src="it/ardour8-ace-reverb-settings.png" >}}
 
-This ensures that the bus carries all of the processed signal from the plugin,
-and none of the unprocessed signal to the _Master_ bus. Remember, the
-unprocessed, 'clean' signals are still available from their original tracks,
-so there is no need to duplicate them in this bus.
+Questo assicura che il bus trasporti tutto il segnale elaborato dal plugin e nessun segnale non elaborato al bus 
+_Master_. Ricorda che i segnali non elaborati, "puliti", sono ancora disponibili dalle loro tracce originali, quindi non
+è necessario duplicarli in questo bus.
 
-## Creating and Routing Sends
+## Creazione e instradamento dei send
 
-Now we can create sends in the other tracks and route them to the bus inputs.
+Ora possiamo creare i send nelle altre tracce e indirizzarli agli ingressi del bus.
 
-Like plugins, sends are also created in the processor box. Go to each of your
-drum tracks, right-click in empty space of the processor box, and create a
-_New Aux Send..._ directed to the appropriate bus (in our case, named _Drums_).
+Come i plugin, anche i send vengono creati nella casella del processore. Vai su ciascuna delle tue tracce di batteria, 
+fai clic con il tasto destro del mouse in uno spazio vuoto della casella del processore e crea un _Nuova mandata aux..._ 
+indirizzata al bus appropriato (nel nostro caso, denominato _Batteria_).
 
-![sends4](en/ardour7-adding-aux-send.png?height=500)
+{{< figure alt="sends4" src="it/ardour8-adding-aux-send.png" >}}
 
 {{< callout type="info" >}}
-If you do *not* see the _New Aux Sends..._ option in the menu, it's probably
-because you did not create any bus yet. Go back to the previous step to create
-the bus.
+Se *non* vedi l'opzione _Nuova mandata aux..._ nel menu, probabilmente è perché non hai ancora creato alcun bus. Torna 
+al passaggio precedente per crearlo.
 {{< /callout >}}
 
-You should now see the send displayed in the processor box:
+Ora dovresti vedere il messaggio visualizzato nella casella del processore:
 
-![postfader](en/ardour7-post-fader-send.png?height=200)
+{{< figure alt="post-fader" src="it/ardour8-post-fader-send.png" >}}
 
-The little _Send_ slider you see just below the green rectangle is the send
-fader, which  controls how much sound will be sent from this track to the bus.
+Il piccolo cursore _Invia_ che vedi appena sotto il rettangolo verde è il fader di invio, che controlla la quantità di 
+suono che verrà inviata da questa traccia al bus.
 
-### Post-Fader vs Pre-Fader Sends
+### Send Post-Fader contro Pre-Fader
 
-Notice that the image above shows a post-fader send (it sits _after_ the fader
-rectangle). In post-fader sends, the send level is controlled _first_ by both
-the track/Bus Fader and _second_ by the send fader.
+Si noti che l'immagine sopra mostra un send _post-fader_ (si trova _dopo_ il rettangolo del fader). Negli invii 
+_post-fader_, il livello di invio è controllato _prima_ dal fader della traccia/bus e _poi_ dal fader di invio.
 
-In a _pre_-fader send, on the other hand, the send level is controlled only by
-the send fader, independently of the track/bus fader. A pre-fader send would
-look like this:
+In un invio _pre-fader_, invece, il livello del send è controllato solo dal fader del send, indipendentemente dal fader 
+della traccia/bus. Un invio _pre-fader_ avrebbe questo aspetto:
 
-![prefader](en/ardour7-pre-fader-send.png?height=200)
+{{< figure alt="prefader" src="it/ardour8-pre-fader-send.png" >}}
 
-You can drag the send rectangle up and down the processor box to make it pre-
-or post-fader as needed.
+È possibile trascinare il rettangolo di invio verso l'alto e verso il basso nella casella del processore per renderlo 
+pre- o post-fader, a seconda delle necessità.
 
 {{< callout type="info" >}}
-The choice of pre- or post-fader depending on the type of effect plugin used and
-the desired result. For this exercise, either one will work.
+La scelta tra pre-fader o post-fader dipende dal tipo di plugin di effetto utilizzato e dal risultato desiderato. Per 
+questo esercizio, entrambi funzionano.
 {{< /callout >}}
 
-A send behaves just like any other plugin in the processor box. You can
-deactivate it temporarily by clicking on the small LED, and you can right click
-on the rectangle to access other options, including _Delete_.
+Un send si comporta esattamente come qualsiasi altro plugin nella casella del processore. È possibile disattivarlo 
+temporaneamente cliccando sul piccolo LED, mentre cliccando con il tasto destro del mouse sul rettangolo è possibile 
+accedere ad altre opzioni, tra cui _Delete_.
 
 ### Send Fader
 
