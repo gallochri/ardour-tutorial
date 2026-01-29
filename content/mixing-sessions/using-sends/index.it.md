@@ -110,25 +110,22 @@ accedere ad altre opzioni, tra cui _Delete_.
 
 ### Send Fader
 
-To control the level of each send, simply click and drag the send fader to
-increase or decrease its volume.
+Per controllare il livello di ciascun send, è sufficiente cliccare e trascinare il fader per aumentare o diminuire il 
+volume.
 
-{{< figure alt="sendfader" src="en/Ardour4_Send_Fader.png" >}} 
+{{< figure alt="send fader" src="it/ardour8-send-fader.png" >}}
 
-The _Drums_ bus is now receiving the sum of all tracks, and applying the effect
-to it. A single plugin applied to the bus controls the effect for the mix of all
-drum sounds routed there. This way, you have independent control over the "dry"
-sound of the original tracks, and the "wet" sound coming out of the bus. 
+Il bus _Batteria_ ora riceve la somma di tutte le tracce e applica l'effetto. Un singolo plugin applicato al bus 
+controlla l'effetto per il mix di tutti i suoni di batteria indirizzati. In questo modo, hai un controllo indipendente 
+sul suono "dry" (pulito) delle tracce originali e sul suono "wet" (processato) che esce dal bus.
 
-Because sends are very useful for this kind of work with effect plugins, they
-are also commonly called "Effect Sends".
+Poiché i send sono molto utili per questo tipo di lavoro con i plugin di effetti, vengono comunemente chiamati anche 
+"Effect Send".
 
-## Continuing
+## Continua
 
-Now that you know how to add plugins to a track, as well as how to add sends
-to tracks to create plugin busses usable by any number of tracks, it might be
-helpful to learn about a few other plugins useful in the mixing process.
-Please continue on to the following chapters covering _dynamics_ and
-_equalizing_.
+Ora che sapete come aggiungere plugin a una traccia e come aggiungere send alle tracce per creare bus plugin 
+utilizzabili da un numero qualsiasi di tracce, potrebbe essere utile conoscere altri plugin utili nel processo di 
+mixaggio. Passate ai capitoli seguenti che trattano la dinamica e l'equalizzazione.
 
-Next: [DYNAMICS](../dynamics)
+Successivo: [Dinamica](../dynamics)

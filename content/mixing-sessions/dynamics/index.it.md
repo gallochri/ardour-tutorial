@@ -6,65 +6,56 @@ cascade:
   type: docs
 ---
 
-OUno dei problemi che potresti incontrare in un mix è che, a seconda del materiale, le parti più forti sono troppo forti
+Uno dei problemi che potresti incontrare in un mix è che, a seconda del materiale, le parti più forti sono troppo forti
 e/o quelle più deboli sono troppo deboli.
 
-This kind of problem cannot be easily solved using faders to adjust the levels
-alone. You may set the levels so high that they clip, or you may add unwanted
-background noise by simply turning levels up. These are all problems with what
-is called the _dynamic range_, i.e., the difference between the loudest and
-quietest parts of your session. There are several types of tools for adjusting
-the dynamic range available mostly as third-party plugins within Ardour,
-including _limiting_, _compression_, and _gating_.
+Questo tipo di problema non può essere risolto facilmente utilizzando solo i fader per regolare i livelli. È possibile 
+impostare livelli così alti da causare il clipping, oppure aggiungere rumori di fondo indesiderati semplicemente alzando
+i livelli. Si tratta di problemi legati alla cosiddetta _gamma dinamica_, ovvero la differenza tra le parti più rumorose
+e quelle più silenziose della sessione. Esistono diversi tipi di strumenti per regolare la gamma dinamica, disponibili 
+principalmente come plugin di terze parti all'interno di Ardour, tra cui _limiting_, _compressione_ e _gating_.
 
 ## Limiting
 
-A _limiter_ is a tool that prevents the volume of a track from going over a
-certain level, usually the peak level (0dB) or something close to it. Many
-limiters have the option to boost the levels of the incoming signal before they
-are limited, and in this way you can "close the gap" between the loudest and
-quietest parts of your mix. A limiter can be used on the _Master_ bus to prevent
-the overall mix from clipping. Limiters are almost always used post-fader.
+Un _limiter_ è uno strumento che impedisce al volume di una traccia di superare un determinato livello, solitamente il 
+livello di picco (0dB) o un valore simile. Molti limiter hanno la possibilità di aumentare i livelli del segnale in 
+ingresso prima che vengano limitati, e in questo modo è possibile "colmare il divario" tra le parti più forti e quelle 
+più deboli del mix. Un limiter può essere utilizzato anche sul bus _Master_ per impedire il clipping del mix 
+complessivo. I limiter sono quasi sempre utilizzati post-fader.
 
-In the example below, a plugin named _Fast Lookahead Limiter_ is used (if you
-don't find that specific one among your installed plugins, look for any other
-called "Limiter"). To set how much it limits, simply adjust the _Limit (dB)_
-slider. The _Fast Lookahead Limiter_ literally looks ahead in the signal by a
-few milliseconds, and when it sees that the signal is about to go over the limit
-you have set, it automatically turns the levels down.
+Nell'esempio seguente viene utilizzato un plugin denominato _Fast Lookahead Limiter_ (se non lo trovate tra i plugin 
+installati, cercate qualsiasi altro plugin denominato "Limiter"). Per impostare il livello di limitazione, è sufficiente
+regolare il cursore _Limit (dB)_. Il _Fast Lookahead Limiter_ anticipa letteralmente il segnale di alcuni millisecondi 
+e, quando rileva che il segnale sta per superare il limite impostato, abbassa automaticamente i livelli.
 
 ![limiter](en/ardour7-fast-lookahead-lmiter.png?width=500)
 
-The _Input Gain (dB)_ slider determines how much the levels are increased before
-they reach the limiter, and the _Attenuation (dB)_ meter on the right-hand side
-shows how much the levels are being reduced at any given moment. While the
-reduction in volume is nearly-instantaneous, the _Release time (s)_ slider
-determines how long it takes the limiter to return to 0dB of _Attenuation_.
+Il cursore _Input Gain (dB)_ determina di quanto vengono aumentati i livelli prima che raggiungano il limitatore, mentre
+il misuratore _Attenuation (dB)_ sul lato destro mostra di quanto vengono ridotti i livelli in un dato momento. Mentre 
+la riduzione del volume è quasi istantanea, il cursore _Release time (s)_ determina il tempo necessario al limitatore 
+per tornare a 0dB di _Attenuation_.
 
-Note that the "harder" one drives the limiter (by increasing the input gain
-and/or decreasing the maximum peak limit allowed), the more reduction the
-limiter is forced to make, and the more likely it is that artifacts of the
-processing will occur (such as distortions or erratic changes in volume). On
-the _Master_ bus, it is generally best to avoid excessive limiting.
+Si noti che più si spinge il limiter (aumentando il guadagno in ingresso e/o diminuendo il limite massimo di picco 
+consentito), maggiore sarà la riduzione che il limiter sarà costretto ad applicare e maggiore sarà la probabilità che si
+verifichino artefatti di elaborazione (come distorsioni o variazioni irregolari del volume). Sul bus _Master_, in genere
+è meglio evitare un limiting eccessivo.
 
-## Compression
+## Compressione
 
-A _compressor_ boosts the overall volume of a sound, but then "squeezes" it
-depending on how loud it is. This can make vocals sound more even or drums
-sound fuller and louder. The end effect is similar to how a limiter can reduce
-the range between the quietest and the loudest sound, however the effect is
-more selective when using a compressor.
+Un _compressore_ aumenta il volume complessivo di un suono, ma poi lo "comprime" a seconda di quanto è forte. Questo può
+rendere la voce più uniforme o la batteria più piena e forte. L'effetto finale è simile a quello di un limitatore che 
+riduce la differenza tra il suono più basso e quello più alto, ma l'effetto è più selettivo quando si usa un compressore.
 
-A typical compressor will have these obligatory controls:
+Un compressore tipico avrà questi comandi obbligatori:
 
-**Threshold**
-: Sets the level at which the compressor will start to act.
+**Soglia**
+: Imposta il livello al quale il compressore inizierà ad agire.
 
-**Ratio**
-: Controls how much the compressor will "squeeze" the sound.
+**Rapporto**
+: Controlla quanto il compressore "comprimerà" il suono.
 
-**Attack** and **Release**
-: Control how quickly the compressor affects the sound.
+**Attacco** e **Rilascio**
+: Controlla la velocità con cui il compressore influisce sul suono.
 
 ![ACE Compressor](en/ardour7-ace-compressor.png?width=450)
 
