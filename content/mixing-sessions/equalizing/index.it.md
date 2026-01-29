@@ -8,110 +8,96 @@ cascade:
 
 Un _equalizzatore_ (_EQ_) consente di controllare separatamente il guadagno delle diverse gamme di frequenza di un suono.
 
-This can be useful not only to sculpt the timbre of an isolated sound (for
-example, to make it sound "sharper" or "smoother"), but also to make sounds of
-various timbres to integrate better into the mix. 
+Questo può essere utile non solo per modellare il timbro di un suono isolato (ad esempio, per renderlo più "nitido" o 
+"morbido"), ma anche per integrare meglio nel mix suoni con timbri diversi.
 
-Often, even after adjusting levels and panning, different tracks with similar
-frequency content (for example, a bass guitar and a kick drum) may be
-difficult to tell apart in the mix. An equalizer is a good tool to address
-this.
+Spesso, anche dopo aver regolato i livelli e il panning, può essere difficile distinguere nel mix tracce diverse con
+contenuti di frequenza simili (ad esempio, un basso e una grancassa). Un equalizzatore è uno strumento utile per 
+risolvere questo problema.
 
-## 3-Band Equalizer
+## Equalizzatore a 3 bande
 
-The simplest kind of equalizer is the one familiar to us from analog mixers. It
-has three parameters, which adjust the levels of three _bands_, or frequency
-ranges: one for the _bass_ (low frequencies), one for the _middle_ range
-frequencies, and one for the _treble_ (high frequencies). The _DJ EQ_  plugin on
-the screenshot below is just such an EQ. If you don't have this particular
-plugin on your computer, explore the ones you have that have "EQ" in the name;
-you will likely find something similar.
+Il tipo più semplice di equalizzatore è quello che conosciamo dai mixer analogici. Ha tre parametri che regolano i 
+livelli di tre bande, o gamme di frequenza: uno per i bassi (frequenze basse), uno per le frequenze medie e uno per gli 
+alti (frequenze alte). Il plugin _DJ EQ_ nella schermata qui sotto è proprio un equalizzatore di questo tipo. Se non 
+avete questo particolare plugin sul vostro computer, cercate quelli che avete che contengono "EQ" nel nome; 
+probabilmente troverete qualcosa di simile.
 
-![DJ EQ](en/ardour7-dj-eq.png?width=400)
+{{< figure alt="dj eq" src="it/ardour8-dj-eq.png" >}}
 
-## Multi-Band (or Graphic) Equalizer
+## Equalizzatore multibanda (o grafico)
 
-A more complex _multi-band_ (or _graphic_) equalizer often has a lot more bands.
-Each band is centered on a frequency, and the level of each band can be
-independently adjusted. In some multi-band EQs, such as the _LSP Graphic
-Equalizer_ plugin shown below, the center frequency of each band can be defined
-by the user. This allows you to either attenuate (or remove) an unwanted
-frequency, or to reinforce (boost) a desired one.
+Un equalizzatore multibanda (o grafico) più complesso spesso ha molte più bande.
+Ogni banda è centrata su una frequenza e il livello di ciascuna banda può essere regolato in modo indipendente. In 
+alcuni equalizzatori multibanda, come il plugin _LSP Graphic Equalizer_ mostrato di seguito, la frequenza centrale di 
+ciascuna banda può essere definita dall'utente. Ciò consente di attenuare (o rimuovere) una frequenza indesiderata o di 
+rafforzare (amplificare) quella desiderata.
 
-{{< figure alt="tap eq" src="en/ardour7-lsp-graphic-16-band-eq.png" >}}
+{{< figure alt="tap eq" src="it/ardour8-lsp-graphic-16-band-eq.png" >}}
 
-The overall "curve" of the bands can also be used to determine the general tone
-of your track or mix. In the example above, the lower part of the mid-range
-frequencies have been "scooped out" a bit (note how bands 1,2 and 15,16 are left
-untouched at 0 dB, while intermediary bands 3 through 14 draw an attenuation
-curve, with band 7 at -13.5 dB as the lowest point).
+La "curva" complessiva delle bande può anche essere utilizzata per determinare il tono generale della traccia o del mix.
+Nell'esempio sopra riportato, la parte inferiore delle frequenze medie è stata leggermente "scavata" (si noti come le 
+bande 1,2 e 15,16 siano rimaste invariate a 0 dB, mentre le bande intermedie dalla 3 alla 14 disegnano una curva di 
+attenuazione, con la banda 7 a -13,5 dB come punto più basso).
 
-## Parametric Equalizer
+## Equalizzatore parametrico
 
-The _parametric equalizer_ is the most versatile type of EQ used for mixing
-because of its extensive control over all types of EQ parameters. Ardour ships
-with a parametric equalizer plug-in called the _ACE EQ_. It looks like this:
+L'equalizzatore parametrico è il tipo di EQ più versatile utilizzato per il mixaggio grazie al suo ampio controllo su 
+tutti i tipi di parametri EQ. Ardour viene fornito con un plug-in equalizzatore parametrico chiamato ACE EQ. 
+Ha questo aspetto:
 
-![ACE EQ](en/ardour7-ace-eq.png?width=500)
+{{< figure alt="ACE EQ" src="it/ardour8-ace-eq.png" >}}
 
-Others may have shinier graphical interfaces like the _x42 EQ_ by Robin Gareus,
-but they all essentially do the exact same thing. You may have EQ plugins on
-your computer that look a bit different than these screenshots, but the
-parameters you can control are likely very similar.
+Altri possono avere interfacce grafiche più accattivanti, come l'EQ _x42_ di Robin Gareus, ma in sostanza fanno tutti 
+esattamente la stessa cosa. È possibile che sul tuo computer siano presenti plugin EQ dall'aspetto leggermente diverso 
+rispetto a questi screenshot, ma i parametri che puoi controllare sono probabilmente molto simili.
 
-{{< figure alt="x42 eq" src="en/ardour7-x42-eq.png" >}}
+{{< figure alt="x42 eq" src="it/ardour8-x42-eq.png" >}}
 
-In both screenshots above (_a-EQ_ and _x42 EQ_), there are options you can
-adjust for each frequency band. Each of the three bands has a _level_ (dB)
-adjustment to cut or boost frequencies, a _frequency_ (Hz) adjustment to select
-center frequency, and a some form of _Q_ adjustment which determines how wide
-the range of frequencies to be affected will be.
+In entrambe le schermate sopra riportate (_ace-EQ_ e _x42 EQ_), sono presenti opzioni che è possibile regolare per 
+ciascuna banda di frequenza. Ciascuna delle bande dispone di una regolazione _level_ (dB) per tagliare o amplificare 
+le frequenze, una regolazione _frequency_ (Hz) per selezionare la frequenza centrale e una qualche forma di regolazione 
+_Q_ che determina l'ampiezza della gamma di frequenze interessate.
 
-#### High Shelf, Low Shelf
+#### High shelf, Low shelf (ripiano alto, ripiano basso)
 
-Both plugins shown above (_a-EQ_ and _x42 EQ_) also contain a _high shelf_ and
-_low shelf_. A _shelf_ cuts or boosts everything above (high shelf) or below
-(low shelf) a specific frequency. For example, a low shelf can be used to remove
-unwanted rumbling sounds, and a high shelf can be used to reduce hiss. The
-frequency control of a shelf determines the cut-off frequency. for example,
-a low shelf with cut off frequency 200 Hz means that the equalizer will
-attenuate everything below that frequency. The amount of attenuation is
-controlled by the level knob.
+Entrambi i plugin sopra indicati (_ace-EQ_ e _x42 EQ_) contengono anche uno _high shelf_ e uno _low shelf_. 
+Uno _shelf_ taglia o amplifica tutto ciò che è al di sopra (high shelf) o al di sotto (low shelf) di una frequenza 
+specifica. Ad esempio, un low shelf può essere utilizzato per rimuovere rumori indesiderati, mentre un high shelf può 
+essere utilizzato per ridurre il sibilo. Il controllo di frequenza di uno shelf determina la frequenza di taglio. 
+Ad esempio, un low shelf con frequenza di taglio di 200 Hz significa che l'equalizzatore attenuerà tutto ciò che è al di
+sotto di quella frequenza. La quantità di attenuazione è controllata dalla manopola del livello.
 
-Note that for ACE EQ, there's no _Q_ parameter for either the high shelf or the
-low shelf, but _x42 EQ_ has it.
+Si noti che in ACE EQ non è presente il parametro _Q_ né per lo shelf alto né per quello basso, mentre in _x42 EQ_ è
+presente.
 
-## An Example of Using an Equalizer
+## Un esempio di utilizzo di un equalizzatore
 
-In order to achieve a better separation of two instruments in the mix through
-the use of EQ, you first need to find out where the two instruments overlap.
+Per ottenere una migliore separazione dei due strumenti nel mix attraverso l'uso dell'EQ, è necessario innanzitutto 
+individuare i punti in cui i due strumenti si sovrappongono.
 
-Here's one approach.
+Ecco un approccio possibile.
 
-1. Using _ACE EQ_ or any equivalent EQ plugin, select an appropriate band for
-one of the instruments. In the case of a bass guitar, it would be a low
-frequency band (start at, say, 100 Hz).
+1. Utilizzando _ACE EQ_ o qualsiasi plugin EQ equivalente, selezionare una banda appropriata per uno degli strumenti. 
+Nel caso di un basso elettrico, sarebbe una banda a bassa frequenza (iniziare, ad esempio, da 100 Hz).
 
-2. Boost the gain to 10dB, change the _Q_ (also called "bandwidth")  so that is
-a narrower range, and then adjust the frequency upwards and downwards slowly.
-You'll hear a pitch move up and down.
+2. Aumenta il guadagno a 10 dB, modifica il _Q_ (chiamato anche "larghezza di banda") in modo che sia un intervallo più
+ristretto, quindi regola lentamente la frequenza verso l'alto e verso il basso. Sentirai un tono che sale e scende.
 
-3. Bring it down slowly until you hear the frequency range where the two
-instruments overlap. Now simply reduce the gain to -5dB, and you will hopefully
-hear the instruments a bit clearer. Next, apply the same process to the other
-instrument.
+3. Abbassalo lentamente fino a sentire la gamma di frequenze in cui i due strumenti si sovrappongono. Ora riduci 
+semplicemente il guadagno a -5dB e, se tutto va bene, sentirai gli strumenti un po' più chiaramente. Successivamente, 
+applica lo stesso processo all'altro strumento.
 
-There are many approaches to EQ. Hopefully this will provide one example of
-how to begin EQ'ing tracks in your mix. But most importantly, when it comes to
-EQ, it is better to use too little than too much, unless you're intentionally
-using extreme EQ as a compositional parameter.
+Esistono molti approcci all'equalizzazione. Speriamo che questo articolo possa fornire un esempio di come iniziare a 
+equalizzare le tracce nel vostro mix. Ma soprattutto, quando si tratta di equalizzazione, è meglio usare troppo poco 
+piuttosto che troppo, a meno che non si stia intenzionalmente utilizzando un'equalizzazione estrema come parametro 
+compositivo.
 
-## Continuing
+## Continua
 
-You should have enough tools now to create a clean, well-balanced stereo mix of
-your session. However, if you want the parameters of your faders, panning or
-plugins to change over time, then you will want to explore the next chapter on
-automation. If not, then skip ahead to learn how to _export sessions_ in the
-next section.
+Ora dovresti avere tutti gli strumenti necessari per creare un mix stereo pulito e ben bilanciato della tua sessione. 
+Tuttavia, se desideri che i parametri dei tuoi fader, panning o plugin cambino nel tempo, ti consigliamo di approfondire
+il prossimo capitolo sull'automazione. In caso contrario, passa alla sezione successiva per imparare come esportare 
+le sessioni.
 
-Next: [USING AUTOMATION](../using-automation)
+Successivo: [Utilizzo dell'automazione](../using-automation)
