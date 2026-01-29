@@ -28,7 +28,7 @@ installati, cercate qualsiasi altro plugin denominato "Limiter"). Per impostare 
 regolare il cursore _Limit (dB)_. Il _Fast Lookahead Limiter_ anticipa letteralmente il segnale di alcuni millisecondi 
 e, quando rileva che il segnale sta per superare il limite impostato, abbassa automaticamente i livelli.
 
-![limiter](en/ardour7-fast-lookahead-lmiter.png?width=500)
+{{< figure alt="Fast Lookahead Limiter" src="it/ardour8-fast-lookahead-lmiter.png" >}}
 
 Il cursore _Input Gain (dB)_ determina di quanto vengono aumentati i livelli prima che raggiungano il limitatore, mentre
 il misuratore _Attenuation (dB)_ sul lato destro mostra di quanto vengono ridotti i livelli in un dato momento. Mentre 
@@ -48,79 +48,71 @@ riduce la differenza tra il suono più basso e quello più alto, ma l'effetto è
 
 Un compressore tipico avrà questi comandi obbligatori:
 
-**Soglia**
+**Threshold** (Soglia)
 : Imposta il livello al quale il compressore inizierà ad agire.
 
-**Rapporto**
+**Ratio** (Rapporto)
 : Controlla quanto il compressore "comprimerà" il suono.
 
-**Attacco** e **Rilascio**
+**Attack** e **Release** (attacco e rilascio)
 : Controlla la velocità con cui il compressore influisce sul suono.
 
-![ACE Compressor](en/ardour7-ace-compressor.png?width=450)
+{{< figure alt="ACE Compressor" src="it/ardour8-ace-compressor.png" >}}
 
-The _ACE Compressor_ plugin on the screenshot above has two additional controls:
+Il plugin _ACE Compressor_ nella schermata sopra riportata presenta due controlli aggiuntivi:
 
 **Threshold level** (in dB)
-: Sets the level at which the compressor will compress or squeeze the sound.
+: Imposta il livello al quale il compressore comprimerà o ridurrà il suono.
 
 **Makeup gain** (in dB)
-: Boosts the whole signal after the compression occurs.
+: Aumenta l'intero segnale dopo la compressione.
 
-To soften out a vocal, for example, you could set _Threshold level_ of −10dB or
-so and a _Ratio_ of 2.5, and then bring the volume back up with the _Makeup
-gain_. The other three controls — _Attack time_, _Release time_, and _Knee_ —
-allow you to control the shape of the compression.
+Per ammorbidire una voce, ad esempio, è possibile impostare il livello di soglia (Threshold level) a circa −10dB e un 
+rapporto (Ratio) di 2,5, quindi riportare il volume al livello originale con il guadagno di compensazione (Makeup gain).
+Gli altri tre controlli — tempo di attacco (Attack time), tempo di rilascio (Release time) e knee — consentono di 
+controllare la forma della compressione.
 
-For soft vocal compression, you would want a semi-fast attack time so that the
-compressor catches the beginning of each word, a slower release time to let the
-voice ring out, and a soft knee radius to create a gentle form of compression
-that isn't too noticeable.
+Per una compressione vocale morbida, è consigliabile un tempo di attacco semi-veloce in modo che il compressore catturi 
+l'inizio di ogni parola, un tempo di rilascio più lento per lasciare risuonare la voce e un raggio morbido per creare 
+una forma delicata di compressione che non sia troppo evidente.
 
-If you want to make drums sound big, you might try a slow attack time so that
-you don't compress the pop of the drum, a fast release time so that the
-compressor can catch the next hit of the drum, and a large ratio to make the
-dynamics between the beginning and end of the drum hit similar.
+Se vuoi rendere il suono della batteria più potente, potresti provare un tempo di attacco lento in modo da non 
+comprimere il suono della batteria, un tempo di rilascio veloce in modo che il compressore possa catturare il colpo 
+successivo della batteria e un rapporto elevato per rendere simili le dinamiche tra l'inizio e la fine del colpo della 
+batteria.
 
-Below is a screenshot of a similar compressor from the [LSP plugins
-suite](https://lsp-plug.in/):
+Di seguito è riportato uno screenshot di un compressore simile dalla [LSP plugins suite](https://lsp-plug.in/):
 
-{{< figure alt="LSP Compressor Mono" src="en/ardour7-lsp-compressor-mono.png" >}}
+{{< figure alt="LSP Compressor Mono" src="it/ardour8-lsp-compressor-mono.png" >}}
 
-If you want to speed up learning how to use a compressor, a generally good idea
-is to insert one scope visualization plugin before the compressor and one right
-after, then open both 
+Se vuoi imparare più velocemente come usare un compressore, una buona idea è quella di inserire un plugin di 
+visualizzazione prima del compressore e uno subito dopo, aprire entrambi. 
 
 ## Gating
 
-The simplest kind of a _gate_ allows a signal to pass through when it is over a
-certain level, and blocks the signal when it is lower than that.
+Il tipo più semplice di _gate_ consente il passaggio di un segnale quando supera un determinato livello e lo blocca 
+quando è inferiore a tale livello.
 
-Gates are often used as a kind of noise reduction. For example, the gate on a
-microphone channel might only open while the singer is singing, preventing other
-background noises from coming through as well when she is not singing. Gated
-drums are also a very well-known studio production trick to make them sound
-"sharper".
+I gate vengono spesso utilizzati come una sorta di riduzione del rumore. Ad esempio, il gate su un canale microfonico 
+potrebbe aprirsi solo mentre il cantante sta cantando, impedendo che altri rumori di fondo vengano trasmessi quando non 
+sta cantando. Anche i tamburi con gate sono un trucco di produzione in studio molto noto per renderli più "nitidi".
 
-Here, the _Hard Gate_ plugin (from a suite of LADSPA plugins called
-[CMT](https://www.ladspa.org/cmt/overview.html)) displays a single control
-parameter, the _Threshold_ at which the gate will open and let the signal
-through.
+Qui, il plugin _Hard Gate_ (da una suite di plugin LADSPA chiamata [CMT](https://www.ladspa.org/cmt/overview.html)) 
+visualizza un unico parametro di controllo, la _soglia_ (threshold) alla quale il gate si aprirà e lascerà passare il 
+segnale.
 
-![Hard Gate](en/ardour7-hard-gate.png?width=400)
+{{< figure alt="Hard Gate" src="it/ardour8-hard-gate.png" >}}
 
-Other kinds of gates, such as the _LSP Gate_ plugin on the screenshot below, are
-more complex. They have independent control over how quickly the gate opens
-(_Attack_) and closes (_Release_), as well as other parameters quite similar to
-those described for the SC Compressor above.
+Altri tipi di gate, come il plugin _LSP Gate_ nella schermata sottostante, sono più complessi. Consentono un controllo 
+indipendente sulla velocità di apertura (_Attack_) e rilascio (_Release_) del gate, oltre ad altri parametri molto 
+simili a quelli descritti sopra per il compressore SC.
 
-{{< figure alt="LSP Gate" src="en/ardour7-lsp-gate-mono.png" >}}
+{{< figure alt="LSP Gate" src="it/ardour8-lsp-gate-mono.png" >}}
 
-## Continuing
+## Continua
 
-Now that we've explored some tools for getting the dynamic range exactly where
-you want it, it's time to look at adjusting the balance of frequencies present
-in each individual track and in your overall mix. In the next chapter, we'll
-learn how to use the equalizer to do just that.
+Ora che abbiamo esplorato alcuni strumenti per ottenere la gamma dinamica esattamente come desideri, è il momento di 
+esaminare la regolazione del bilanciamento delle frequenze presenti in ogni singola traccia e nel mix complessivo. Nel 
+prossimo capitolo impareremo come utilizzare l'equalizzatore per ottenere proprio questo risultato.
 
-Next: [EQUALIZING](../equalizing)
+Successivo: [Equalizzazione](../equalizing)
