@@ -275,4 +275,4 @@ stereo mix to an audio file which you can listen to or share on a website.
 Please continue on to the next section to learn the different ways of doing
 this.
 
-Next: [EXPORTING A SESSION](../exporting-a-session)
+Next: [EXPORTING A SESSION](../../exporting-sessions/exporting-a-session)
