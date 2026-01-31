@@ -7,48 +7,44 @@ sidebar:
   exclude: true
 ---
 
-Below are some basic conventions we have adopted in this manual.
+Di seguito sono riportate alcune convenzioni di base che abbiamo adottato in questo manuale.
 
-## Mouse Clicks
+## Clic del mouse
 
-Ardour requires a two-button mouse to run (or the emulation of that on
-your system in some other way). A **click** is assumed to be a left
-button mouse click. A **right-click** refers to the right-hand button on
-the mouse. A **Ctrl**, **Cmd** or **Apple** key pressed with a mouse
-click is not the same and may in fact give a different result.
+Ardour richiede un mouse a due pulsanti per funzionare (o l'emulazione di tale funzione sul proprio sistema in altro 
+modo). Un **clic** è considerato come un clic con il tasto sinistro del mouse. Un **clic destro** si riferisce al tasto 
+destro del mouse. Un tasto **Ctrl**, **Cmd** o **Apple** premuto insieme a un clic del mouse non ha lo stesso effetto e 
+può infatti dare un risultato diverso.
 
-## Key Names & Combinations
+## Nomi chiave e combinazioni
 
-The names of keys to be pressed are written in bold typeface like this:
+I nomi dei tasti da premere sono scritti in grassetto come in questo esempio:
 
-**Ctrl**, **Return**, **Backspace**, **R**
+**Ctrl**, **Invio**, **Backspace**, **R**
 
-Key combinations are written in bold typeface as well:
+Anche le combinazioni di tasti sono scritte in grassetto:
 
 **Ctrl + X**
 
-or
+oppure
 
 **Apple + X**
 
-## Menu Navigation
+## Menu Navigazione
 
-Many functions are accessible in Ardour by clicking on the various menu
-items. Additionally, you may need to access functions through the menus
-of macOS, Ubuntu or other Linux distributions. To illustrate this, we use
-two conventions: the first is illustration via screenshots (images), and
-the second is through a syntax like this :
+Molte funzioni sono accessibili in Ardour cliccando sulle varie voci di menu. Inoltre, potrebbe essere necessario 
+accedere alle funzioni tramite i menu di macOS, Ubuntu o altre distribuzioni Linux. Per illustrare questo concetto, 
+utilizziamo due convenzioni: la prima è l'illustrazione tramite screenshot (immagini), la seconda è tramite una sintassi
+come questa:
 
-`View > Zoom > Zoom to Session`
+`Visualizza > Zoom > Zoom sulla sessione`
 
-The above example is shorthand for "first click on the _View_ menu, then
-choose the _Zoom_ item of the list, and then click on _Zoom to Session_".
+L'esempio sopra riportato è una scorciatoia per "prima clicca sul menu _Visualizza_, poi seleziona la voce _Zoom_ 
+dall'elenco e infine clicca su _Zoom alla sessione_".
 
-## Glossary Words
+## Parole del glossario
 
-This tutorial does not assume any previous knowledge of computers or
-audio editing, so terms which might be unfamiliar to the general reader
-are capitalized throughout this manual, and are listed in **boldface**
-the first time they are used in a chapter. Glossary words are also
-defined in-line the first time they occur in the manual, and are
-included in the glossary at the end of this tutorial.
+Questo tutorial non presuppone alcuna conoscenza preliminare di computer o editing audio, pertanto i termini che 
+potrebbero risultare poco familiari al lettore generico sono riportati in maiuscolo in tutto il manuale e sono elencati 
+in **grassetto** la prima volta che vengono utilizzati in un capitolo. Anche i termini del glossario sono definiti nel
+testo la prima volta che compaiono nel manuale e sono inclusi nel glossario alla fine di questo tutorial.
