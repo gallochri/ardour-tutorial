@@ -1,5 +1,5 @@
 ---
-title: Salvataggio di una sessione
+title: Salvare una sessione
 description: Come salvare e spostare una sessione di Ardour
 weight: 1
 cascade:
@@ -67,4 +67,4 @@ Salvare un'intera sessione consente di riaprirla in un secondo momento. Tuttavia
 specifico della tua sessione, per poter tornare a quello stato in un secondo momento dopo aver apportato delle 
 modifiche, passa alla sezione successiva _Salvataggio di un'istantanea_.
 
-Successivo: [Salvataggio di un'istantanea](../saving-a-snapshot)
+Successivo: [Salvare un'istantanea](../saving-a-snapshot)
