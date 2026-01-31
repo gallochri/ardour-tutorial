@@ -36,45 +36,45 @@ Questa pagina elenca le principali modifiche apportate al tutorial di Ardour dal
 - Improved content: the Credits page now has structure
 - Improved content: the 'How to contribute' guide has been updated to match theme changes
 
-**January 2025**
+**Gennaio 2025**
 
 - Improved content: mention DND as importing method
 - Improved content: provide an example of complex routing
 
-**September 2024**
+**Settembre 2024**
 
 - New content: 'Performing live' section
 - New content: 'Recording modes' page
 - Fix: incorrect advice on metronome routing
 
-**May 2024**
+**Maggio 2024**
 
 - Improved content: explain the Latch automation mode
 - Improved content: update the edit modes documentation
 - Fixes: various small issues spotted by users
 
-**February 2024**
+**Febbraio 2024**
 
 - Translations: localized screenshots (FR)
 
-**November/December 2023**
+**Novembre/Dicembre 2023**
 
 - Translations: the 'Mixing' section (FR)
 
-**October 2023**
+**Ottobre 2023**
 
 - Improved content: update for Ardour 8.0 (EN and FR)
 - Translations: the 'Exporting' section (FR)
 
-**August/September 2023**
+**Agosto/Settembre 2023**
 
 - Translations: the 'Getting started' and 'Editing sessions' sections (FR)
 
-**January 2023**
+**Gennaio 2023**
 
 - Improved content: screenshot updates
 
-**August 2022**
+**Agosto 2022**
 
 - New content: cover importing MIDI
 - New content: cover editing MIDI regions
@@ -82,12 +82,12 @@ Questa pagina elenca le principali modifiche apportate al tutorial di Ardour dal
 - New content: recommended plugins (free/libre)
 - New content: perfoming on time (metronome, pre-roll, count-in)
 
-**April 2022**
+**Aprile 2022**
 
 - Improved content: full update to match newer software capabilities 
 - Fixes: Meter -> Time Signature
 
-**March 2022**
+**Marzo 2022**
 
 - Infrastructure: port to Hugo and the `relearn` theme
 - New content: a section on non-destructive editing
