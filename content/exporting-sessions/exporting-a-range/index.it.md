@@ -81,4 +81,4 @@ _Marcatori di intervallo_ della timeline e selezionando _Cancella tutti gli inte
 Ora sapete come esportare regioni isolate, intervalli selezionati dalla vostra sessione o l'intera sessione come mix 
 stereo. L'ultima sezione di questo tutorial spiega come salvare sessioni, istantanee e modelli.
 
-Successivo: [Salvataggio di una sessione](../../saving-sessions/saving-a-session/)
+Successivo: [Salvare una sessione](../../saving-sessions/saving-a-session/)
