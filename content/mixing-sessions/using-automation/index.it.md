@@ -148,111 +148,101 @@ possibile impostarle in questo modo:
 Ricorda che puoi anche ingrandire e rimpicciolire l'immagine per aumentare la risoluzione sull'asse orizzontale.
 {{< /callout >}}
 
-## Working with Automation Points
+## Lavorare con i punti di automazione
 
-There are several ways to adjust automation points, depending on the editing
-mode you are in:
+Esistono diversi modi per regolare i punti di automazione, a seconda della modalità di modifica in cui ci si trova:
 
-- An automation point can be dragged in any direction with the mouse (works in
-_Grab_, _Draw_, and _Edit_ modes).
-- To remove an automation point, hold down the **Shift** key while
-right-clicking on it (works in _Grab_, _Draw_, and _Edit_ modes).
-- _Edit_ mode only: any segment of the automation line between automation points
-may be dragged vertically, affecting both end points at once, without affecting
-their horizontal position. Simply click somewhere on the line between two
-points, and drag up and down.
-- How to delete multiple automation points at once (_Grab_ mode and _Edit_ mode
-only): select multiple automation points by dragging a box starting on the track
-background around the points. Then the selected points may be deleted by hitting
-**Delete** (_not_ **Backspace**). If you are on a Mac and do not have a true
-**Delete** key, try **Function + Backspace**.
+- Un punto di automazione può essere trascinato in qualsiasi direzione con il mouse (funziona nelle modalità 
+_Mano_, _Matita_ e _Modifica interna_).
+- Per rimuovere un punto di automazione, tieni premuto il tasto **Shift** mentre fai clic con il pulsante destro del 
+mouse su di esso (funziona nelle modalità _Mano_, _Matita_ e _Modifica interna_).
+- Solo in modalità _Modifica interna_: qualsiasi segmento della linea di automazione tra i punti di automazione può 
+essere trascinato verticalmente, influenzando entrambi i punti finali contemporaneamente, senza influire sulla loro 
+posizione orizzontale. È sufficiente fare clic in un punto qualsiasi della linea tra due punti e trascinare verso l'alto
+o verso il basso.
+- Come eliminare più punti di automazione contemporaneamente (solo in modalità _Mano_ e _Modifca interna_): selezionare 
+più punti di automazione trascinando un riquadro che parte dallo sfondo della traccia attorno ai punti. Quindi i punti 
+selezionati possono essere eliminati premendo **Canc** (_non_ **Backspace**). Se si utilizza un Mac e non si dispone di 
+un tasto **Canc** vero e proprio, provare **Funzione + Backspace**.
 
-After an automation curve ends, its value will stay at that level for all
-subsequent regions, whether or not you have drawn a continuation of the curve.
+Al termine di una curva di automazione, il suo valore rimarrà a quel livello per tutte le regioni successive, 
+indipendentemente dal fatto che sia stata tracciata o meno una continuazione della curva.
 
-{{< figure alt="end point" src="en/Ardour4_Automation_Fader_End.png" >}}
+{{< figure alt="punto finale" src="it/ardour8-automation-fader-end.png" >}}
 
-In the example above, the last point of the curve is at -23dB. That same level
-will be kept for the remainder of the track, even though the line is not drawn
-until the end.
+Nell'esempio sopra riportato, l'ultimo punto della curva è a -7,91dB. Lo stesso livello verrà mantenuto per il resto 
+della traccia, anche se la linea non viene tracciata fino alla fine.
 
-## Moving Automation
+## Spostamento dell'automazione
 
-Moving a region to a new location will automatically move the automation data
-that might be aligned with it, as we can see in the following screen shots.
+Lo spostamento di una regione in una nuova posizione comporta automaticamente lo spostamento dei dati di automazione 
+che potrebbero essere allineati con essa, come possiamo vedere nelle seguenti schermate.
 
-Before moving:
+Prima dello spostamento:
 
-{{< figure alt="mv1" src="en/Ardour4_Automation_Moving_1.png" >}}
+{{< figure alt="spostamento1" src="en/Ardour4_Automation_Moving_1.png" >}}
 
-After moving:
+Dopo lo spostamento:
 
-{{< figure alt="mv2" src="en/Ardour4_Automation_Moving_2.png" >}}
+{{< figure alt="spostamento2" src="en/Ardour4_Automation_Moving_2.png" >}}
 
-You can change this behavior if you like. In other words, if you want automation
-curves to stay where they are even when you move regions around, go to `Edit >
-Preferences > Editor` and uncheck _Move relevant automation when audio regions
-are moved_.
+È possibile modificare questo comportamento, se lo si desidera. In altre parole, se si desidera che le curve di 
+automazione rimangano dove sono anche quando si spostano le regioni, andare su `Modifica > Preferenze > Editor` e 
+deselezionare _Sposta automazione rilevanti quando le regioni audio vengono spostate_.
 
-## Region-specific Gain Automation
+## Automazione del guadagno specifico per regione
 
-There is a way to create a gain automation directly bound to a region. When you
-select the _Draw_ mode, you should see a flat line on the top half of each
-region rectangle:
+Esiste un modo per creare un'automazione del guadagno direttamente collegata a una regione. Quando selezioni la modalità
+_Matita_, dovresti vedere una linea piatta nella metà superiore di ogni rettangolo della regione:
 
-{{< figure alt="gain-automation" src="en/Ardour4_Automation_Region_Specific_1.png" >}}
+{{< figure alt="automazione del guadagno 1" src="en/Ardour4_Automation_Region_Specific_1.png" >}}
 
-Click directly on that line to create automation points. These will be drawn
-directly on the region itself, unlike fader automation which is drawn or
-recorded in the automation lane. Region gain automation is separate from, and
-in addition to, fader automation.
+Clicca direttamente su quella linea per creare punti di automazione. Questi saranno disegnati direttamente sulla regione
+stessa, a differenza dell'automazione del fader che viene disegnata o registrata nella corsia di automazione. 
+L'automazione del guadagno della regione è separata e aggiuntiva rispetto all'automazione del fader.
 
-{{< figure alt="gain-automation2" src="en/Ardour4_Automation_Region_Specific_2.png" >}}
+{{< figure alt="automazione del guadagno 2" src="en/Ardour4_Automation_Region_Specific_2.png" >}}
 
-As with the automation lanes, a _gain automation point_ can be dragged in any
-direction with the mouse. To remove a gain automation point, hold down the
-**Shift** key while right-clicking on it.
+Come per le tracce di automazione, un _punto di automazione del guadagno_ può essere trascinato in qualsiasi direzione 
+con il mouse. Per rimuovere un punto di automazione del guadagno, tenere premuto il tasto **Shift** mentre si fa clic 
+con il tasto destro del mouse su di esso.
 
-### Deactivating and Removing Gain Automation
+### Disattivazione e rimozione dell'automazione del guadagno
 
-Gain automation can be reset or deactivated from the region context menu, which
-is reached by right-clicking on the region.
+L'automazione del guadagno può essere reimpostata o disattivata dal menu contestuale della regione, accessibile facendo 
+clic con il tasto destro del mouse sulla regione.
 
-{{< figure alt="gain-automation3" src="en/Ardour4_Automation_Gain_Tool_Reset.png" >}}
+{{< figure alt="automazione del guadagno 3" src="it/ardour8-automation-gain-tool-reset.png" >}}
 
-Here, the gain automation is referred to as the _envelope_:
+Qui, l'automazione del guadagno è indicata come _inviluppo_:
 
-- _Reset Envelope_ removes the gain automation points you have drawn in the
-region.
-- _Envelope Active_ toggles the gain automation envelope on and off.
+- _Azzera inviluppo_ rimuove i punti di automazione del guadagno che hai tracciato nella regione.
 
-### When should I use region Gain Automation or Track Fader Automation?
+- _Inviluppo attivo_ attiva e disattiva l'inviluppo dell'automazione del guadagno.
 
-As seen above, both are very similar. With practice you will notice situations
-in which one is more convenient than the other. Here are two examples:
+### Quando dovrei usare l'automazione del guadagno della regione o l'automazione del fader della traccia?
 
-* If all you need to do is a little touch up (cut or boost gain) in a specific
-portion of a region, and you are otherwise happy with the level for the rest of
-the passage or entire track, use the region-specific automation.
+Come visto sopra, entrambi sono molto simili. Con la pratica noterai situazioni in cui uno è più conveniente dell'altro.
+Ecco due esempi:
 
-{{< figure alt="gain-example1" src="en/Ardour4_Automation_Region_Specific_2.png" >}}
+* Se tutto ciò che devi fare è un piccolo ritocco (taglio o aumento del guadagno) in una parte specifica di una regione 
+e sei soddisfatto del livello del resto del passaggio o dell'intera traccia, utilizza l'automazione specifica per la 
+regione.
 
-* If you have a more complex track with crossfades over regions, and/or need to
-shape a longer dynamic curve across several regions on the same track, use fader
-automation.
+{{< figure alt="esempio guadagno 1" src="en/Ardour4_Automation_Region_Specific_2.png" >}}
 
-{{< figure alt="gain-automation2" src="en/Ardour4_Automation_Gain_Comparison.png" >}}
+* Se hai una traccia più complessa con dissolvenze incrociate tra le regioni e/o hai bisogno di modellare una curva 
+dinamica più lunga su più regioni della stessa traccia, usa l'automazione del fader.
 
-The screenshot above shows a simple gradual fade starting from the first region
-in the track, and ending at the last region. It's very straightforward to do
-this with fader automation, but it would be much harder to do it using
-region-specific automation.
+{{< figure alt="esempio guadagno 2" src="en/Ardour4_Automation_Gain_Comparison.png" >}}
 
-## Continuing
+Lo screenshot sopra mostra una semplice dissolvenza graduale che inizia dalla prima regione della traccia e termina 
+nell'ultima regione. È molto semplice farlo con l'automazione del fader, ma sarebbe molto più difficile farlo 
+utilizzando l'automazione specifica per regione.
 
-Once you have your automation in place, you are just about ready to export your
-stereo mix to an audio file which you can listen to or share on a website.
-Please continue on to the next section to learn the different ways of doing
-this.
+## Continua
+
+Una volta impostata l'automazione, sei pronto per esportare il tuo mix stereo in un file audio che potrai ascoltare o 
+condividere su un sito web. Continua con la sezione successiva per scoprire i diversi modi per farlo.
 
 Successivo: [Esportazione di una sessione](../../exporting-sessions/exporting-a-session)
