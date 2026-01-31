@@ -14,7 +14,7 @@ esportare un intervallo o l'intera sessione.
 
 Per esportare un intervallo, procedere come segue:
 
-1. Click on the **Range Mode** button (**R** shortcut)
+1. Clicca sul pulsante **Modalità intervallo** (scorciatoia **R**)
 
 ![Range mode](en/ardour7-range-edit-mode.png?width=250)
 
